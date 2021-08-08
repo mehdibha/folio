@@ -1,0 +1,26 @@
+.squiggle {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: draw 2s linear ;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
+}
+
+.squiggle2 {
+    stroke-dasharray: 866;
+    stroke-dashoffset: 866;
+    animation: draw 2.5s linear alternate;
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+    -webkit-animation-fill-mode: forwards; 
+animation-fill-mode: forwards;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  

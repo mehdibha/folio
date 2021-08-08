@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "./assets/theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -9,6 +9,11 @@ import Loader from "./components/Loader";
 
 function App() {
   const [isLoading,setIsLoading]=useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 4500);
+  }, []);
   return (
     <Router>
       <ThemeProvider theme={theme}>

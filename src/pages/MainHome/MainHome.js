@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Home from "../../sections/Home";
 import About from "../../sections/About";
 import Experience from "../../sections/Experience";
@@ -7,13 +8,21 @@ import Contact from "../../sections/Contact";
 
 const MainHome = () => {
     return (
-        <main>
+        <motion.main
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+            }}
+        >
             <Home />
             <About />
             <Experience />
             <Projects />
             <Contact />
-        </main>
+        </motion.main>
     );
 };
 

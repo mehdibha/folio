@@ -8,7 +8,7 @@ import Menu from "./Menu";
 const Navbar = () => {
   const classes = useStyles();
   const [scroll, setScroll] = useState(false);
-  const handleNav = () => setScroll(window.scrollY > 1);
+  const handleNav = () => setScroll(window.scrollY > 0);
   window.addEventListener("scroll", handleNav);
 
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
       component="nav"
     >
       <Toolbar>
-        <Logo className={classes.logo} />
+        <Logo />
         <Menu />
       </Toolbar>
     </AppBar>
@@ -32,10 +32,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgb(20,20,20)",
     transition: ".4s",
   }),
-  logo: {
-    width: "90px",
-    marginRight: theme.spacing(2),
-  },
 }));
 
 export default Navbar;

@@ -6,15 +6,15 @@ import Projects from "../../sections/Projects";
 import Contact from "../../sections/Contact";
 
 const MainHome = () => {
-  return (
-    <main>
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-    </main>
-  );
+    return (
+        <main>
+            <Home />
+            <About />
+            <Experience />
+            <Projects />
+            <Contact />
+        </main>
+    );
 };
 
 export default MainHome;

@@ -4,13 +4,12 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { motion } from "framer-motion";
 import VideoLogo from "../../components/VideoLogo";
-import { makeStyles } from "@material-ui/core";
+// import { makeStyles } from "@material-ui/core";
 
 const Home = () => {
-  const classes = useStyles()
     return (
-        <SectionContainer>
-            <Typography color="primary" variant="h5" style={{marginBottom:"6px"}}>
+        <SectionContainer></SectionContainer>
+            <Typography component={motion.p} ini color="primary" variant="h5" style={{marginBottom:"6px"}}>
                 Hi there
                 <motion.div 
                     style={{ display:"inline-block"}}
@@ -26,7 +25,7 @@ const Home = () => {
                 I make awesome websites.
             </Typography>
             <Typography variant="body2" color="initial" style={{marginBottom:"0"}}>
-                Full stack web developer, UI/UX designer, Freelancer, Github addict.
+                Full stack web developer, UI/UX designer, freelancer, Github addict.
             </Typography>
             <Typography variant="body1" color="initial" style={{marginBottom:"30px"}}>
                 Based in sousse, Tunisia.
@@ -38,10 +37,10 @@ const Home = () => {
     );
 };
 
-const useStyles = makeStyles((theme) => ({
-  typo: {
-      marginBottom:theme.spacing(2)
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   typo: {
+//       marginBottom:theme.spacing(2)
+//   },
+// }));
 
 export default Home;

@@ -8,8 +8,8 @@ const container = {
     hidden: {},
     visible: {
         transition: {
-            delayChildren: 0,
-            staggerChildren: 1,
+            delayChildren: 0.5,
+            staggerChildren: 0.3,
         },
     },
 };
@@ -44,6 +44,7 @@ const Menu = () => {
             <StyledTab component={motion.div} variants={button} label="Contact" />
             <Button
                 component={motion.button}
+                variants={button}
                 variant="outlined"
                 color="primary"
                 exact

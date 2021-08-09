@@ -7,7 +7,7 @@ const VideoLogo = (props) => {
     return (
         <div className={classes.wrapper} {...props}>
             <VideoMask className={classes.mask} />
-            <video autoPlay muted loop preload className={classes.video}>
+            <video autoPlay muted loop preload="auto" className={classes.video}>
                 <source src="https://d33wubrfki0l68.cloudfront.net/ab4c4ea31f1543825102ebf15a35080cdc1397ce/b8c4f/static/images/frontpage/hero/gradient.mp4" />
             </video>
         </div>

@@ -8,7 +8,7 @@ import VideoLogo from "../../components/VideoLogo";
 
 const Home = () => {
     return (
-        <SectionContainer></SectionContainer>
+        <SectionContainer>
             <Typography component={motion.p} ini color="primary" variant="h5" style={{marginBottom:"6px"}}>
                 Hi there
                 <motion.div 

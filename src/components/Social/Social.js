@@ -13,7 +13,7 @@ const Social = () => {
         <motion.div 
             initial={{ y: '100vh'}}
             animate={{ y: 0}}
-            transition={{ delay:3}}
+            transition={{ delay:4}}
             className={classes.wrapper}>
             <Link href="https://github.com/Mehdi-BHA" target="_blank">
                 <GitHubIcon className={classes.socialIcon} />

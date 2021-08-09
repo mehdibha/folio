@@ -9,7 +9,7 @@ import Routes from "./Routes";
 import Loader from "./components/Loader";
 
 function App() {
-  const [isLoading,setIsLoading]=useState(true)
+  const [isLoading,setIsLoading]=useState(false)
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)

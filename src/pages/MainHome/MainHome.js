@@ -5,6 +5,7 @@ import About from "../../sections/About";
 import Experience from "../../sections/Experience";
 import Projects from "../../sections/Projects";
 import Contact from "../../sections/Contact";
+import Background3d from "../../components/Background3d.js/Background3d";
 
 const MainHome = () => {
     return (
@@ -22,6 +23,7 @@ const MainHome = () => {
             <Experience />
             <Projects />
             <Contact />
+            <Background3d />
         </motion.main>
     );
 };

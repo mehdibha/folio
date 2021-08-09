@@ -11,7 +11,7 @@ const MainContainer = ({ away, children, ...rest }) => {
       maxWidth="lg"
       {...rest}
     >
-      <div style={{ margin: "0 auto" }}>{children}</div>
+      <div>{children}</div>
     </Container>
   );
 };
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     overflow: "hidden",
+    flexBasis:'auto',
   },
 }));
 

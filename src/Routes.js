@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import MainHome from "./pages/MainHome";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Typography from '@material-ui/core/Typography'
 
 const Routes = () => {
     return (

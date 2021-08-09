@@ -10,8 +10,8 @@ const container = {
         opacity:0,
         scale:0,
         transition: {
-            delay:3.95,
-            duration: 0.4,
+            delay:4.3,
+            duration: 0.2,
         },
     },
 };
@@ -60,7 +60,6 @@ const Mehdi = (props) => (
             variants={svg}
             initial="hidden"
             animate="visible"
-            style={{ transformOrigin: "center center" }}
             {...props}
         >
             <clipPath id="m">

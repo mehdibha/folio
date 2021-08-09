@@ -1,10 +1,8 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+import MehdiBHA from "../../assets/images/mehdibha.svg"
 
 const Logo = (props) => (
-  <Typography style={{ flexGrow: 1 }} variant="h5" color="initial">
-    MEHDI BHA
-  </Typography>
+  <img src={MehdiBHA} alt="mehdi bha" {...props} />
 );
 
 export default Logo;

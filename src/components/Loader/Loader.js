@@ -5,11 +5,9 @@ import { motion } from "framer-motion";
 
 const Loader = () => {
     return (
-        <motion.div >
-            <CenterContainer>
-                <Mehdi width={250} />
-            </CenterContainer>
-        </motion.div>
+        <CenterContainer>
+            <Mehdi width={250} />
+        </CenterContainer>
     );
 };
 

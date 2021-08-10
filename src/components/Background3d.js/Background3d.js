@@ -17,7 +17,7 @@ const Background3d = () => {
                     initial={{ y: "-100vh" }}
                     animate={{ y: 0 }}
                     transition={{
-                        delay: 3,
+                        delay: 4.5,
                         type: "spring",
                         stiffness: 260,
                         damping: 20,

@@ -4,7 +4,7 @@ import typography from './typography';
 const theme = createTheme({
   palette: {
     background: {
-      default: 'rgb(20,20,20) ',
+      default: '#082032 ',
     },
     primary: {
       main:'#FF4C29',
@@ -19,6 +19,7 @@ const theme = createTheme({
       secondary: 'rgb(220,220,220)'
     }
   },
+  navbarHeight:"70px",
   typography,
   overrides:{
     MuiButton:{

@@ -1,19 +1,21 @@
 import React from "react";
-import { Paper, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import AvatarImg from "../../assets/images/avatar.jpg";
 
 const Avatar = () => {
   const classes = useStyles();
   return (
-    <Paper>
-      <img src={AvatarImg} alt="Mehdi BHA" className={classes.avatarImg} />{" "}
-    </Paper>
+      <img src={AvatarImg} alt="Mehdi BHA" className={classes.avatarImg} />
   );
 };
 
 const useStyles = makeStyles((theme) => ({
   avatarImg: {
-    width: "300px",
+    borderRadius:'50%',
+    width:"270px",
+    height:"270px",
+    objectFit:'cover',
+    boxShadow:theme.shadows[7]
   },
 }));
 

@@ -1,15 +1,15 @@
 import React from "react";
+import { Grid, Typography, Divider } from "@material-ui/core";
 import SectionContainer from "../../containers/SectionContainer";
 import Skills from "../../components/Skills";
-import { Grid, Typography } from "@material-ui/core";
 import Avatar from "../../components/Avatar";
+// import Divider from "../../components/Divider";
 
 const About = () => {
+  // const classes=useStyles()
   return (
-    <SectionContainer>
-      <Typography variant="h2" color="initial">
-        About me
-      </Typography>
+    <SectionContainer title='About'>
+        <Divider />
       <Grid container alignItems="center">
         <Grid item xs={12} md={7}>
           <Typography variant="body1" color="initial">
@@ -29,5 +29,11 @@ const About = () => {
     </SectionContainer>
   );
 };
+
+// const useStyles = makeStyles(theme=>({
+//   container: {
+//     border: "1px solid white"
+//   }
+// }))
 
 export default About;

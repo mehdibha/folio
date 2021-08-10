@@ -9,11 +9,11 @@ import Routes from "./Routes";
 import Loader from "./components/Loader";
 
 function App() {
-  const [isLoading,setIsLoading]=useState(false)
+  const [isLoading,setIsLoading]=useState(true)
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 4500);
+    }, 5500);
   }, []);
   return (
     <Router>

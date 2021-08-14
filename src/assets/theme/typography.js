@@ -34,11 +34,11 @@ export default {
     fontWeight: 500
   },
   body1:{
-    fontWeight:700,
+    fontWeight:300,
     fontSize:18,
   },
   body2:{
-    fontWeight:500,
+    fontWeight:300,
     fontSize:18,
   }
 };

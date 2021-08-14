@@ -24,7 +24,7 @@ const ProjectsGallery = () => {
             <ImageList
                 rowHeight={400}
                 cols={3}
-                gap={20}
+                gap={60}
                 className={classes.galleryContainer}
             >
                 {projectList.map((item, k) => (

@@ -42,12 +42,14 @@ const useStyles = makeStyles((theme) => ({
         height: 200,
         width: "100%",
         borderRadius:"10px 10px 0 0",
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center"
     },
     frontImage: {
         objectFit: "cover",
         width: "100%",
-        height: "100%",
-        transform: "scale(1.3)",
+        transform: "scale(1.2)",
     },
     title: {
         color: "rgb(30,30,30)",

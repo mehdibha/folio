@@ -4,7 +4,7 @@ import MessageBox from "../../components/MessageBox/MessageBox";
 
 const Contact = () => {
   return (
-    <SectionContainer title="Contact" maxWidth="700" reverse>
+    <SectionContainer id="contact" title="Contact" maxWidth="700" reverse>
       <MessageBox />
     </SectionContainer>
   );

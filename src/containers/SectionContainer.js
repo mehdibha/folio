@@ -31,7 +31,7 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest })
                     animate={titleControls}
                     initial="hidden"
                     transition={{
-                        delay: 0.5,
+                        delay: 0.3,
                         type: "spring",
                         stiffness: 100,
                         damping: 20,
@@ -54,7 +54,7 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest })
                 animate={contentControls}
                 initial="hidden"
                 transition={{
-                    delay: 0.8,
+                    delay: 0.5,
                     type: "spring",
                     stiffness: 100,
                     damping: 20,
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "80px 0",
     },
     titleContainer: {
-        padding: theme.spacing(8, 0),
+        paddingBottom: theme.spacing(8),
         display: "flex",
         alignItems: "center",
     },

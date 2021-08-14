@@ -4,48 +4,12 @@ import { useInView } from "react-intersection-observer";
 import { ImageList, ImageListItem, makeStyles } from "@material-ui/core";
 import Card from "./Card";
 import ExtendedCard from "./ExtendedCard";
+import { projectList } from "../../data";
 
 const ProjectsGallery = () => {
     const classes = useStyles();
     const [selectedId, setSelectedId] = useState(null);
-    const projects = [
-        {
-            id: 1,
-            title: "Tunflix",
-            overview:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
-            technologies: ["React JS", "Node JS", "MongoDB"],
-            backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-            frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
-        },
-        {
-            id: 2,
-            title: "Code Hub",
-            overview:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
-            technologies: ["React JS", "Node JS", "MongoDB"],
-            backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-            frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
-        },
-        {
-            id: 3,
-            title: "Burpees.io",
-            overview:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
-            technologies: ["React JS", "Node JS", "MongoDB"],
-            backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-            frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
-        },
-        {
-            id: 4,
-            title: "Burpees.io",
-            overview:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
-            technologies: ["React JS", "Node JS", "MongoDB"],
-            backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-            frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
-        },
-    ];
+    
     const galleryControls = useAnimation();
     const [galleryRef, galleryInView] = useInView();
 
@@ -54,7 +18,7 @@ const ProjectsGallery = () => {
             galleryControls.start("visible");
         }
     }, [galleryControls, galleryInView]);
-    const getSelected = (id) => projects.find((elem) => elem.id === id);
+    const getSelected = (id) => projectList.find((elem) => elem.id === id);
     return (
         <AnimateSharedLayout type="crossfade">
             <ImageList
@@ -63,7 +27,7 @@ const ProjectsGallery = () => {
                 gap={20}
                 className={classes.galleryContainer}
             >
-                {projects.map((item, k) => (
+                {projectList.map((item, k) => (
                     <ImageListItem
                         key={item.id}
                         layoutId={item.id}

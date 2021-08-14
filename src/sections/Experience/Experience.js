@@ -4,7 +4,7 @@ import Tabs from "../../components/Tabs/Tabs";
 
 const Experience = () => {
   return (
-    <SectionContainer title="Experience" maxWidth="700" reverse>
+    <SectionContainer id="experience" title="Experience" maxWidth="700" reverse>
       <Tabs />
     </SectionContainer>
   );

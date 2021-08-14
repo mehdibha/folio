@@ -1,13 +1,11 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 import SectionContainer from "../../containers/SectionContainer";
+import Tabs from "../../components/Tabs/Tabs";
 
 const Experience = () => {
   return (
-    <SectionContainer>
-      <Typography variant="h1" color="initial">
-        Experience here
-      </Typography>
+    <SectionContainer title="Experience" maxWidth="700" reverse>
+      <Tabs />
     </SectionContainer>
   );
 };

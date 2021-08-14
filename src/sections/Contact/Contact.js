@@ -1,13 +1,11 @@
 import React from "react";
 import SectionContainer from "../../containers/SectionContainer";
-import { Typography } from "@material-ui/core";
+import MessageBox from "../../components/MessageBox/MessageBox";
 
 const Contact = () => {
   return (
-    <SectionContainer>
-      <Typography variant="h1" color="initial">
-        Contact here
-      </Typography>
+    <SectionContainer title="Contact" maxWidth="700" reverse>
+      <MessageBox />
     </SectionContainer>
   );
 };

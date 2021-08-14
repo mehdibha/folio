@@ -1,13 +1,13 @@
 import React from "react";
-import CenterContainer from "../../containers/CenterContainer";
+import LoaderContainer from "../../containers/LoaderContainer";
 import Mehdi from "../../assets/images/Mehdi";
 // import { motion } from "framer-motion";
 
 const Loader = () => {
     return (
-        <CenterContainer>
+        <LoaderContainer>
             <Mehdi width={250} />
-        </CenterContainer>
+        </LoaderContainer>
     );
 };
 

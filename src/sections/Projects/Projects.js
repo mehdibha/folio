@@ -1,13 +1,11 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 import SectionContainer from "../../containers/SectionContainer";
+import ProjectsGallery from "../../components/ProjectsGallery";
 
 const Projects = () => {
   return (
-    <SectionContainer>
-      <Typography variant="h1" color="initial">
-        projects here
-      </Typography>
+    <SectionContainer title="Projects" maxWidth="1000">
+      <ProjectsGallery />
     </SectionContainer>
   );
 };

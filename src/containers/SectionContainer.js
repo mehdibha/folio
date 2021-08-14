@@ -1,48 +1,94 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
+import React, { useEffect } from "react";
+import { makeStyles, Container, Typography } from "@material-ui/core";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Divider from "../components/Divider";
 
-const MainContainer = ({ children, full, title, ...rest }) => {
-    const classes = useStyles({ full });
+const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest }) => {
+    const titleControls = useAnimation();
+    const contentControls = useAnimation();
+    const [titleRef, titleInView] = useInView();
+    const [contentRef, contentInView] = useInView();
+
+    useEffect(() => {
+        if (titleInView) {
+            titleControls.start("visible");
+        }
+    }, [titleControls, titleInView]);
+
+    useEffect(() => {
+        if (contentInView) {
+            contentControls.start("visible");
+        }
+    }, [contentControls, contentInView]);
+
+    const classes = useStyles({ full, maxWidth });
     return (
-        <Container component="section" className={classes.container} maxWidth="lg" {...rest}>
+        <Container component="section" className={classes.container} {...rest}>
             {title && (
-                <div className={classes.titleContainer}>
-                    <Divider className={classes.divider} width="40px" />
-                    <Typography variant="h2" color="initial" className={classes.title}>
+                <motion.div
+                    ref={titleRef}
+                    animate={titleControls}
+                    initial="hidden"
+                    transition={{
+                        delay: 0.5,
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 20,
+                    }}
+                    variants={{
+                        visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: reverse ? 50 : -50 },
+                    }}
+                    className={classes.titleContainer}
+                >
+                    <Divider width="40px" />
+                    <Typography variant="h4" color="initial" className={classes.title}>
                         {title}
                     </Typography>
-                    <Divider className={classes.divider} fullWidth />
-                </div>
+                    <Divider fullWidth />
+                </motion.div>
             )}
-            <div>{children}</div>
+            <motion.div
+                ref={contentRef}
+                animate={contentControls}
+                initial="hidden"
+                transition={{
+                    delay: 0.8,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 20,
+                    when: "beforeChildren",
+                    duration: 0.5,
+                    staggerChildren: 0.3,
+                }}
+                variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: -50 },
+                }}
+            >
+                {children}
+            </motion.div>
         </Container>
     );
 };
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        minHeight: (props) => (props.full ? "100vh" : `calc( 100vh - ${theme.navbarHeight} )`),
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        overflow: "hidden",
-        flexBasis: "auto",
+        maxWidth: (props) => (props.maxWidth ? `${props.maxWidth}px` : theme.breakpoints.values["lg"]),
+        padding: "80px 0",
     },
     titleContainer: {
+        padding: theme.spacing(8, 0),
         display: "flex",
-        justifyContent:'center',
-        alignItems:'center',
-        marginBottom:theme.spacing(4)
+        alignItems: "center",
     },
-    divider:{
-        backgroundColor:theme.palette.primary.main
+    title: {
+        margin: theme.spacing(0, 4),
     },
-    title:{
-        margin:theme.spacing(0,4)
-    }
+    childrenContainer: {
+        minHeight: "100%",
+    },
 }));
 
-export default MainContainer;
+export default SectionContainer;

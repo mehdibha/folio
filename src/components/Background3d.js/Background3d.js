@@ -4,11 +4,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const Background3d = () => {
     const classes = useStyles();
-    const [delay, setDelay] = useState(false);
+    const [delay, setDelay] = useState(true);
     useEffect(() => {
         setTimeout(() => {
             setDelay(true);
-        }, 3000);
+        }, 1000);
     }, []);
     return (
         <>

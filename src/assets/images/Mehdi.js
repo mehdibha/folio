@@ -11,7 +11,7 @@ const container = {
         scale: 0,
         transition: {
             delay: 4.3,
-            duration: 0.6,
+            duration: 0.3,
         },
     },
 };

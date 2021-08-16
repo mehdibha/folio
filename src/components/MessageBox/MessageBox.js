@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Box, Button, makeStyles, TextField } from "@material-ui/core";
+import { Box, Button, makeStyles, TextField, Typography } from "@material-ui/core";
 import { useFormik } from "formik";
 import emailjs from "emailjs-com";
 import * as Yup from "yup";
 import { AnimatePresence, motion } from "framer-motion";
+import Check from "../../assets/images/Check";
 
 const MessageBox = () => {
     const classes = useStyles();
@@ -28,12 +29,12 @@ const MessageBox = () => {
             message: "",
         },
         validationSchema: Yup.object({
-            // name: Yup.string().required("Name is required"),
-            // email: Yup.string().email("Email adress is not valid").required("Email adress is required"),
-            // message: Yup.string().required("message is required"),
+            name: Yup.string().required("Name is required"),
+            email: Yup.string().email("Email adress is not valid").required("Email adress is required"),
+            message: Yup.string().required("message is required"),
         }),
         onSubmit: (values) => {
-            // SendEmail(values);
+            SendEmail(values);
             setSendEmailSuccess(true);
         },
         validateOnChange: false,
@@ -41,14 +42,13 @@ const MessageBox = () => {
     });
 
     return (
-        <Box overflow="hidden" style={{ position: "relative", minHeight: "430px" }}>
+        <Box overflow="hidden" style={{ position: "relative", minHeight: "300px" }}>
             <AnimatePresence>
                 {!sendEmailSuccess && (
                     <motion.div
-                        style={{ position: "absolute", top: 0,height:"100%",width:"100%" }}
                         initial={{ y: 0 }}
-                        exit={{ y: [0,150,150,-600] }}
-                        transition={{duration:0.7,times:[0,0.45,0.7,1]}}
+                        exit={{ y: [0, 150, 150, -600] }}
+                        transition={{ duration: 0.7, times: [0, 0.45, 0.7, 1] }}
                     >
                         <form className={classes.form} onSubmit={formik.handleSubmit}>
                             <TextField
@@ -118,10 +118,29 @@ const MessageBox = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.9 }}
-                        style={{ position: "absolute", top: 0, height: "100%", width: "100%", backgroundColor: "red" }}
-                        onClick={()=>setSendEmailSuccess(false)}
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            height: "100%",
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
                     >
-                        success
+                        <Box m={2}>
+                            <Check width="150" />
+                        </Box>
+                        <Typography
+                            component={motion.h4}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{delay:1.5, duration:1}}
+                            variant="body2"
+                        >
+                            Your message has been successfully sent, i'll reply as soon as possible.
+                        </Typography>
                     </Box>
                 )}
             </AnimatePresence>

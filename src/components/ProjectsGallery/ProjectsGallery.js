@@ -10,14 +10,14 @@ const ProjectsGallery = () => {
     const classes = useStyles();
     const [selectedId, setSelectedId] = useState(null);
 
-    const galleryControls = useAnimation();
-    const [galleryRef, galleryInView] = useInView();
+    // const galleryControls = useAnimation();
+    // const [galleryRef, galleryInView] = useInView();
 
-    useEffect(() => {
-        if (galleryInView) {
-            galleryControls.start("visible");
-        }
-    }, [galleryControls, galleryInView]);
+    // useEffect(() => {
+    //     if (galleryInView) {
+    //         galleryControls.start("visible");
+    //     }
+    // }, [galleryControls, galleryInView]);
     const getSelected = (id) => projectList.find((elem) => elem.id === id);
     return (
         <AnimateSharedLayout type="crossfade">

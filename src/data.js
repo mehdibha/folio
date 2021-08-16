@@ -12,37 +12,28 @@ const projectList = [
         id: 1,
         title: "Tunflix",
         overview:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
+            "Tunflix is the tunisian Netflix.",
         technologies: ["React JS", "Node JS", "MongoDB"],
-        backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-        frontImage: "https://i.ibb.co/jhCZB43/logo-9cf7f5b7.png",
+        backgroundImage: "https://cdn.cbeditz.com/cbeditz/preview/black-red-gradient-background-wallpaper-74-11614352798fbqrv1wpuv.jpg",
+        frontImage: "https://i.ibb.co/L0F7mKX/tunflix.png",
     },
     {
         id: 2,
         title: "Code Hub",
         overview:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
-        technologies: ["React JS", "Node JS", "MongoDB"],
-        backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-        frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
+            "Code Hub is a hub for code lovers in Sousse, Tunisia.",
+        technologies: ["React JS"],
+        backgroundImage: "https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?size=626&ext=jpg&ga=GA1.2.2102900112.1628985600",
+        frontImage: "https://i.ibb.co/zNMJFTW/Webp-net-resizeimage.png",
     },
     {
         id: 3,
         title: "Burpees.io",
         overview:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
+            "Burpees.io is a solution for gyms. you can see plannings, take reservations and more.",
         technologies: ["React JS", "Node JS", "MongoDB"],
-        backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-        frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
-    },
-    {
-        id: 4,
-        title: "Burpees.io",
-        overview:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita incidunt ab recusandae minus sequi. Nostrum debitis aliquam et recusandae ducimus.",
-        technologies: ["React JS", "Node JS", "MongoDB"],
-        backgroundImage: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg",
-        frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
+        backgroundImage: "https://media.istockphoto.com/vectors/abstract-purple-vector-background-with-stripes-vector-id972475894?k=6&m=972475894&s=612x612&w=0&h=99AirGMOb64N2-1ZSMYRjEBp2USrAdzXUGzQMh5o6Js=",
+        frontImage: "https://themes-backend.material-ui.com/wp-content/uploads/2021/05/01_preview.jpg",
     },
 ];
 

@@ -2,7 +2,6 @@ import React from "react";
 import {
     makeStyles,
     Card as MuiCard,
-    CardActionArea,
     CardContent,
     CardMedia,
     Typography,
@@ -32,7 +31,7 @@ const titleVariants = {
     },
 };
 
-const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, onClick,...rest }) => {
+const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, onClick, ...rest }) => {
     const classes = useStyles();
     const controls = useAnimation();
     const handleMouseEnterControls = () => {
@@ -51,15 +50,9 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
             onMouseEnter={handleMouseEnterControls}
             onMouseLeave={handleMouseLeaveControls}
             onClick={() => onClick()}
-            transition={{type:"spring",stiffness:80,damping:20,delay:0.45*id}}
             {...rest}
         >
-            <CardActionArea
-                // component={motion.div}
-                // animate={controls}
-                // transition={{ delay: 0.05, type: "spring", stiffness: 180, damping: 20 }}
-                // variants={{ hover: { scale: 1.1 }, initial: { scale: 1 } }}
-            >
+            <div>
                 <CardMedia
                     component={motion.div}
                     layoutId={`img-container-${id}`}
@@ -95,7 +88,7 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
                         {technologies.join(" · ")}
                     </Typography>
                 </CardContent>
-            </CardActionArea>
+            </div>
             <motion.div
                 transition={{ delay: 0.15 }}
                 variants={hoverVariants}
@@ -131,20 +124,25 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
 const useStyles = makeStyles((theme) => ({
     root: {
         position: "relative",
-        height: 400,
+        height: 350,
         overflow: "hidden",
         cursor: "pointer",
+        backgroundColor:"rgba(255,255,255,0.95)"
     },
     media: {
         height: 200,
         width: "100%",
         display: "flex",
-        alignItems: "center",
         justifyContent: "center",
+        alignItems:"flex-start",
+        overflow:"hidden"
     },
     frontImage: {
+        marginTop:"20px",
         objectFit: "cover",
-        width: "100%",
+        objectPosition:"center top",
+        width: "90%",
+        boxShadow:theme.shadows[8]
     },
     title: {
         color: "rgb(30,30,30)",

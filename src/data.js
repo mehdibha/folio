@@ -45,4 +45,53 @@ const projectList = [
         frontImage: "https://ltheme.com/wp-content/uploads/2018/05/et-fashion-free-responsive-joomla-template.png",
     },
 ];
-export { AboutDesc, skillsList, projectList };
+
+const experienceList = [
+    {
+        id: 0,
+        company: "Code Hub",
+        job: "Full stack web developer",
+        overview:
+            "Code Hub is a space where code lovers are based in Sousse: some are freelancers, some started their startups, others work as remote developers. it's a place where we discuss about new technologies, about IT solutions, about anything in relation to Code, we also do workshops and offer a calm coworking space to the members.",
+        links: {
+            website:"https://www.codehub.tn",
+            facebook: "https://www.facebook.com/codehubtn/",
+            instagram: "https://www.instagram.com/codehub.coworking/",
+        },
+        duration:{
+            from: "June 2021",
+            to:"present"
+        }
+    },
+    {
+        id: 1,
+        company: "Dar Mounira",
+        job: "Founder",
+        overview:
+        "Dar Mounira is a guest house that i've found two years ago, it's the place to be at Sousse.",
+        links: {
+            facebook: "https://www.facebook.com/profile.php?id=100063463714107",
+            instagram: "https://www.instagram.com/darmounira.official",
+        },
+        duration:{
+            from: "December 2019",
+            to:"present"
+        }
+    },
+    {
+        id: 2,
+        company: "vapoter.tn",
+        job: "Front-end web developer",
+        overview:
+        "Vapoter.tn is an e-commerce website that sells anything in relation with vapes. unfortunately, Tunisia has a restricted system and it's now forbidden to sell vape products. so, the website closed.",
+        links: {
+            instagram: "https://www.instagram.com/vapoter.tn/",
+        },
+        duration:{
+            from: "September 2018",
+            to:"December 2018"
+        }
+    },
+];
+
+export { AboutDesc, skillsList, projectList, experienceList };

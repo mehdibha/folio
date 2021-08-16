@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, Container, Typography } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Divider from "../components/Divider";
 
-const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest }) => {
+const SectionContainer = ({ children, maxWidth, full, reverse, title, padding, ...rest }) => {
+    const classes = useStyles({ full, maxWidth, padding });
     const titleControls = useAnimation();
     const contentControls = useAnimation();
     const [titleRef, titleInView] = useInView();
     const [contentRef, contentInView] = useInView();
+    // const [contentStart, setContentStart]=useState(false)
 
     useEffect(() => {
         if (titleInView) {
@@ -18,11 +20,11 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest })
 
     useEffect(() => {
         if (contentInView) {
+            // setContentStart(true)
             contentControls.start("visible");
         }
     }, [contentControls, contentInView]);
 
-    const classes = useStyles({ full, maxWidth });
     return (
         <Container component="section" className={classes.container} {...rest}>
             {title && (
@@ -58,13 +60,11 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest })
                     type: "spring",
                     stiffness: 100,
                     damping: 20,
-                    when: "beforeChildren",
-                    duration: 0.5,
-                    staggerChildren: 0.3,
+                    when:"beforeChildren"
                 }}
                 variants={{
                     visible: { opacity: 1, y: 0 },
-                    hidden: { opacity: 0, y: -50 },
+                hidden: { opacity: 0, y: -50 },
                 }}
             >
                 {children}
@@ -76,7 +76,7 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, ...rest })
 const useStyles = makeStyles((theme) => ({
     container: {
         maxWidth: (props) => (props.maxWidth ? `${props.maxWidth}px` : theme.breakpoints.values["lg"]),
-        padding: "80px 0",
+        padding: props => props.padding ? `${props.padding}px 0` : "80px 0",
     },
     titleContainer: {
         paddingBottom: theme.spacing(8),

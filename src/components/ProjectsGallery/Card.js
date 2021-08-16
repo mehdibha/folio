@@ -1,5 +1,15 @@
 import React from "react";
-import { makeStyles, Card as MuiCard, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
+import {
+    makeStyles,
+    Card as MuiCard,
+    CardActionArea,
+    CardContent,
+    CardMedia,
+    Typography,
+    Icon,
+    Box,
+} from "@material-ui/core";
+import { ArrowDownward } from "@material-ui/icons";
 import { motion, useAnimation } from "framer-motion";
 
 const hoverVariants = {
@@ -13,16 +23,16 @@ const hoverVariants = {
 
 const titleVariants = {
     hover: {
-        y:0,
-        opacity:1
+        y: 0,
+        opacity: 1,
     },
     initial: {
-        opacity:0,
+        opacity: 0,
         y: 50,
     },
 };
 
-const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, ...rest }) => {
+const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, onClick,...rest }) => {
     const classes = useStyles();
     const controls = useAnimation();
     const handleMouseEnterControls = () => {
@@ -37,47 +47,82 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
             className={classes.root}
             elevation={10}
             component={motion.div}
+            layoutId={id}
             onMouseEnter={handleMouseEnterControls}
             onMouseLeave={handleMouseLeaveControls}
+            onClick={() => onClick()}
+            transition={{type:"spring",stiffness:80,damping:20,delay:0.45*id}}
             {...rest}
         >
-            <CardActionArea>
+            <CardActionArea
+                // component={motion.div}
+                // animate={controls}
+                // transition={{ delay: 0.05, type: "spring", stiffness: 180, damping: 20 }}
+                // variants={{ hover: { scale: 1.1 }, initial: { scale: 1 } }}
+            >
                 <CardMedia
                     component={motion.div}
-                    layoutId={`img-${id}`}
+                    layoutId={`img-container-${id}`}
                     className={classes.media}
                     image={backgroundImage}
                     title={title}
                 >
-                    <img className={classes.frontImage} src={frontImage} alt={title} />
+                    <motion.img
+                        layoutId={`front-img-${id}`}
+                        className={classes.frontImage}
+                        src={frontImage}
+                        alt={title}
+                    />
                 </CardMedia>
                 <CardContent>
-                    <Typography variant="h5" className={classes.title}>
+                    <Typography variant="h5" className={classes.title} component={motion.h5} layoutId={`title-${id}`}>
                         {title}
                     </Typography>
-                    <Typography variant="body2" className={classes.overview}>
+                    <Typography
+                        variant="body2"
+                        className={classes.overview}
+                        component={motion.h5}
+                        layoutId={`overview-${id}`}
+                    >
                         {overview}
                     </Typography>
-                    <Typography variant="body2" className={classes.technologies}>
+                    <Typography
+                        variant="body2"
+                        className={classes.technologies}
+                        component={motion.h5}
+                        layoutId={`technologies-${id}`}
+                    >
                         {technologies.join(" · ")}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <motion.div
-                // transition={{ delay: 0.1 * k }}
+                transition={{ delay: 0.15 }}
                 variants={hoverVariants}
                 animate={controls}
                 className={classes.hover}
             >
-                <Typography
-                    variant="h4"
-                    transition={{delay:0.2}}
-                    component={motion.h4}
+                <Box
+                    display="flex"
+                    alignItems="center"
+                    justofyContent="center"
+                    transition={{ delay: 0.3 }}
+                    component={motion.div}
                     variants={titleVariants}
                     animate={controls}
                 >
-                    View project
-                </Typography>
+                    <Box mr={1}>
+                        <Typography variant="h4">View project </Typography>
+                    </Box>
+                    <Icon
+                        component={motion.div}
+                        transition={{ delay: 0.3, repeat: Infinity, duration: 1, repeatType: "reverse" }}
+                        variants={{ hover: { y: 7 }, intial: { y: -2 } }}
+                        animate="hover"
+                    >
+                        <ArrowDownward />
+                    </Icon>
+                </Box>
             </motion.div>
         </MuiCard>
     );
@@ -121,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         height: "100%",
         width: "100%",
-        backgroundColor: "rgba(0,0,0,0.9)",
+        backgroundColor: "rgba(0,0,0,0.97)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

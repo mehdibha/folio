@@ -1,5 +1,59 @@
 import React, { useState } from "react";
-import { makeStyles, Tabs, Tab, Typography, Box } from "@material-ui/core";
+import { makeStyles, Tabs, Tab, Typography, Box, ButtonGroup, Link } from "@material-ui/core";
+import { Language, Facebook, Instagram } from "@material-ui/icons";
+import { experienceList } from "../../data";
+import IconBtn from "../../components/IconBtn";
+
+const StyledTabs = () => {
+    const classes = useStyles();
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    return (
+        <div className={classes.root}>
+            <Tabs
+                orientation="vertical"
+                value={value}
+                onChange={handleChange}
+                className={classes.tabs}
+                classes={{ indicator: classes.indicator }}
+                centered
+            >
+                {experienceList.map((elem) => (
+                    <Tab label={elem.company} />
+                ))}
+            </Tabs>
+            {experienceList.map((elem) => (
+                <TabPanel value={value} index={elem.id}>
+                    <Box mb={4}>
+                        <Typography variant="h5">
+                            {elem.job} at{" "}
+                            <Link href={elem.links.website || elem.links.facebook} color="primary" target="_blank">
+                                {elem.company}
+                            </Link>
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" fontSize="14">
+                            {`${elem.duration.from} - ${elem.duration.to}`}{" "}
+                        </Typography>
+                    </Box>
+                    <Box mb={4}>
+                        <Typography variant="body1" color="textPrimary">
+                            {elem.overview}
+                        </Typography>
+                    </Box>
+                    <Box>
+                        {elem.links.website && <IconBtn icon={Language} fontSize={28} m={1} href={elem.links.website} />}
+                        {elem.links.facebook && <IconBtn icon={Facebook} fontSize={28} m={1} href={elem.links.facebook} />}
+                        {elem.links.instagram && <IconBtn icon={Instagram} fontSize={28} m={1} href={elem.links.instagram} />}
+                    </Box>
+                </TabPanel>
+            ))}
+        </div>
+    );
+};
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -13,7 +67,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box p={3}>
+                <Box p={3} minHeight="350px">
                     <Typography>{children}</Typography>
                 </Box>
             )}
@@ -39,48 +93,5 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "red",
     },
 }));
-
-const StyledTabs = () => {
-    const classes = useStyles();
-    const [value, setValue] = useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
-    return (
-        <div className={classes.root}>
-            <Tabs
-                orientation="vertical"
-                value={value}
-                onChange={handleChange}
-                aria-label="Vertical tabs example"
-                className={classes.tabs}
-                classes={{ indicator: classes.indicator }}
-            >
-                <Tab label="Code Hub" />
-                <Tab label="Dar Mounira" />
-                <Tab label="Moustache vape store" />
-            </Tabs>
-            <TabPanel value={value} index={0}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci explicabo voluptates quos
-                deleniti atque eaque neque dolores nemo natus.
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae at perspiciatis molestiae, quos
-                perferendis dolor ad nostrum, cum nulla eos voluptatum odit dolores officia architecto suscipit commodi,
-                incidunt minus eveniet qui corrupti iste delectus. Sapiente quae at similique expedita nesciunt. Quo
-                possimus aut dolor corporis enim rem eius aliquam libero, voluptatem fugit asperiores sit, ex
-                consequatur delectus eaque dicta consectetur inventore repudiandae ut distinctio ratione aperiam.
-                Doloremque fugiat consequatur reiciendis amet a, commodi autem delectus incidunt doloribus adipisci
-                repellat architecto ut. Alias autem, quidem maiores voluptates quaerat eius laudantium? Magnam qui
-                provident itaque nesciunt quo nisi consequuntur, ratione a neque!
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-                test
-            </TabPanel>
-        </div>
-    );
-};
 
 export default StyledTabs;

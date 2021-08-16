@@ -1,32 +1,17 @@
 import React from "react";
 import { Link, makeStyles } from "@material-ui/core";
-import { motion } from "framer-motion"
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import EmailIcon from "@material-ui/icons/Email";
-
+import { motion } from "framer-motion";
+import { LinkedIn, Instagram, GitHub, Email } from "@material-ui/icons";
+import IconBtn from "../IconBtn";
 
 const Social = () => {
     const classes = useStyles();
     return (
-        <motion.div 
-            initial={{ y: '100vh'}}
-            animate={{ y: 0}}
-            transition={{ delay:4}}
-            className={classes.wrapper}>
-            <Link href="https://github.com/Mehdi-BHA" target="_blank">
-                <GitHubIcon className={classes.socialIcon} />
-            </Link>
-            <Link href="https://www.instagram.com/mehdibha/" target="_blank">
-                <InstagramIcon className={classes.socialIcon} />
-            </Link>
-            <Link href="https://www.linkedin.com/in/mehdi-ben-hadj-ali-6a7435131/" target="_blank">
-                <LinkedInIcon className={classes.socialIcon} />
-            </Link>
-            <Link href="mailto:mehdibenhadjali@gmail.com">
-                <EmailIcon className={classes.socialIcon} />
-            </Link>
+        <motion.div initial={{ y: "100vh" }} animate={{ y: 0 }} transition={{ delay: 4 }} className={classes.wrapper}>
+            <IconBtn icon={GitHub} m={1} href="https://github.com/Mehdi-BHA" />
+            <IconBtn icon={Instagram} m={1} href="https://www.instagram.com/mehdibha/" />
+            <IconBtn icon={LinkedIn} m={1} href="https://www.linkedin.com/in/mehdi-ben-hadj-ali-6a7435131/" />
+            <IconBtn icon={Email} m={1} href="mailto:mehdibenhadjali@gmail.com" />
         </motion.div>
     );
 };
@@ -39,14 +24,6 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         right: 0,
         padding: theme.spacing(2),
-    },
-    socialIcon: {
-        margin: theme.spacing(1, 0),
-        color: theme.palette.text.secondary,
-        fontSize: "30px",
-        "&:hover":{
-            color:theme.palette.text.primary
-        }
     },
 }));
 

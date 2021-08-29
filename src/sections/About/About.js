@@ -8,7 +8,7 @@ import { AboutDesc } from "../../data";
 const About = () => {
     const classes = useStyles();
     return (
-        <SectionContainer id="about" title="About" maxWidth="1000">
+        <SectionContainer id="about" title="About" maxWidth="md">
             <Grid container spacing={6} alignItems="center">
                 <Grid
                     item

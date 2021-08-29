@@ -50,7 +50,7 @@ const experienceList = [
             instagram: "https://www.instagram.com/codehub.coworking/",
         },
         duration:{
-            from: "June 2021",
+            from: "Jan 2021",
             to:"present"
         }
     },

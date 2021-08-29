@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { makeStyles, Container, Typography } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -40,7 +40,7 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, padding, .
                     }}
                     variants={{
                         visible: { opacity: 1, x: 0 },
-                        hidden: { opacity: 0, x: reverse ? 50 : -50 },
+                        hidden: { opacity: 0, x: reverse ? 0 : 0 },
                     }}
                     className={classes.titleContainer}
                 >
@@ -75,8 +75,8 @@ const SectionContainer = ({ children, maxWidth, full, reverse, title, padding, .
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        maxWidth: (props) => (props.maxWidth ? `${props.maxWidth}px` : theme.breakpoints.values["lg"]),
-        padding: props => props.padding ? `${props.padding}px 0` : "80px 0",
+        paddingTop: props => props.padding ? `${props.padding}px` : "80px",
+        paddingBottom: props => props.padding ? `${props.padding}px` : "80px",
     },
     titleContainer: {
         paddingBottom: theme.spacing(8),

@@ -12,11 +12,14 @@ const HomeContainer = ({ children, ...rest }) => {
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        minHeight: `calc( 100vh )`,
+        minHeight: "100vh",
         display:"flex",
         alignItems:"center",
         paddingTop: `calc( ${theme.spacing(4)}px + ${theme.navbarHeight} ) `,
-        paddingBottom: theme.spacing(4)
+        paddingBottom: theme.spacing(4),
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: theme.navbarHeight,
+          },
     },
 }));
 

@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Logo from "./Logo";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Menu from "./Menu";
+import { makeStyles, useTheme, useMediaQuery, AppBar, Toolbar, Hidden } from "@material-ui/core";
 import { motion } from "framer-motion";
+import Logo from "./Logo";
+import Menu from "./Menu";
+import MobileMenu from "./MobileMenu";
+import HamburgerIcon from "./HamburgerIcon";
 
 const Navbar = () => {
+    const isMobile = useMediaQuery('(max-width:700px)');
     const theme = useTheme();
     const [scroll, setScroll] = useState(false);
-    const classes = useStyles({ scroll });
+    const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
+    const classes = useStyles({ scroll, isMobile });
     const handleNav = () => setScroll(window.scrollY > 30);
     window.addEventListener("scroll", handleNav);
 
     const appbarVariants = {
-        initial: { height: 100, boxShadow: theme.shadows[0] },
+        initial: { height: isMobile ? 70 : 100, boxShadow: theme.shadows[0] },
         scrolled: { height: theme.navbarHeight, boxShadow: theme.shadows[10] },
     };
 
@@ -42,9 +44,21 @@ const Navbar = () => {
                     }}
                 >
                     <Logo className={classes.logo} />
-                    <Menu />
+                    <Hidden smDown>
+                        <Menu />
+                    </Hidden>
+                    <Hidden mdUp>
+                        <HamburgerIcon isOpen={mobileNavIsOpen} onClick={()=>setMobileNavIsOpen(!mobileNavIsOpen)} />
+                    </Hidden>
                 </Toolbar>
             </AppBar>
+            <Hidden mdUp>
+                <MobileMenu
+                    open={mobileNavIsOpen}
+                    onClose={() => setMobileNavIsOpen(false)}
+                    onOpen={() => setMobileNavIsOpen(true)}
+                />
+            </Hidden>
         </motion.div>
     );
 };
@@ -58,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbar: {
         justifyContent: "space-between",
-
+        padding:props => props.isMobile ? theme.spacing(0,2) : theme.spacing(0,6)
     },
 }));
 

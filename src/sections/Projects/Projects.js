@@ -4,7 +4,7 @@ import ProjectsGallery from "../../components/ProjectsGallery";
 
 const Projects = () => {
   return (
-    <SectionContainer id="projects" title="Projects" maxWidth="1000">
+    <SectionContainer id="projects" title="Projects" maxWidth="md">
       <ProjectsGallery />
     </SectionContainer>
   );

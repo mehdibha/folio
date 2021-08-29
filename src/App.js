@@ -20,7 +20,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ScrollToTop />
-        {isLoading ? <Loader /> :<Routes />}
+        {/* <Loader /> */}
+        <Routes />
       </ThemeProvider>
     </Router>
   );

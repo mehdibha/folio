@@ -1,7 +1,8 @@
 import React from "react";
-import HomeContainer from "../../containers/HomeContainer";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button, makeStyles } from "@material-ui/core";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"
+import HomeContainer from "../../containers/HomeContainer";
 import VideoLogo from "../../components/VideoLogo";
 
 const container = {
@@ -15,14 +16,21 @@ const container = {
 };
 
 const typo = {
-    hidden: { opacity: 0, x: -10 },
+    hidden: { opacity: 0, x: 0 },
     visible: {
         x: 0,
         opacity: 1,
     },
 };
 
+const AnimatedLink = (props) => (
+    <motion.div variants={props.variants}>
+        <Link {...props} />
+    </motion.div>
+);
+
 const Home = () => {
+    const classes = useStyles()
     return (
         <HomeContainer id="home">
             <motion.div variants={container} initial="hidden" animate="visible">
@@ -31,7 +39,7 @@ const Home = () => {
                     variants={typo}
                     color="primary"
                     variant="h5"
-                    style={{ marginBottom: "6px" }}
+                    style={{ marginBottom: "0px" }}
                 >
                     Hi there
                     <motion.div
@@ -43,15 +51,15 @@ const Home = () => {
                     </motion.div>
                     , i'm
                 </Typography>
-                <motion.p variants={typo}>
-                    <VideoLogo style={{ marginBottom: "0px" }} />
-                </motion.p>
+                <motion.div variants={typo}>
+                    <VideoLogo  />
+                </motion.div>
                 <Typography
                     component={motion.p}
                     variants={typo}
                     variant="h2"
                     color="secondary"
-                    style={{ marginBottom: "16px" }}
+                    className={classes.subTitle}
                 >
                     I make awesome websites.
                 </Typography>
@@ -73,12 +81,25 @@ const Home = () => {
                 >
                     Based in sousse, Tunisia.
                 </Typography>
-                <Button component={motion.p} variants={typo} variant="outlined" color="primary" size="large">
+                <Button component={AnimatedLink} to="contact" variants={typo} variant="outlined" color="primary" size="large">
                     Get in touch
                 </Button>
             </motion.div>
         </HomeContainer>
     );
 };
+
+const useStyles = makeStyles(theme=>({
+    subTitle: {
+        marginBottom: "16px",
+        fontSize: "75px",
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "45px",
+          },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "35px",
+          },
+    }
+}))
 
 export default Home;

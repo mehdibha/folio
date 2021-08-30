@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
     makeStyles,
     Drawer,
@@ -6,8 +6,6 @@ import {
     Button,
     Divider,
     ListItem,
-    ListItemIcon,
-    ListItemText,
     Link as MuiLink,
 } from "@material-ui/core";
 import { Link } from "react-scroll";
@@ -21,7 +19,7 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
         onKeyDown: onClose,
         spy: true,
         smooth: true,
-        offset: -10,
+        offset: 0,
         duration: 500,
         className: classes.listItem,
         activeClass : classes.active

@@ -10,22 +10,16 @@ const ProjectsGallery = () => {
     const classes = useStyles();
     const [selectedId, setSelectedId] = useState(null);
 
-    // const galleryControls = useAnimation();
-    // const [galleryRef, galleryInView] = useInView();
-
-    // useEffect(() => {
-    //     if (galleryInView) {
-    //         galleryControls.start("visible");
-    //     }
-    // }, [galleryControls, galleryInView]);
     const getSelected = (id) => projectList.find((elem) => elem.id === id);
     return (
         <AnimateSharedLayout type="crossfade">
-            <Grid container spacing={7} className={classes.galleryContainer}>
+            <Grid container  spacing={4} className={classes.galleryContainer}>
                 {projectList.map((item, k) => (
                     <Grid
                         item
-                        xs={4}
+                        xs={12}
+                        sm={6}
+                        md={4}
                         key={item.id}
                         classes={{ item: classes.item }}
                         >
@@ -64,6 +58,8 @@ const ProjectsGallery = () => {
 const useStyles = makeStyles((theme) => ({
     galleryContainer: {
         overflow: "visible",
+        width:"100%",
+        margin:"0 auto"
     },
     item: {
         overflow: "visible",

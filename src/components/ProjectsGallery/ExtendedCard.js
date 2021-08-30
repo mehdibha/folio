@@ -54,6 +54,7 @@ const ExtendedCard = ({ id, title, backgroundImage, frontImage, overview, techno
                                 className={classes.technologies}
                                 component={motion.h5}
                                 layoutId={`technologies-${id}`}
+                                color="primary"
                             >
                                 {technologies.join(" · ")}
                             </Typography>
@@ -91,8 +92,8 @@ const useStyles = makeStyles((theme) => ({
         right: 0,
         top: 0,
         bottom: 0,
-        backgroundColor: "rgba(0,0,0,0.1)",
-        backdropFilter: "blur(1px)",
+        backgroundColor: "rgba(0,0,0,0.22)",
+        backdropFilter: "blur(2px)",
         opacity: 0,
     },
     root: {
@@ -102,10 +103,13 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         margin: "0 auto",
         marginTop: `calc( ${theme.navbarHeight} + 20px )`,
-        width: "600px",
+        width: "90%",
+        maxWidth: "600px",
         height: "600px",
+        maxHeight:"80%",
         zIndex: "10000",
         boxShadow: theme.shadows[10],
+        backgroundColor: theme.backgroundSecondary
     },
     media: {
         height: "300px",
@@ -116,26 +120,22 @@ const useStyles = makeStyles((theme) => ({
         overflow: "hidden",
     },
     frontImage: {
+        marginTop: "20px",
         objectFit: "cover",
-        width: "90%",
-        height: "100%",
         objectPosition: "center top",
+        width: "90%",
         boxShadow: theme.shadows[8],
-        marginTop: "10px",
     },
     title: {
-        color: "rgb(30,30,30)",
         fontSize: "20px",
         fontWeight: 700,
         marginBottom: theme.spacing(1),
     },
     overview: {
-        color: "rgb(30,30,30)",
         fontSize: "14px",
         marginBottom: theme.spacing(1),
     },
     technologies: {
-        color: "rgb(120,120,120)",
         fontSize: "14px",
     },
     closeBtn: {

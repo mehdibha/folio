@@ -29,9 +29,9 @@ const MessageBox = () => {
             message: "",
         },
         validationSchema: Yup.object({
-            name: Yup.string().required("Name is required"),
-            email: Yup.string().email("Email adress is not valid").required("Email adress is required"),
-            message: Yup.string().required("message is required"),
+            // name: Yup.string().required("Name is required"),
+            // email: Yup.string().email("Email adress is not valid").required("Email adress is required"),
+            // message: Yup.string().required("message is required"),
         }),
         onSubmit: (values) => {
             SendEmail(values);
@@ -45,11 +45,6 @@ const MessageBox = () => {
         <Box overflow="hidden" style={{ position: "relative", minHeight: "300px" }}>
             <AnimatePresence>
                 {!sendEmailSuccess && (
-                    <motion.div
-                        initial={{ y: 0 }}
-                        exit={{ y: [0, 150, 150, -600] }}
-                        transition={{ duration: 0.7, times: [0, 0.45, 0.7, 1] }}
-                    >
                         <form className={classes.form} onSubmit={formik.handleSubmit}>
                             <TextField
                                 error={Boolean(formik.touched.name && formik.errors.name)}
@@ -108,7 +103,6 @@ const MessageBox = () => {
                                 </Button>
                             </Box>
                         </form>
-                    </motion.div>
                 )}
             </AnimatePresence>
             <AnimatePresence>

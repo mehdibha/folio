@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { makeStyles, Tabs, Tab, Typography, Box, ButtonGroup, Link } from "@material-ui/core";
+import { makeStyles, Tabs, Tab, Typography, Box, ButtonGroup, Link, useTheme, useMediaQuery } from "@material-ui/core";
 import { Language, Facebook, Instagram } from "@material-ui/icons";
 import { experienceList } from "../../data";
 import IconBtn from "../../components/IconBtn";
 
 const StyledTabs = () => {
-    const classes = useStyles();
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const classes = useStyles({isMobile});
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -15,7 +17,7 @@ const StyledTabs = () => {
     return (
         <div className={classes.root}>
             <Tabs
-                orientation="vertical"
+                orientation={isMobile ? "horizontal" : "vertical"}
                 value={value}
                 onChange={handleChange}
                 className={classes.tabs}
@@ -30,7 +32,7 @@ const StyledTabs = () => {
                 <TabPanel value={value} index={elem.id}>
                     <Box mb={4}>
                         <Typography variant="h5">
-                            {elem.job} at{" "}
+                            {elem.job} @{" "}
                             <Link href={elem.links.website || elem.links.facebook} color="primary" target="_blank">
                                 {elem.company}
                             </Link>
@@ -45,9 +47,15 @@ const StyledTabs = () => {
                         </Typography>
                     </Box>
                     <Box>
-                        {elem.links.website && <IconBtn icon={Language} fontSize={28} m={1} href={elem.links.website} />}
-                        {elem.links.facebook && <IconBtn icon={Facebook} fontSize={28} m={1} href={elem.links.facebook} />}
-                        {elem.links.instagram && <IconBtn icon={Instagram} fontSize={28} m={1} href={elem.links.instagram} />}
+                        {elem.links.website && (
+                            <IconBtn icon={Language} fontSize={28} m={1} href={elem.links.website} />
+                        )}
+                        {elem.links.facebook && (
+                            <IconBtn icon={Facebook} fontSize={28} m={1} href={elem.links.facebook} />
+                        )}
+                        {elem.links.instagram && (
+                            <IconBtn icon={Instagram} fontSize={28} m={1} href={elem.links.instagram} />
+                        )}
                     </Box>
                 </TabPanel>
             ))}
@@ -57,17 +65,18 @@ const StyledTabs = () => {
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     return (
         <div
             role="tabpanel"
             hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            aria-labelledby={`vertical-tab-${index}`}
+            id={`tabpanel-${index}`}
+            aria-labelledby={`tab-${index}`}
             {...other}
         >
             {value === index && (
-                <Box p={3} minHeight="350px">
+                <Box p={3} minHeight={isMobile ? 0 : "350px"}>
                     <Typography>{children}</Typography>
                 </Box>
             )}
@@ -82,12 +91,14 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         width: "100%",
         height: "100%",
+        flexDirection: props => props.isMobile ? 'column' : "row"
     },
     tabs: {
-        borderRight: `1px solid ${theme.palette.secondary.main}`,
-        width: "200px",
-        maxWidth: "200px",
-        minWidth: "200px",
+        borderRight: props => props.isMobile ? 'none' : `1px solid ${theme.palette.secondary.main}`,
+        borderBottom: props => !props.isMobile ? 'none' : `1px solid ${theme.palette.secondary.main}`,
+        width: props => props.isMobile ? "inherit" : "200px",
+        maxWidth: props => props.isMobile ? "inherit" : "200px",
+        minWidth: props => props.isMobile ? "inherit" : "200px",
     },
     indicator: {
         backgroundColor: "red",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, makeStyles, Box } from "@material-ui/core";
+import { useTheme, Grid, Typography, makeStyles, Box, useMediaQuery } from "@material-ui/core";
 import SectionContainer from "../../containers/SectionContainer";
 import Skills from "../../components/Skills";
 import Avatar from "../../components/Avatar";
@@ -7,9 +7,18 @@ import { AboutDesc } from "../../data";
 
 const About = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     return (
         <SectionContainer id="about" title="About" maxWidth="md">
-            <Grid container spacing={6} alignItems="center">
+            <Grid container spacing={0} alignItems="center" style={{ width: "100%" }}>
+                {isMobile && (
+                    <Grid item xs={12} md={5} className={classes.gridItemWrapper}>
+                        <Box mb={6}>
+                            <Avatar />
+                        </Box>
+                    </Grid>
+                )}
                 <Grid
                     item
                     xs={12}
@@ -22,9 +31,11 @@ const About = () => {
                     </Box>
                     <Skills />
                 </Grid>
-                <Grid item xs={12} md={5} className={classes.gridItemWrapper}>
-                    <Avatar />
-                </Grid>
+                {!isMobile && (
+                    <Grid item xs={12} md={5} className={classes.gridItemWrapper}>
+                        <Avatar />
+                    </Grid>
+                )}
             </Grid>
         </SectionContainer>
     );

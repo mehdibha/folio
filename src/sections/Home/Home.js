@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Button, makeStyles } from "@material-ui/core";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll"
+import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
 import VideoLogo from "../../components/VideoLogo";
 
@@ -25,12 +25,12 @@ const typo = {
 
 const AnimatedLink = (props) => (
     <motion.div variants={props.variants}>
-        <Link {...props} />
+        <Link spy smooth offset={0} duration={500} {...props} />
     </motion.div>
 );
 
 const Home = () => {
-    const classes = useStyles()
+    const classes = useStyles();
     return (
         <HomeContainer id="home">
             <motion.div variants={container} initial="hidden" animate="visible">
@@ -52,7 +52,7 @@ const Home = () => {
                     , i'm
                 </Typography>
                 <motion.div variants={typo}>
-                    <VideoLogo  />
+                    <VideoLogo />
                 </motion.div>
                 <Typography
                     component={motion.p}
@@ -81,7 +81,14 @@ const Home = () => {
                 >
                     Based in sousse, Tunisia.
                 </Typography>
-                <Button component={AnimatedLink} to="contact" variants={typo} variant="outlined" color="primary" size="large">
+                <Button
+                    component={AnimatedLink}
+                    to="contact"
+                    variants={typo}
+                    variant="outlined"
+                    color="primary"
+                    size="large"
+                >
                     Get in touch
                 </Button>
             </motion.div>
@@ -89,17 +96,17 @@ const Home = () => {
     );
 };
 
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles((theme) => ({
     subTitle: {
         marginBottom: "16px",
         fontSize: "75px",
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "45px",
-          },
-        [theme.breakpoints.down('xs')]: {
+        },
+        [theme.breakpoints.down("xs")]: {
             fontSize: "35px",
-          },
-    }
-}))
+        },
+    },
+}));
 
 export default Home;

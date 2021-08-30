@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core";
 
 const Background3d = () => {
-    const classes = useStyles();
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+    const isMobileSm = useMediaQuery(theme.breakpoints.down('xs'))
+    const classes = useStyles({isMobile,isMobileSm});
     const [delay, setDelay] = useState(true);
     useEffect(() => {
         setTimeout(() => {
@@ -27,10 +31,10 @@ const Background3d = () => {
                     <div className={classes.container}>
                         <iframe
                             title="background-3d"
-                            src="https://my.spline.design/portfoliomehdibha-521cfe934b9eba378566127b0d041072/"
+                            src="https://my.spline.design/awesomefolio-0c39efc3de701ba97be395cc128e4e2f/"
                             frameborder="0"
-                            width="100%"
                             height="100%"
+                            className={classes.iframe}
                         ></iframe>
                         <div className={classes.hideLogo} />
                     </div>
@@ -45,12 +49,14 @@ const useStyles = makeStyles((theme) => ({
         position: "relative",
         height: "100vh",
         width: "100%",
+        overflow:"hidden"
     },
     iframe: {
         position: "absolute",
         top: 0,
-        right: 0,
-        width: "100%",
+        right: props => props.isMobileSm ? "-220px" : 0,
+        width:"100%",
+        maxWidth:props => props.isMobile ? "400px" : "600px",
     },
     wrapper: {
         position: "absolute",

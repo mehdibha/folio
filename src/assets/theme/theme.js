@@ -32,6 +32,7 @@ const theme = createTheme({
             disabledBackground: "rgb(150,150,150)",
         },
     },
+    backgroundSecondary:"rgb(43,43,43)",
     navbarHeight: "70px",
     mobileNavbarHeight: "55px",
     typography,

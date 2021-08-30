@@ -7,6 +7,7 @@ import {
     Typography,
     Icon,
     Box,
+    rgbToHex,
 } from "@material-ui/core";
 import { ArrowDownward } from "@material-ui/icons";
 import { motion, useAnimation } from "framer-motion";
@@ -67,7 +68,7 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
                         alt={title}
                     />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={{display:"flex", flexDirection:'column', height:"100%", justifyContent:"space-between"}}>
                     <Typography variant="h5" className={classes.title} component={motion.h5} layoutId={`title-${id}`}>
                         {title}
                     </Typography>
@@ -76,6 +77,7 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
                         className={classes.overview}
                         component={motion.h5}
                         layoutId={`overview-${id}`}
+                        style={{flexGrow:2}}
                     >
                         {overview}
                     </Typography>
@@ -84,6 +86,7 @@ const Card = ({ id, title, backgroundImage, frontImage, overview, technologies, 
                         className={classes.technologies}
                         component={motion.h5}
                         layoutId={`technologies-${id}`}
+                        color="primary"
                     >
                         {technologies.join(" · ")}
                     </Typography>
@@ -127,36 +130,34 @@ const useStyles = makeStyles((theme) => ({
         height: 350,
         overflow: "hidden",
         cursor: "pointer",
-        backgroundColor:"rgba(255,255,255,0.95)"
+        backgroundColor: theme.backgroundSecondary,
     },
+
     media: {
         height: 200,
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        alignItems:"flex-start",
-        overflow:"hidden"
+        alignItems: "flex-start",
+        overflow: "hidden",
     },
     frontImage: {
-        marginTop:"20px",
+        marginTop: "20px",
         objectFit: "cover",
-        objectPosition:"center top",
+        objectPosition: "center top",
         width: "90%",
-        boxShadow:theme.shadows[8]
+        boxShadow: theme.shadows[8],
     },
     title: {
-        color: "rgb(30,30,30)",
         fontSize: "20px",
         fontWeight: 700,
         marginBottom: theme.spacing(1),
     },
     overview: {
-        color: "rgb(30,30,30)",
         fontSize: "14px",
         marginBottom: theme.spacing(1),
     },
     technologies: {
-        color: "rgb(120,120,120)",
         fontSize: "14px",
     },
     hover: {

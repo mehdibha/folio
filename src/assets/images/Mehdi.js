@@ -92,7 +92,7 @@ const Mehdi = (props) => {
                     <clipPath id="p">
                         <path d="M308 80.1l17.9-51h2.7l18 51h-3.1l-5.2-15h-22.1l-5.3 15H308zm8.9-17.6h20.7L327.2 33l-10.3 29.5z" />
                     </clipPath>
-                    <g fill="none" stroke="#FFF" strokeWidth={7} strokeMiterlimit={10} strokeDasharray={200}>
+                    <g fill="none" stroke="#fff" strokeWidth={7} strokeMiterlimit={10} strokeDasharray={200}>
                         <motion.path
                             {...pathProps}
                             clipPath="url(#m)"

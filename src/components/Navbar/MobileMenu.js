@@ -1,14 +1,7 @@
 import React from "react";
-import {
-    makeStyles,
-    Drawer,
-    List,
-    Button,
-    Divider,
-    ListItem,
-    Link as MuiLink,
-} from "@material-ui/core";
+import { makeStyles, Drawer, List, Button, Divider, ListItem, Link as MuiLink } from "@material-ui/core";
 import { Link } from "react-scroll";
+import DarkModeSwitcher from "../DarkModeSwitcher";
 
 const MobileMenu = ({ open, onClose, onOpen }) => {
     const classes = useStyles();
@@ -22,7 +15,7 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
         offset: 0,
         duration: 500,
         className: classes.listItem,
-        activeClass : classes.active
+        activeClass: classes.active,
     };
 
     return (
@@ -53,6 +46,9 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
                             Resume
                         </Button>
                     </ListItem>
+                    <ListItem className={classes.btnContainer}>
+                        <DarkModeSwitcher />
+                    </ListItem>
                     <Divider />
                 </List>
             </div>
@@ -82,11 +78,11 @@ const useStyles = makeStyles((theme) => ({
     btnContainer: {
         display: "flex",
         justifyContent: "center",
-        marginTop:theme.spacing(1)
+        marginTop: theme.spacing(1),
     },
-    active:{
-        backgroundColor: theme.palette.primary.main
-    }
+    active: {
+        backgroundColor: theme.palette.primary.main,
+    },
 }));
 
 export default MobileMenu;

@@ -10,7 +10,7 @@ const container = {
         opacity: 0,
         scale: 0,
         transition: {
-            delay: 4.3,
+            delay: 3.4,
             duration: 0.3,
         },
     },
@@ -24,9 +24,9 @@ const svg = {
         opacity: 0.5,
         transition: {
             when: "afterChildren",
-            duration: 0.5,
+            duration: 0.1,
             delay: 3,
-            staggerChildren: 0.3,
+            staggerChildren: 0.2,
         },
     },
 };

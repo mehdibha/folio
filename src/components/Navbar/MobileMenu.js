@@ -2,9 +2,12 @@ import React from "react";
 import { makeStyles, Drawer, List, Button, Divider, ListItem, Link as MuiLink } from "@material-ui/core";
 import { Link } from "react-scroll";
 import DarkModeSwitcher from "../DarkModeSwitcher";
+import LangSelector from "./LangSelector";
+import { useTranslation } from "react-i18next";
 
 const MobileMenu = ({ open, onClose, onOpen }) => {
     const classes = useStyles();
+    const { t } = useTranslation();
     const listItemProps = {
         button: true,
         component: Link,
@@ -20,19 +23,19 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
 
     return (
         <Drawer anchor="left" open={open} onClose={onClose} classes={{ paper: classes.drawer }}>
-            <div className={classes.list} role="presentation" onClick={onClose} onKeyDown={onClose}>
+            <div className={classes.list} role="presentation">
                 <List className={classes.fullList}>
                     <ListItem {...listItemProps} to="about">
-                        About
+                        {t('menu_about')}
                     </ListItem>
                     <ListItem {...listItemProps} to="experience">
-                        Experience
+                        {t('menu_experience')}
                     </ListItem>
                     <ListItem {...listItemProps} to="projects">
-                        Projects
+                        {t('menu_projects')}
                     </ListItem>
                     <ListItem {...listItemProps} to="contact">
-                        Contact
+                        {t('menu_contact')}
                     </ListItem>
                     <ListItem className={classes.btnContainer}>
                         <Button
@@ -42,12 +45,15 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
                             variant="outlined"
                             color="primary"
                             underline="none"
-                        >
-                            Resume
+                            >
+                            {t('menu_resume')}
                         </Button>
                     </ListItem>
                     <ListItem className={classes.btnContainer}>
-                        <DarkModeSwitcher />
+                        <LangSelector onClose={onClose} />
+                    </ListItem>
+                    <ListItem className={classes.btnContainer}>
+                        <DarkModeSwitcher onClose={onClose} />
                     </ListItem>
                     <Divider />
                 </List>

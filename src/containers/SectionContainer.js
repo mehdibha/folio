@@ -86,6 +86,8 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         margin: theme.spacing(0, 4),
+        textTransform:"uppercase",
+        whiteSpace: "nowrap"
     },
     childrenContainer: {
         minHeight: "100%",

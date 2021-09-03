@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Switch, FormControlLabel } from "@material-ui/core";
-import themeContext from "../../contexts/themeContext";
+import ThemeContext from "../../contexts/themeContext";
+import { useTranslation } from "react-i18next";
 
-const DarkModeSwitcher = () => {
-    const { isDarkMode, setIsDarkMode } = useContext(themeContext);
+const DarkModeSwitcher = ({ onClose }) => {
+    const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
+    const { t } = useTranslation()
     return (
         <FormControlLabel
             control={
@@ -11,10 +13,15 @@ const DarkModeSwitcher = () => {
                     checked={isDarkMode}
                     name="checkedDarkMode"
                     color="primary"
-                    onChange={() => setIsDarkMode(!isDarkMode)}
+                    onChange={() => {
+                        if (onClose) {
+                            onClose();
+                        }
+                        setIsDarkMode(!isDarkMode);
+                    }}
                 />
             }
-            label="Dark Mode"
+            label={t('dark_mode')}
         />
     );
 };

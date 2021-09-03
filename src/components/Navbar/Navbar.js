@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles, useTheme, useMediaQuery, AppBar, Toolbar, Hidden } from "@material-ui/core";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Logo from "./Logo";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import HamburgerIcon from "./HamburgerIcon";
+import loaderContext from "../../contexts/loaderContext";
 
 const Navbar = () => {
-    const isMobile = useMediaQuery('(max-width:700px)');
+    const isMobile = useMediaQuery("(max-width:700px)");
+    const { isLoading } = useContext(loaderContext);
+    const controls = useAnimation();
     const theme = useTheme();
     const [scroll, setScroll] = useState(false);
     const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
@@ -20,16 +23,25 @@ const Navbar = () => {
         scrolled: { height: theme.navbarHeight, boxShadow: theme.shadows[10] },
     };
 
+    useEffect(() => {
+        if (!isLoading) {
+            controls.start({
+                y: 0,
+                transition: {
+                    delay: 0.05,
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                },
+            });
+        } else {
+            controls.start({ y: -100 });
+        }
+    }, [isLoading, controls]);
+
     return (
         <motion.div
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{
-                delay: 0.2,
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-            }}
+            animate={controls}
         >
             <AppBar position="fixed" elevation={0} className={classes.navbar} component="nav">
                 <Toolbar
@@ -48,7 +60,7 @@ const Navbar = () => {
                         <Menu />
                     </Hidden>
                     <Hidden mdUp>
-                        <HamburgerIcon isOpen={mobileNavIsOpen} onClick={()=>setMobileNavIsOpen(!mobileNavIsOpen)} />
+                        <HamburgerIcon isOpen={mobileNavIsOpen} onClick={() => setMobileNavIsOpen(!mobileNavIsOpen)} />
                     </Hidden>
                 </Toolbar>
             </AppBar>
@@ -72,7 +84,8 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbar: {
         justifyContent: "space-between",
-        padding:props => props.isMobile ? theme.spacing(0,2) : theme.spacing(0,6)
+        alignItems:"center",
+        padding: (props) => (props.isMobile ? theme.spacing(0, 2) : theme.spacing(0, 6)),
     },
 }));
 

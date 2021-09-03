@@ -50,7 +50,7 @@ const ExtendedCard = ({ id, title, backgroundImage, frontImage, overview, techno
                                 {overview}
                             </Typography>
                             <Typography
-                                variant="body2"
+                                variant="body1"
                                 className={classes.technologies}
                                 component={motion.h5}
                                 layoutId={`technologies-${id}`}
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight:"80%",
         zIndex: "10000",
         boxShadow: theme.shadows[10],
-        backgroundColor: theme.backgroundSecondary
+        backgroundColor: theme.palette.secondary.main,
     },
     media: {
         height: "300px",
@@ -130,13 +130,17 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "20px",
         fontWeight: 700,
         marginBottom: theme.spacing(1),
+        color:theme.palette.secondary.contrastText
     },
     overview: {
         fontSize: "14px",
         marginBottom: theme.spacing(1),
+        color:theme.palette.secondary.contrastText,
+        
     },
     technologies: {
-        fontSize: "14px",
+        fontSize: "15px",
+        color:"rgb(10,10,10)",
     },
     closeBtn: {
         position: "absolute",

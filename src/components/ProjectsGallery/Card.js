@@ -7,7 +7,6 @@ import {
     Typography,
     Icon,
     Box,
-    rgbToHex,
 } from "@material-ui/core";
 import { ArrowDownward } from "@material-ui/icons";
 import { motion, useAnimation } from "framer-motion";
@@ -130,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
         height: 350,
         overflow: "hidden",
         cursor: "pointer",
-        backgroundColor: theme.backgroundSecondary,
+        backgroundColor: theme.palette.secondary.main,
     },
 
     media: {
@@ -152,13 +151,16 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "20px",
         fontWeight: 700,
         marginBottom: theme.spacing(1),
+        color:theme.palette.secondary.contrastText
     },
     overview: {
         fontSize: "14px",
         marginBottom: theme.spacing(1),
+        color:theme.palette.secondary.contrastText
     },
     technologies: {
-        fontSize: "14px",
+        fontSize: "15px",
+        color:"rgb(10,10,10)"
     },
     hover: {
         position: "absolute",

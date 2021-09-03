@@ -11,12 +11,9 @@ function LinearProgressWithLabel({title,value}) {
             <Typography variant="body2" display="inline" component="span" className={classes.skillTitle}>
                 {title}
             </Typography>
-            <Box display="flex" alignItems="center">
+            <Box display="flex" alignItems="center" mb={2}>
                 <Box width="100%" mr={1}>
                     <ProgressBar value={value}/>
-                </Box>
-                <Box minWidth={35}>
-                    <Typography variant="body2" color="textSecondary">{`${Math.round(value)}%`}</Typography>
                 </Box>
             </Box>
         </div>
@@ -27,8 +24,8 @@ const Skills = () => {
     const classes = useStyles();
     return (
         <div className={classes.container}>
-            {skillsList.map((elem) => (
-                <LinearProgressWithLabel title={elem.title} value={elem.value} />
+            {skillsList.map((elem,k) => (
+                <LinearProgressWithLabel title={elem.title} value={elem.value} key={k} />
             ))}
         </div>
     );

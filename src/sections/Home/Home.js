@@ -1,47 +1,42 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Typography, Button, makeStyles } from "@material-ui/core";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
 import VideoLogo from "../../components/VideoLogo";
-
-const container = {
-    hidden: {},
-    visible: {
-        transition: {
-            delayChildren: 1.3,
-            staggerChildren: 0.5,
-        },
-    },
-};
-
-const typo = {
-    hidden: { opacity: 0, x: 0 },
-    visible: {
-        x: 0,
-        opacity: 1,
-    },
-};
-
-const AnimatedLink = (props) => (
-    <motion.div variants={props.variants}>
-        <Link spy smooth offset={0} duration={500} {...props} />
-    </motion.div>
-);
+import { useTranslation } from "react-i18next";
+import loaderContext from "../../contexts/loaderContext";
 
 const Home = () => {
     const classes = useStyles();
+    const { isLoading } = useContext(loaderContext);
+    const controls = useAnimation();
+    const { t } = useTranslation();
+
+    useEffect(() => {
+        if (!isLoading) {
+            controls.start((i) => ({
+                y: 0,
+                opacity: 1,
+                transition: { delay: i * 0.1 + 1.2 },
+            }));
+        } else {
+            controls.start({ opacity: 0, y: 5 });
+        }
+    }, [isLoading, controls]);
+
     return (
         <HomeContainer id="home">
-            <motion.div variants={container} initial="hidden" animate="visible">
+            <div>
                 <Typography
-                    component={motion.p}
-                    variants={typo}
+                    component={motion.div}
+                    animate={controls}
+                    custom={0}
                     color="primary"
                     variant="h5"
                     style={{ marginBottom: "0px" }}
                 >
-                    Hi there
+                    {t("home_welcome")}
                     <motion.div
                         style={{ display: "inline-block" }}
                         animate={{ rotate: [50, 90, 50] }}
@@ -49,49 +44,57 @@ const Home = () => {
                     >
                         👋
                     </motion.div>
-                    , i'm
+                    , {t("home_i")}
                 </Typography>
-                <motion.div variants={typo}>
+                <motion.div animate={controls} custom={1}>
                     <VideoLogo />
                 </motion.div>
                 <Typography
                     component={motion.p}
-                    variants={typo}
+                    animate={controls}
+                    custom={2}
                     variant="h2"
                     color="secondary"
                     className={classes.subTitle}
                 >
-                    I make awesome websites.
+                    {t("home_what_i_do")}
                 </Typography>
                 <Typography
                     component={motion.p}
-                    variants={typo}
+                    animate={controls}
+                    custom={3}
                     variant="body2"
                     color="initial"
                     style={{ marginBottom: "0" }}
                 >
-                    Full stack web developer, UI/UX designer, freelancer, Github addict.
+                    {t("home_job")}
                 </Typography>
                 <Typography
                     component={motion.p}
-                    variants={typo}
+                    animate={controls}
+                    custom={4}
                     variant="body1"
                     color="initial"
                     style={{ marginBottom: "30px" }}
                 >
-                    Based in sousse, Tunisia.
+                    {t("home_location")}
                 </Typography>
-                <Button
-                    component={AnimatedLink}
-                    to="contact"
-                    variants={typo}
-                    variant="outlined"
-                    color="primary"
-                    size="large"
-                >
-                    Get in touch
-                </Button>
-            </motion.div>
+                <motion.div animate={controls} custom={5}>
+                    <Button
+                        component={Link}
+                        spy
+                        smooth
+                        offset={0}
+                        duration={500}
+                        to="contact"
+                        variant="outlined"
+                        color="primary"
+                        size="large"
+                    >
+                        {t("home_contact_btn")}
+                    </Button>
+                </motion.div>
+            </div>
         </HomeContainer>
     );
 };

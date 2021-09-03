@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { makeStyles, Tabs, Tab, Typography, Box, ButtonGroup, Link, useTheme, useMediaQuery } from "@material-ui/core";
+import { makeStyles, Tabs, Tab, Typography, Box, Link, useTheme, useMediaQuery } from "@material-ui/core";
 import { Language, Facebook, Instagram } from "@material-ui/icons";
 import { experienceList } from "../../data";
 import IconBtn from "../../components/IconBtn";
+import { useTranslation } from "react-i18next";
 
 const StyledTabs = () => {
     const theme = useTheme();
+    const { t } = useTranslation();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-    const classes = useStyles({isMobile});
+    const classes = useStyles({ isMobile });
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -25,25 +27,29 @@ const StyledTabs = () => {
                 centered
             >
                 {experienceList.map((elem) => (
-                    <Tab label={elem.company} />
+                    <Tab label={elem.company} key={elem.id} />
                 ))}
             </Tabs>
             {experienceList.map((elem) => (
-                <TabPanel value={value} index={elem.id}>
+                <TabPanel value={value} index={elem.id} key={elem.id}>
                     <Box mb={4}>
                         <Typography variant="h5">
-                            {elem.job} @{" "}
-                            <Link href={elem.links.website || elem.links.facebook} color="primary" target="_blank">
+                            {t(`experience_${elem.id}_job`)} @{" "}
+                            <Link
+                                href={elem.links.website || elem.links.facebook || elem.links.instagram}
+                                color="primary"
+                                target="_blank"
+                            >
                                 {elem.company}
                             </Link>
                         </Typography>
                         <Typography variant="body2" color="textSecondary" fontSize="14">
-                            {`${elem.duration.from} - ${elem.duration.to}`}{" "}
+                            {t(`experience_${elem.id}_duration`)}
                         </Typography>
                     </Box>
                     <Box mb={4}>
                         <Typography variant="body1" color="textPrimary">
-                            {elem.overview}
+                            {t(`experience_${elem.id}_overview`)}
                         </Typography>
                     </Box>
                     <Box>
@@ -77,7 +83,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box p={3} minHeight={isMobile ? 0 : "350px"}>
-                    <Typography>{children}</Typography>
+                    <div>{children}</div>
                 </Box>
             )}
         </div>
@@ -91,14 +97,14 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         width: "100%",
         height: "100%",
-        flexDirection: props => props.isMobile ? 'column' : "row"
+        flexDirection: (props) => (props.isMobile ? "column" : "row"),
     },
     tabs: {
-        borderRight: props => props.isMobile ? 'none' : `1px solid ${theme.palette.secondary.main}`,
-        borderBottom: props => !props.isMobile ? 'none' : `1px solid ${theme.palette.secondary.main}`,
-        width: props => props.isMobile ? "inherit" : "200px",
-        maxWidth: props => props.isMobile ? "inherit" : "200px",
-        minWidth: props => props.isMobile ? "inherit" : "200px",
+        borderRight: (props) => (props.isMobile ? "none" : `1px solid ${theme.palette.secondary.main}`),
+        borderBottom: (props) => (!props.isMobile ? "none" : `1px solid ${theme.palette.secondary.main}`),
+        width: (props) => (props.isMobile ? "inherit" : "200px"),
+        maxWidth: (props) => (props.isMobile ? "inherit" : "200px"),
+        minWidth: (props) => (props.isMobile ? "inherit" : "200px"),
     },
     indicator: {
         backgroundColor: "red",

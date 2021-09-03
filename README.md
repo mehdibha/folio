@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Mehdi-BHA/Awesomefolio">
-    <img src="images/mockup.png" alt="Mockup" width="80" height="80">
+    <img src="images/mockup.jpg" alt="Mockup" width="80" height="80">
   </a>
 
   <h1 align="center">Awesomefolio</h3>

@@ -41,7 +41,6 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
                         <Button
                             component={MuiLink}
                             href="/resume.pdf"
-                            target="_blank"
                             variant="outlined"
                             color="primary"
                             underline="none"

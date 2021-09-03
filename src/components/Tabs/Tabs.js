@@ -38,7 +38,6 @@ const StyledTabs = () => {
                             <Link
                                 href={elem.links.website || elem.links.facebook || elem.links.instagram}
                                 color="primary"
-                                target="_blank"
                             >
                                 {elem.company}
                             </Link>

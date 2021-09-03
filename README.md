@@ -61,6 +61,10 @@ I've spent a non-trivial amount of effort building and designing this iteration 
 ### Screenshots
 
 <p align="center">
+  <p align="center">Light Mode</p>
+  <img src="screenshots/light.png" alt="Home section">
+</p>
+<p align="center">
   <p align="center">Home Section</p>
   <img src="screenshots/home.png" alt="Home section">
 </p>

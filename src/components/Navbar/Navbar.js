@@ -8,6 +8,7 @@ import HamburgerIcon from "./HamburgerIcon";
 import loaderContext from "../../contexts/loaderContext";
 
 const Navbar = () => {
+    const [homeIsActive, setHomeIsActive]=useState(true)
     const isMobile = useMediaQuery("(max-width:700px)");
     const { isLoading } = useContext(loaderContext);
     const controls = useAnimation();
@@ -55,9 +56,9 @@ const Navbar = () => {
                         damping: 20,
                     }}
                 >
-                    <Logo className={classes.logo} />
+                    <Logo className={classes.logo} setHomeIsActive={setHomeIsActive} />
                     <Hidden smDown>
-                        <Menu />
+                        <Menu homeIsActive={homeIsActive} />
                     </Hidden>
                     <Hidden mdUp>
                         <HamburgerIcon isOpen={mobileNavIsOpen} onClick={() => setMobileNavIsOpen(!mobileNavIsOpen)} />

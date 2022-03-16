@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, makeStyles, TextField, Typography } from "@material-ui/core";
+import { Box, Button, Container, makeStyles, TextField, Typography } from "@material-ui/core";
 import { useFormik } from "formik";
 import emailjs from "emailjs-com";
 import * as Yup from "yup";
@@ -44,6 +44,8 @@ const MessageBox = () => {
     });
 
     return (
+        <Container maxWidth="md">
+
         <Box overflow="hidden" style={{ position: "relative", minHeight: "300px" }}>
             <AnimatePresence>
                 {!sendEmailSuccess && (
@@ -141,6 +143,7 @@ const MessageBox = () => {
                 )}
             </AnimatePresence>
         </Box>
+        </Container>
     );
 };
 

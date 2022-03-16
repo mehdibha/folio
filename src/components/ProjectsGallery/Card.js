@@ -129,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
         height: 350,
         overflow: "hidden",
         cursor: "pointer",
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: theme.palette.primary.main,
     },
 
     media: {
@@ -151,12 +151,12 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "20px",
         fontWeight: 700,
         marginBottom: theme.spacing(1),
-        color:theme.palette.secondary.contrastText
+        color:theme.palette.primary.contrastText
     },
     overview: {
         fontSize: "14px",
         marginBottom: theme.spacing(1),
-        color:theme.palette.secondary.contrastText
+        color:theme.palette.primary.contrastText
     },
     technologies: {
         fontSize: "15px",

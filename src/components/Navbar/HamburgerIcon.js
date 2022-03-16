@@ -27,10 +27,11 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         flexDirection:"column",
         alignItems:"flex-end",
-        cursor:"pointer"
+        cursor:"pointer",
+        padding:"2px"
     },
     line: {
-        height: "2px",
+        height: "3px",
         backgroundColor: theme.palette.text.secondary,
     },
     line1: {

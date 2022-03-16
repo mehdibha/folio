@@ -1,10 +1,9 @@
 import React from "react";
-import { Typography, makeStyles, Box } from "@material-ui/core";
+import { Typography, makeStyles, Box, useTheme, Paper } from "@material-ui/core";
 import ProgressBar from "./ProgressBar";
-import {skillsList} from "../../data"
+import { skillsList } from "../../data";
 
-
-function LinearProgressWithLabel({title,value}) {
+function LinearProgressWithLabel({ title, value }) {
     const classes = useStyles();
     return (
         <div className={classes.skillWrapper}>
@@ -13,7 +12,7 @@ function LinearProgressWithLabel({title,value}) {
             </Typography>
             <Box display="flex" alignItems="center" mb={2}>
                 <Box width="100%" mr={1}>
-                    <ProgressBar value={value}/>
+                    <ProgressBar value={value} />
                 </Box>
             </Box>
         </div>
@@ -22,10 +21,13 @@ function LinearProgressWithLabel({title,value}) {
 
 const Skills = () => {
     const classes = useStyles();
+    const theme = useTheme();
     return (
         <div className={classes.container}>
-            {skillsList.map((elem,k) => (
-                <LinearProgressWithLabel title={elem.title} value={elem.value} key={k} />
+            {skillsList.map((elem, k) => (
+                <Paper elevation={10} key={k} className={classes.paper}>
+                    <Typography align="center" >{elem.title}</Typography>
+                </Paper>
             ))}
         </div>
     );
@@ -33,7 +35,9 @@ const Skills = () => {
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        width: "100%",
+        maxWidth: "600px",
+        display: "flex",
+        flexWrap:"wrap"
     },
     skillWrapper: {
         width: "100%",
@@ -42,6 +46,12 @@ const useStyles = makeStyles((theme) => ({
         whiteSpace: "nowrap",
         marginRight: theme.spacing(1),
     },
+    paper:{
+        marginRight:"10px",
+        marginBottom:"10px",
+        minWidth:"50px",
+        padding:"10px"
+    }
 }));
 
 export default Skills;

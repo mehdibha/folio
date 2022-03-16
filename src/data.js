@@ -1,9 +1,11 @@
 const skillsList = [
     { title: "React JS", value: 75 },
+    { title: "Next js", value: 80 },
+    { title: "Material UI", value: 80 },
+    { title: "Styled components", value: 80 },
     { title: "Node JS ", value: 60 },
     { title: "Express JS ", value: 70 },
     { title: "Firebase", value: 70 },
-    { title: "CSS", value: 80 },
 ];
 const projectList = [
     {
@@ -44,14 +46,6 @@ const experienceList = [
     },
     {
         id: 1,
-        company: "Dar Mounira",
-        links: {
-            facebook: "https://www.facebook.com/profile.php?id=100063463714107",
-            instagram: "https://www.instagram.com/darmounira.official",
-        },
-    },
-    {
-        id: 2,
         company: "vapoter.tn",
         links: {
             instagram: "https://www.instagram.com/vapoter.tn/",

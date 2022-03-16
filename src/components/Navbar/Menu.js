@@ -19,7 +19,7 @@ const AnimatedLink = React.forwardRef((props, ref) => (
     </motion.div>
 ));
 
-const Menu = () => {
+const Menu = ({homeIsActive}) => {
     const classes = useStyles();
     const [value, setValue] = useState(false);
     const [isScrolling, setIsScrolling] = useState(false);
@@ -54,10 +54,16 @@ const Menu = () => {
     };
 
     const spyHandleChange = (index) => {
-        if (!isScrolling || value === 0) {
+        if (!isScrolling) {
             setValue(index);
         }
     };
+
+    useEffect(() => {
+        if (homeIsActive){
+            setValue(false)
+        }
+    }, [homeIsActive])
 
     return (
         <div className={classes.wrapper}>

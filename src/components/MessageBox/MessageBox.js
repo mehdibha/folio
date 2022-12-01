@@ -32,7 +32,7 @@ const MessageBox = () => {
         },
         validationSchema: Yup.object({
             name: Yup.string().required("Name is required"),
-            email: Yup.string().email("Email adress is not valid").required("Email adress is required"),
+            email: Yup.string().email("Email address is not valid").required("Email address is required"),
             message: Yup.string().required("message is required"),
         }),
         onSubmit: (values) => {

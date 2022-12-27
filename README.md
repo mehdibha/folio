@@ -59,7 +59,7 @@ I've spent a non-trivial amount of effort building and designing this iteration 
 
 <p align="center">
   <p align="center">Light Mode</p>
-  <img src="screenshots/light.png" alt="Home section">
+  ![image](https://user-images.githubusercontent.com/86098390/209610097-0d62613c-a97d-400d-9768-e235f6641042.png)
 </p>
 <p align="center">
   <p align="center">Home Section</p>

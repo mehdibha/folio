@@ -24,7 +24,7 @@ const baseTheme = {
                 letterSpacing: "2px",
                 borderRadius: 0,
                 "&:hover": {
-                    color: "rgb(230,230,230)",
+                    color: "BFF8D4",
                     backgroundColor: "inherit",
                 },
             },
@@ -32,6 +32,7 @@ const baseTheme = {
     },
 };
 
+// Dark Theme Foundation
 const darkTheme = createTheme({
     palette: {
         background: {
@@ -59,13 +60,14 @@ const darkTheme = createTheme({
     ...baseTheme
 });
 
+// Light Theme Foundation
 const lightTheme = createTheme({
     palette: {
         background: {
-            default: "#DEBA9D",
+            default: "#FFB100",
         },
         primary: {
-            main: "#9E7777",
+            main: "#434242",
             contrastText: "#000",
         },
         secondary: {

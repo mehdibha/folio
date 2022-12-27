@@ -24,6 +24,7 @@ const ProjectsGallery = () => {
                         key={item.id}
                         classes={{ item: classes.item }}
                         >
+                            {/* Card Section Start 28-38 */}
                         <Card
                             id={item.id}
                             title={item.title}
@@ -38,6 +39,8 @@ const ProjectsGallery = () => {
                     </Grid>
                 ))}
             </Grid>
+
+            {/* Extended Card Section Start 42-55 */}
             <AnimatePresence>
                 {selectedId && (
                     <ExtendedCard

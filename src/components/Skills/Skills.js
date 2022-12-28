@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, makeStyles, Box, useTheme, Paper } from "@material-ui/core";
+import { Typography, makeStyles,  Paper } from "@material-ui/core";
 import { skillsList } from "../../data";
 // import ProgressBar from "./ProgressBar";
 
@@ -23,7 +23,7 @@ import { skillsList } from "../../data";
 
 const Skills = () => {
     const classes = useStyles();
-    const theme = useTheme();
+    // const theme = useTheme();
     return (
         <div className={classes.container}>
             {skillsList.map((elem, k) => (

@@ -1,55 +1,54 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import VideoMask from "../../assets/images/VideoMask";
+import { Typography } from "@material-ui/core";
 
 const VideoLogo = (props) => {
-    const classes = useStyles();
-    return (
-        <div className={classes.wrapper} {...props}>
-            <VideoMask className={classes.mask} />
-            <video autoPlay muted loop preload="auto" className={classes.video}>
-                <source src="https://d33wubrfki0l68.cloudfront.net/ab4c4ea31f1543825102ebf15a35080cdc1397ce/b8c4f/static/images/frontpage/hero/gradient.mp4" />
-            </video>
-        </div>
-    );
+  const classes = useStyles();
+  return (
+    <div className={classes.wrapper} {...props}>
+      <Typography variant="h3" className={classes.name_typo}>
+        <span className={classes.span_name}>Ihtisham</span> Khattak
+      </Typography>
+    </div>
+  );
 };
 
 const useStyles = makeStyles((theme) => ({
-    wrapper: {
-        overflow:"hidden",
-        position: "relative",
-        width: "300px",
-        height: "68px",
-        [theme.breakpoints.down("xs")]: {
-            width: "230px",
-            height: "53px",
-        },
+  wrapper: {
+    overflow: "hidden",
+    position: "relative",
+    width: "300px",
+    height: "68px",
+    [theme.breakpoints.down("xs")]: {
+      width: "230px",
+      height: "53px",
     },
-    mask: {
-        zIndex: 1,
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        width: "300px",
-        [theme.breakpoints.down("xs")]: {
-            width: "230px",
-            height: "52px",
-        },
+  },
+  mask: {
+    zIndex: 1,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    width: "300px",
+    [theme.breakpoints.down("xs")]: {
+      width: "230px",
+      height: "52px",
     },
-    video: {
-        zIndex: 0,
-        position: "absolute",
-        top: 0,
-        left: "1px",
-        right: "1px",
-        width: "298px",
-        height: "68px",
-        [theme.breakpoints.down("xs")]: {
-            width: "228px",
-            height: "52px",
-        },
+  },
+  name_typo: {
+    fontWeight: "bold",
+    marginTop: 15,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 25,
     },
+  },
+  span_name: {
+    color: "#F7F7F7",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 25,
+    },
+  },
 }));
 
 export default VideoLogo;

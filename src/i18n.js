@@ -5,6 +5,7 @@ import en from "./assets/translations/en.json";
 import fr from "./assets/translations/fr.json";
 import ur from "./assets/translations/ur.json";
 
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -22,7 +23,7 @@ i18n
     },
 
     // default languaage
-    lng: "en",
+    lng: "ur",
     fallbackLng: "en",
     detection: {
       order: ["cookie", "localStorage", "navigator", "htmlTag"],

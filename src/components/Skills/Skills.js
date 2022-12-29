@@ -1,26 +1,6 @@
 import React from "react";
 import { Typography, makeStyles,  Paper } from "@material-ui/core";
 import { skillsList } from "../../data";
-// import ProgressBar from "./ProgressBar";
-
-// function LinearProgressWithLabel({ title, value }) {
-//     const classes = useStyles();
-//     return (
-//         <div className={classes.skillWrapper}>
-
-//             <Typography variant="body2" display="inline" component="span" className={classes.skillTitle}>
-//                 {title}
-//             </Typography>
-            
-//             <Box display="flex" alignItems="center" mb={2}>
-//                 <Box width="100%" mr={1}>
-//                     <ProgressBar value={value} />
-//                 </Box>
-//             </Box>
-//         </div>
-//     );
-// }
-
 const Skills = () => {
     const classes = useStyles();
     // const theme = useTheme();

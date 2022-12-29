@@ -18,7 +18,7 @@ const languages = [
   },
   {
     code: "ur",
-    name: "ur",
+    name: "UR",
     country_code: "pk",
   },
 ];
@@ -37,17 +37,11 @@ const LangSelector = (props) => {
       props.onClose();
     }
   };
-  console.log(
-    "🚀 ~ file: LangSelector.js:35 ~ handleClose ~ handleClose",
-    handleClose
-  );
+
 
   //For language translation switch the language when the code matchs.
+  debugger
   const currentLanguage = languages.find((elem) => elem.code === t("language"));
-  console.log(
-    "🚀 ~ file: LangSelector.js:41 ~ LangSelector ~ currentLanguage",
-    currentLanguage
-  );
 
   return (
     <div {...props}>

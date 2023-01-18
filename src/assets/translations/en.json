@@ -4,8 +4,8 @@
     "home_welcome": "Hi there",
     "home_i": "i'm",
     "home_what_i_do": "I make awesome websites",
-    "home_job": "Full stack web developer, UI/UX designer, freelancer, Github addict.",
-    "home_location": "Based in sousse, Tunisia.",
+    "home_job": "ReactJS web developer, UI/UX designer, freelancer, QA Tester.",
+    "home_location": "Based in Peshawar, Pakistan.",
     "home_contact_btn": "Get in touch",
     "menu_about": "About",
     "menu_projects": "Projects",
@@ -15,18 +15,27 @@
     "about_desc": "My name is Ihtisham Khattak, and I'm self-driven when it comes to learning new skills and technology. Always attempting new things for the internet, particularly open-source initiatives. I generally work mostly on ReactJS and QA projects, but I'm always interested in new chances 🙁.",
     "name": "Ihtisham Khattak",
     "experience": "Experience",
+
     "experience_0_job": "React JS Developer",
     "experience_0_overview": "Candela Digital Services is a space where code lovers are based in Sousse: some are freelancers, some started their startups, others work as remote developers. it's a place where we discuss about new technologies, about IT solutions, about anything in relation to Code, we also do workshops and offer a calm coworking space to the members.",
-    "experience_0_duration": "Jan 2021 - Present",
+    "experience_0_duration": "Jan 2021 - December 2022",
+    
     "experience_1_job": "Front-end web developer",
     "experience_1_overview": "Vapoter.tn is an e-commerce website that sells anything in relation with vapes. unfortunately, Tunisia has a restricted system and it's now forbidden to sell vape products. so, the website closed.",
-    "experience_1_duration": "September 2018 - December 2018",
+    "experience_1_duration": "December 2020 - December 2021",
+    
+    "experience_2_job": "Senior Software Engineer",
+    "experience_2_overview": "Building prototypes for clients and System Design, Establish New Documentation, Maintain Software Functionality, Troubleshoot and Upgrade Existing Systems are the main duties in my role",
+    "experience_2_duration": "December 2022 - Present",
+
     "projects_1_overview": "Tunflix is the tunisian Netflix.",
     "projects_2_overview": "Code Hub is a hub for code lovers in Sousse, Tunisia",
     "projects_3_overview": "Burpees.io is a solution for gyms.",
+   
     "projects_1_extended_overview": "Tunflix is a streaming website: it allows you to watch movies by scraping data from the internet. The UI is modern and base on material design",
     "projects_2_extended_overview": "codehub.tn is a showcase website for Code Hub: a coworking space at Sousse for developers",
     "projects_3_extended_overview": "Burpees.io is a solution for gyms. you can see plannings, take reservations and more. We've developed a white labalise app: If a client wants his native application it will be generated automatically. The dashboard is for the gym owner.",
+   
     "contact": "contact",
     "contact_full_name": "Full name",
     "contact_email": "E-mail adress",

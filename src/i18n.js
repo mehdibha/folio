@@ -23,7 +23,7 @@ i18n
     },
 
     // default languaage
-    lng: "ur",
+    lng: "en",
     fallbackLng: "en",
     detection: {
       order: ["cookie", "localStorage", "navigator", "htmlTag"],

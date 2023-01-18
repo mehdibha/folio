@@ -1,0 +1,44 @@
+{
+  "language": "ur",
+  "dark_mode": "ڈارک موڈ",
+  "home_welcome": "ہیلو وہاں",
+  "home_i": "میں ہوں",
+  "home_what_i_do": "میں ویب سائٹس بناتا ہوں۔",
+  "name": "احتشام خٹک",
+  "home_job": "ReactJS web developer, UI/UX designer, freelancer, QA Tester.",
+  "home_location": "پشاور، پاکستان۔",
+  "home_contact_btn": "رابطے میں رہنا",
+  "menu_about": "کے بارے میں",
+  "menu_projects": "پروجیکٹس",
+  "menu_experience": "تجربہ",
+  "menu_contact": "رابطہ کریں۔",
+  "menu_resume": " حیات نام",
+  "about_desc": "ہیلو، میرا نام احتشام خٹک ہے اور مجھے انٹرنیٹ پر خاص طور پر اوپن سورس پروجیکٹس کے لیے چیزیں کرنا پسند ہے۔ ترقی کے لیے میری محبت اس وقت شروع ہوئی جب میں 20 سال کا تھا۔.",
+  "experience": "تجربہ",
+  
+  "experience_0_job": "React JS Developer",
+  "experience_0_overview": "Candela Digital Services is a space where code lovers are based in Sousse: some are freelancers, some started their startups, others work as remote developers. it's a place where we discuss about new technologies, about IT solutions, about anything in relation to Code, we also do workshops and offer a calm coworking space to the members.",
+  "experience_0_duration": "Jan 2021 - December 2022",
+  
+  "experience_1_job": "Front-end web developer",
+  "experience_1_overview": "Vapoter.tn is an e-commerce website that sells anything in relation with vapes. unfortunately, Tunisia has a restricted system and it's now forbidden to sell vape products. so, the website closed.",
+  "experience_1_duration": "December 2020 - December 2021",
+  
+  "experience_2_job": "Senior Software Engineer",
+  "experience_2_overview": "Building prototypes for clients and System Design, Establish New Documentation, Maintain Software Functionality, Troubleshoot and Upgrade Existing Systems are the main duties in my role",
+  "experience_2_duration": "December 2022 - Present",
+
+  "projects_1_overview": "Tunflix is the tunisian Netflix.",
+  "projects_2_overview": "Code Hub is a hub for code lovers in Sousse, Tunisia",
+  "projects_3_overview": "Burpees.io is a solution for gyms.",
+ 
+  "projects_1_extended_overview": "Tunflix is a streaming website: it allows you to watch movies by scraping data from the internet. The UI is modern and base on material design",
+  "projects_2_extended_overview": "codehub.tn is a showcase website for Code Hub: a coworking space at Sousse for developers",
+  "projects_3_extended_overview": "Burpees.io is a solution for gyms. you can see plannings, take reservations and more. We've developed a white labalise app: If a client wants his native application it will be generated automatically. The dashboard is for the gym owner.",
+ 
+  "contact": "رابطہ",
+  "contact_full_name": "پورا نام",
+  "contact_email": "ای میل اڈریس",
+  "message": "پیغام",
+  "contact_btn": "پیغام بھیجیں"
+}

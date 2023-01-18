@@ -36,6 +36,7 @@ const Home = () => {
                     variant="h5"
                     style={{ marginBottom: "0px" }}
                 >
+                    
                     {t("home_welcome")}
                     <motion.div
                         style={{ display: "inline-block" }}

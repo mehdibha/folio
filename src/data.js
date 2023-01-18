@@ -1,54 +1,59 @@
 const skillsList = [
-    { title: "React JS", value: 75 },
-    { title: "Next js", value: 80 },
-    { title: "Material UI", value: 80 },
-    { title: "Styled components", value: 80 },
-    { title: "Node JS ", value: 60 },
-    { title: "Express JS ", value: 70 },
-    { title: "Firebase", value: 70 },
+    { title: "React JS" },
+    { title: "Material UI" },
+    { title: "Node JS " },
+    { title: "Express JS" },
+    { title: "MongooDB" },
+    { title: "Cypress"},
 ];
+
 const projectList = [
     {
         id: 1,
-        title: "Tunflix",
-        technologies: ["React JS", "Node JS", "MongoDB"],
+        title: "Gawadar",
+        technologies: ["React JS", "Tailwind Css"],
         backgroundImage:
             "https://cdn.cbeditz.com/cbeditz/preview/black-red-gradient-background-wallpaper-74-11614352798fbqrv1wpuv.jpg",
-        frontImage: "https://i.ibb.co/L0F7mKX/tunflix.png",
+        frontImage: "https://user-images.githubusercontent.com/86098390/193441190-180e4bca-2e07-42d7-8c76-ab15af39dfb0.png",
     },
     {
         id: 2,
-        title: "Code Hub",
-        technologies: ["React JS"],
+        title: "OjO Admin Side",
+        technologies: ["React JS,Tailwind CSS"],
         backgroundImage:
             "https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?size=626&ext=jpg&ga=GA1.2.2102900112.1628985600",
-        frontImage: "https://i.ibb.co/zNMJFTW/Webp-net-resizeimage.png",
+        frontImage: "https://user-images.githubusercontent.com/86098390/209755339-99d9d789-0c8d-45b5-a2ef-4f7fc0ee5f78.png",
     },
     {
         id: 3,
-        title: "Burpees.io",
-        technologies: ["React JS", "Node JS", "MongoDB"],
+        title: "Crypptoact",
+        technologies: ["React JS", "Rest API" ],
         backgroundImage:
             "https://media.istockphoto.com/vectors/abstract-purple-vector-background-with-stripes-vector-id972475894?k=6&m=972475894&s=612x612&w=0&h=99AirGMOb64N2-1ZSMYRjEBp2USrAdzXUGzQMh5o6Js=",
-        frontImage: "https://themes-backend.material-ui.com/wp-content/uploads/2021/05/01_preview.jpg",
+        frontImage: "https://user-images.githubusercontent.com/86098390/209755633-360b693f-a12a-4c2c-a869-904f69131448.png",
     },
 ];
 
 const experienceList = [
     {
         id: 0,
-        company: "Code Hub",
+        company: "Candela Digital",
         links: {
-            website: "https://www.codehub.tn",
-            facebook: "https://www.facebook.com/codehubtn/",
-            instagram: "https://www.instagram.com/codehub.coworking/",
+            website: "https://candeladigi.com/",
         },
     },
     {
         id: 1,
-        company: "vapoter.tn",
+        company: "XtremeSoft Services",
         links: {
-            instagram: "https://www.instagram.com/vapoter.tn/",
+            website: "https://xtremessoft.com",
+        },
+    },
+    {
+        id:2,
+        company: "NextPak AGILE Solutions",
+        links: {
+            website: "https://nextpak.org"
         },
     },
 ];

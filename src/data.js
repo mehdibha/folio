@@ -26,11 +26,19 @@ const projectList = [
     },
     {
         id: 3,
-        title: "Crypptoact",
+        title: "Crypto Currancy",
         technologies: ["React JS", "Rest API" ],
         backgroundImage:
             "https://media.istockphoto.com/vectors/abstract-purple-vector-background-with-stripes-vector-id972475894?k=6&m=972475894&s=612x612&w=0&h=99AirGMOb64N2-1ZSMYRjEBp2USrAdzXUGzQMh5o6Js=",
         frontImage: "https://user-images.githubusercontent.com/86098390/209755633-360b693f-a12a-4c2c-a869-904f69131448.png",
+    },
+    {
+        id: 4,
+        title: "Personal Portfolio",
+        technologies: ["React JS", "React Bootstrap", "React Carousel", "React Slider" ],
+        backgroundImage:
+            "https://media.istockphoto.com/vectors/abstract-purple-vector-background-with-stripes-vector-id972475894?k=6&m=972475894&s=612x612&w=0&h=99AirGMOb64N2-1ZSMYRjEBp2USrAdzXUGzQMh5o6Js=",
+        frontImage: "https://user-images.githubusercontent.com/86098390/222922881-b38d655d-df02-4dc8-a419-a6efa50f1916.png",
     },
 ];
 

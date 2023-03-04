@@ -77,6 +77,7 @@ const ExtendedCard = ({ id, title, backgroundImage, frontImage, overview, techno
     );
 };
 
+// MUI Style Components
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         position: "fixed",
@@ -151,4 +152,4 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default ExtendedCard;
+export default ExtendedCard

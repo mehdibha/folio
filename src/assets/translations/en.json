@@ -31,11 +31,14 @@
     "projects_1_overview": "Tunflix is the tunisian Netflix.",
     "projects_2_overview": "Code Hub is a hub for code lovers in Sousse, Tunisia",
     "projects_3_overview": "Burpees.io is a solution for gyms.",
-   
+    "projects_4_overview": "Nayab Wadood Personal Portfolio.",
+
+
     "projects_1_extended_overview": "Tunflix is a streaming website: it allows you to watch movies by scraping data from the internet. The UI is modern and base on material design",
     "projects_2_extended_overview": "codehub.tn is a showcase website for Code Hub: a coworking space at Sousse for developers",
     "projects_3_extended_overview": "Burpees.io is a solution for gyms. you can see plannings, take reservations and more. We've developed a white labalise app: If a client wants his native application it will be generated automatically. The dashboard is for the gym owner.",
-   
+    "projects_4_extended_overview": "Nayab Wadood. Any academic and professional resources that demonstrate your values, talents, credentials, education, training, and experiences are included in this portfolio. It reveals the entire personality and work ethic.",
+
     "contact": "contact",
     "contact_full_name": "Full name",
     "contact_email": "E-mail adress",

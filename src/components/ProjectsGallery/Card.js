@@ -167,10 +167,11 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         height: "100%",
         width: "100%",
-        backgroundColor: "rgba(0,0,0,0.97)",
+        backgroundColor: "rgb(247, 205, 69)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        opacity: "10%"
     },
 }));
 

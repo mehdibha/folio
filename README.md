@@ -54,13 +54,13 @@ This section should list any major frameworks that you built your project using.
 Distributed under the MIT License. See [LICENSE](https://github.com/Mehdi-BHA/notionfolio/blob/main/LICENSE.md) for more information.
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/Mehdi-BHA/Awesomefolio.svg?style=for-the-badge
-[contributors-url]: https://github.com/Mehdi-BHA/Awesomefolio/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Mehdi-BHA/Awesomefolio.svg?style=for-the-badge
-[forks-url]: https://github.com/Mehdi-BHA/Awesomefolio.svg/network/members
-[stars-shield]: https://img.shields.io/github/stars/Mehdi-BHA/Awesomefolio.svg?style=for-the-badge
-[stars-url]: https://github.com/Mehdi-BHA/Awesomefolio.svg/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Mehdi-BHA/Awesomefolio.svg?style=for-the-badge
-[issues-url]: https://github.com/Mehdi-BHA/Awesomefolio.svg/issues
-[license-shield]: https://img.shields.io/github/license/Mehdi-BHA/Awesomefolio.svg?style=for-the-badge
-[license-url]: https://github.com/Mehdi-BHA/Awesomefolio.svg/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Mehdi-BHA/notionfolio.svg?style=for-the-badge
+[contributors-url]: https://github.com/Mehdi-BHA/notionfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Mehdi-BHA/notionfolio.svg?style=for-the-badge
+[forks-url]: https://github.com/Mehdi-BHA/notionfolio.svg/network/members
+[stars-shield]: https://img.shields.io/github/stars/Mehdi-BHA/notionfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/Mehdi-BHA/notionfolio.svg/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Mehdi-BHA/notionfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/Mehdi-BHA/notionfolio.svg/issues
+[license-shield]: https://img.shields.io/github/license/Mehdi-BHA/notionfolio.svg?style=for-the-badge
+[license-url]: https://github.com/Mehdi-BHA/notionfolio.svg/blob/master/LICENSE.txt

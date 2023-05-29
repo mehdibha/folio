@@ -18,7 +18,9 @@
       "@lib/*": ["./lib/*"],
       "@config/*": ["./config/*"],
       "@components/*": ["./components/*"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@types/*": ["./types/*"],
+      "@/*": ["./*"]
     },
     "plugins": [
       {

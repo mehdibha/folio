@@ -11,7 +11,7 @@ module.exports = {
     "<THIRD_PARTY_MODULES>",
     "",
     "^types$",
-    "^@types/(.*)$",
+    "^@/types/(.*)$",
     "^@config/(.*)$",
     "^@lib/(.*)$",
     "^@hooks/(.*)$",

@@ -15,46 +15,8 @@
     Make your own portfolio + Notion-powered blog in minutes with Next.js and Vercel.
     <br/>
     <br/>
-    <a href="https://github.com/Mehdi-BHA/notionfolio"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/Mehdi-BHA/notionfolio">View Demo</a>
-    .
-    <a href="https://github.com/Mehdi-BHA/notionfolio/issues">Report Bug</a>
-    .
-    <a href="https://github.com/Mehdi-BHA/notionfolio/issues">Request Feature</a>
   </p>
 </p>
-
-
-## Table Of Contents
-
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
-
-## About The Project
-
-![Screen Shot](https://www.notionfol.io/images/screenshot.png)
-
-Notionfolio is a static portfolio and blog using Notion as a Content Management System (CMS) that updates in real time (every 10 seconds), synchronizing changes to Notion pages without rebuilding.
-
-## Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-## License
-
-Distributed under the MIT License. See [LICENSE](https://github.com/Mehdi-BHA/notionfolio/blob/main/LICENSE.md) for more information.
-
 
 [contributors-shield]: https://img.shields.io/github/contributors/Mehdi-BHA/notionfolio.svg?style=for-the-badge
 [contributors-url]: https://github.com/Mehdi-BHA/notionfolio/graphs/contributors

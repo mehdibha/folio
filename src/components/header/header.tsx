@@ -3,7 +3,6 @@ import Link from "next/link"
 import { siteConfig } from "@/config"
 import Nav from "./nav"
 import Image from "next/image"
-import logo from "@/assets/images/logo.png"
 import ThemeToggle from "./theme-toggle"
 import { cn } from "@/utils"
 
@@ -22,7 +21,7 @@ export const Header = (props: HeaderProps) => {
               href="/"
               className="mr-8 flex items-center space-x-2 transition-all hover:opacity-80"
             >
-              <Image src={logo} alt="notionfol.io" width={30} />
+              <Image src="/images/logo.png" alt="notionfol.io" width={30} />
               <span className="inline-block font-bold">{siteConfig.name}</span>
             </Link>
             <div className="flex-1">

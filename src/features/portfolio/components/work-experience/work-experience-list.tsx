@@ -15,7 +15,7 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
         <li className="group relative cursor-pointer" key={experience.title}>
           <Link href={experience.link} target="_blank">
             {/* background */}
-            <div className="absolute left-0 top-0 z-[-1] h-full w-full rounded-xl bg-[rgba(50,50,50,0.1)] opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent" />
+            <div className="absolute left-0 top-0 z-[-1] h-full w-full rounded-xl bg-[rgba(50,50,50,0.1)] opacity-30 transition-all shadow-md duration-300 group-hover:opacity-100 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent" />
             {/* content */}
             <div className=" grid grid-cols-9 gap-6 p-6">
               <div className="col-span-2 pt-1">

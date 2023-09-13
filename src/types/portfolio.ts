@@ -1,7 +1,13 @@
 export interface IPortfolio {
-  "work-experience": IWorkExperience[]
+  about: IAbout
+  experience: IWorkExperience[]
   education: IEducation[]
   projects: IProject[]
+}
+
+export interface IAbout {
+  title: string
+  description: string[]
 }
 
 export interface IWorkExperience {

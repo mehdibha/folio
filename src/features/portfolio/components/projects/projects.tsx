@@ -10,8 +10,7 @@ export const Projects = () => {
   const displayedProjects = projectsData.slice(0, 3)
 
   return (
-    <div className="mx-auto max-w-4xl">
-      <h2 className="mb-4 font-display text-4xl font-bold">Some featured projects</h2>
+    <div>
       <ProjectsList projects={displayedProjects} />
       <div className="text-center">
         {projectsData.length > 3 && (

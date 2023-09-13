@@ -21,7 +21,7 @@ export const Header = (props: HeaderProps) => {
               href="/"
               className="mr-8 flex items-center space-x-2 transition-all hover:opacity-80"
             >
-              <Image src="/images/logo.png" alt="notionfol.io" width={30} />
+              <Image src="/images/logo.png" alt="notionfol.io" width={30} height={30} />
               <span className="inline-block font-bold">{siteConfig.name}</span>
             </Link>
             <div className="flex-1">
@@ -34,7 +34,7 @@ export const Header = (props: HeaderProps) => {
         </div>
         <div
           className={cn(
-            "absolute left-0 top-0 z-[-1] h-full w-full bg-background/70 opacity-0 shadow-md backdrop-blur-md transition-all duration-300",
+            "absolute left-0 top-0 z-[-1] h-full w-full bg-background/70 opacity-0 shadow-md backdrop-blur-md transition-all",
             { "opacity-100": elevated }
           )}
         ></div>

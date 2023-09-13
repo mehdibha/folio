@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
 
-    --border: 214.3 31.8% 91.4%;
+    --border: 0 0% 50%;
     --input: 214.3 31.8% 91.4%;
 
     --card: 0 0% 100%;
@@ -52,7 +52,7 @@
     --popover: 224 71% 4%;
     --popover-foreground: 215 20.2% 65.1%;
 
-    --border: 216 34% 17%;
+    --border: 217 4% 78%;
     --input: 216 34% 17%;
 
     --card: 224 71% 4%;
@@ -85,6 +85,6 @@
 
 @layer utilities {
   .focus-ring {
-    @apply ring-primary ring-offset-4 ring-offset-white transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-primary hover:ring-2 hover:ring-primary focus:outline-none focus:ring-2 focus:ring-primary disabled:ring-0 group-hover:ring-2 group-hover:ring-primary group-focus:ring-2 group-focus:ring-primary dark:ring-offset-gray-900;
+    @apply ring-primary ring-offset-2 ring-offset-background transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-primary hover:ring-[3px] hover:ring-primary focus:outline-none focus:ring-2 focus:ring-primary disabled:ring-0 group-hover:ring-2 group-hover:ring-primary group-focus:ring-2 group-focus:ring-primary dark:ring-offset-background;
   }
 }

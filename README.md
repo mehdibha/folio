@@ -4,19 +4,17 @@
 > This app is a work in progress. I'm building this in public.
 
 <br/>
-<p align="center">
+<div align="center">
   <a href="https://github.com/Mehdi-BHA/notionfolio">
-    <img src="htttps://www.notionfol.io/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://www.notionfol.io/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Notionfolio</h3>
+  <h1 align="center">Notionfolio</h1>
 
   <p align="center">
     Make your own portfolio + Notion-powered blog in minutes with Next.js and Vercel.
-    <br/>
-    <br/>
   </p>
-</p>
+</div>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Mehdi-BHA/notionfolio.svg?style=for-the-badge
 [contributors-url]: https://github.com/Mehdi-BHA/notionfolio/graphs/contributors

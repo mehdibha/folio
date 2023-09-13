@@ -76,12 +76,14 @@ If you want to clone the project and make you personal notionfolio
 
 ## Roadmap
 
-- [x] Better SEO
-- [x] Dark mode
-- [x] Open Graph support
-- [x] Switch to react-notion-x
-- [x] Sitemap
-- [ ] ...
+- [ ] Organize project architecture
+- [ ] Latest posts component (home page)
+- [ ] Footer
+- [ ] Blog page design
+- [ ] Refactor blog page to use pagination
+- [ ] NotionRenderrer component
+- [ ] Post page
+- [ ] 
 
 ## Sites using notionfol.io
 We will be happy to mention you here, just make a pull request and we will add you

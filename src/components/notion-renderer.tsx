@@ -15,6 +15,7 @@ import "prismjs/themes/prism-tomorrow.css"
 
 import "katex/dist/katex.min.css"
 import { FC } from "react"
+import { useTheme } from "next-themes"
 
 const _NotionRenderer = dynamic(
   () => import("react-notion-x").then((m) => m.NotionRenderer),
@@ -90,9 +91,10 @@ type Props = {
 }
 
 const NotionRenderer: FC<Props> = ({ recordMap }) => {
+  const { theme } = useTheme()
   return (
       <_NotionRenderer
-        darkMode={true}
+        darkMode={theme === "dark"}
         recordMap={recordMap}
         components={{
           Code,

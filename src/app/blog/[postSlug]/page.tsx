@@ -41,10 +41,10 @@ const PostPage = async (props: PostPageProps) => {
   if (!post) notFound()
 
   return (
-    <div>
+    <div className="mt-20">
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
       <div className="flex items-center space-x-2">
-        <p>Published in {post.createdTime}</p>
+        <p>Published in {date}</p>
         <p>•</p>
         <p>{timeToRead} min read</p>
         <p>•</p>
@@ -54,7 +54,7 @@ const PostPage = async (props: PostPageProps) => {
           ))}
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-12">
         <NotionRenderer recordMap={recordMap} />
       </div>
     </div>

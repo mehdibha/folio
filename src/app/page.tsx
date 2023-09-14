@@ -25,17 +25,17 @@ export default async function Home() {
       <HeroBanner />
       <div className="container flex flex-col space-y-24">
         <About />
-        <Section title="Experience">
+        <Section id="experience" title="Experience">
           <WorkExperience />
         </Section>
-        <Section title="Education">
+        <Section id="education" title="Education">
           <Education />
         </Section>
-        <Section title="Some featured projects">
+        <Section id="projects" title="Some featured projects">
           <Projects />
         </Section>
         {posts && (
-          <Section title="Latest posts">
+          <Section id="latest-posts" title="Latest posts">
             <PostsList posts={posts.slice(0, 3)} />
             <div className="text-center">
               <Button size="lg" asChild className="mx-auto mt-6">
@@ -45,7 +45,7 @@ export default async function Home() {
           </Section>
         )}
       </div>
-      <div className="flex min-h-[calc(100vh-160px)] items-center justify-center py-20">
+      <div id="contact" className="flex min-h-[calc(100vh-160px)] items-center justify-center py-20">
         <GetInTouch />
       </div>
     </main>
@@ -55,12 +55,13 @@ export default async function Home() {
 interface SectionProps {
   title: string
   children: React.ReactNode
+  id: string
 }
 
 const Section = (props: SectionProps) => {
-  const { title, children } = props
+  const { title, id, children } = props
   return (
-    <div className="mx-auto w-full max-w-4xl">
+    <div id={id} className="mx-auto w-full max-w-4xl">
       <h2 className="mb-4 font-display text-4xl font-bold">{title}</h2>
       {children}
     </div>

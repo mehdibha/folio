@@ -13,7 +13,7 @@ export const PostsList = (props: PostsListProps) => {
       {posts.map((post) => (
         <PostListItem
           key={post.slug}
-          href={`/posts/${post.slug}`}
+          href={`/blog/${post.slug}`}
           title={post.title}
           createdTime={post.createdTime}
           timeToRead={4}

@@ -1,38 +1,20 @@
 // "use client"
 import React from "react"
 import { Badge } from "@/components/ui"
-import { PostsList, SearchBar } from "@/features/blog"
+import { PostsList, SearchBar, getAllTags } from "@/features/blog"
 import { getAllPosts } from "@/lib/notion"
-
-const keywords = [
-  "career",
-  "react",
-  "node",
-  "review",
-  "personal",
-  "databases",
-  "remix",
-  "typescript",
-  "user experience",
-  "css",
-  "testing",
-  "javascript",
-  "productivity",
-  "open source",
-  "programming",
-  "teaching",
-  "state",
-  "performance",
-  "learning",
-]
 
 async function getData() {
   const posts = await getAllPosts({ includePages: false })
-  return { posts }
+  let tags: string[] = []
+  if (posts) {
+    tags = getAllTags(posts)
+  }
+  return { posts, tags }
 }
 
 const Blog = async () => {
-  const { posts } = await getData()
+  const { posts, tags } = await getData()
 
   return (
     <div className="pt-8">
@@ -45,17 +27,17 @@ const Blog = async () => {
       <div className="container mb-6 max-w-6xl">
         <h2 className="mb-5 text-xl font-bold">Search blog by topics</h2>
         <div className="mb-10 flex flex-wrap gap-3">
-          {keywords.map((keyword) => {
+          {tags.map((tag) => {
             // const selected = selectedTopics.includes(keyword)
             return (
               <Badge
-                key={keyword}
+                key={tag}
                 className="focus-ring cursor-pointer px-4 py-2"
                 selected={false}
                 // onClick={false}
                 // disabled={Boolean(!visibleTags.has(tag)) ? !selected : false}
               >
-                {keyword}
+                {tag}
               </Badge>
             )
           })}

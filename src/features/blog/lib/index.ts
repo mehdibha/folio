@@ -1,1 +1,2 @@
-export { getAllPosts } from "@/lib/notion"
+export * from "./get-all-posts"
+export * from "./get-keywords"

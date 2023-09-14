@@ -2,21 +2,22 @@ import * as React from "react"
 import { VariantProps, cn, cva } from "@/utils"
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 border",
   {
     variants: {
       color: {
+        default: "border-gray-400/30 bg-gray-400/30 text-foreground",
         primary: "border-primary bg-primary text-primary-foreground",
         secondary: "border-secondary bg-secondary text-secondary-foreground",
       },
       variant: {
         filled: "border-transparent",
-        outlined: "bg-transparent text-primary",
+        outlined: "bg-transparent",
       },
     },
     defaultVariants: {
       variant: "filled",
-      color: "primary",
+      color: "default",
     },
   }
 )
@@ -30,7 +31,10 @@ export interface BadgeProps
 function Badge(props: BadgeProps) {
   const { className, variant, selected, color, ...restProps } = props
   return (
-    <div className={cn(badgeVariants({ color, variant }), className)} {...restProps} />
+    <div
+      className={cn(badgeVariants({ color, variant }), className)}
+      {...restProps}
+    />
   )
 }
 

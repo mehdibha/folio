@@ -39,7 +39,7 @@
   }
 
   .dark {
-    --background: 252 31% 20%;
+    --background: 233, 13%, 14%;
     --foreground: 213 31% 91%;
     --foreground-secondary: 217 4% 78%;
 
@@ -85,6 +85,6 @@
 
 @layer utilities {
   .focus-ring {
-    @apply ring-primary ring-offset-2 ring-offset-background transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-primary hover:ring-[3px] hover:ring-primary focus:outline-none focus:ring-2 focus:ring-primary disabled:ring-0 group-hover:ring-2 group-hover:ring-primary group-focus:ring-2 group-focus:ring-primary dark:ring-offset-background;
+    @apply ring-primary ring-offset-0 ring-offset-background transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-primary hover:ring-[3px] hover:ring-primary focus:outline-none focus:ring-[3px] focus:ring-primary disabled:ring-0 group-hover:ring-2 group-hover:ring-primary group-focus:ring-2 group-focus:ring-primary dark:ring-offset-background;
   }
 }

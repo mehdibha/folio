@@ -34,7 +34,7 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
                 <p className="mb-3">{experience.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {experience.tags.map((tag, index) => (
-                    <Badge variant="filled" color="secondary" key={index}>
+                    <Badge key={index}>
                       {tag}
                     </Badge>
                   ))}

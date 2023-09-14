@@ -34,7 +34,6 @@ export const PostListItem = (props: PostListItemProps) => {
                   <Badge
                     variant="outlined"
                     key={tag}
-                    className="border-current pb-1"
                   >
                     {tag}
                   </Badge>

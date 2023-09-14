@@ -39,7 +39,7 @@ export default async function Home() {
             <PostsList posts={posts.slice(0, 3)} />
             <div className="text-center">
               <Button size="lg" asChild className="mx-auto mt-6">
-                <Link href="/projects">See all blog posts</Link>
+                <Link href="/blog">See all blog posts</Link>
               </Button>
             </div>
           </Section>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 export const useScroll = (threshold: number = 0) => {
-  const [scrolled, setScrolled] = useState(window.scrollY > threshold)
+  const [scrolled, setScrolled] = useState(window ? window.scrollY > threshold : false)
 
   useEffect(() => {
     // Function to handle scroll events

@@ -7,7 +7,7 @@ import { EducationList } from "./education-list"
 export const Education = () => {
   const [collapsed, setCollapsed] = React.useState(true)
 
-  const educationData = siteConfig.portfolio.education
+  const educationData = siteConfig.education
   const displayedEducations = collapsed
     ? educationData.slice(0, 2)
     : educationData

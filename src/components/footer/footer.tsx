@@ -11,7 +11,7 @@ import {
 } from "@/assets/icons"
 import { siteConfig } from "@/config"
 import { getRepoDetails } from "@/lib/github"
-import { ISocialLinks } from "@/types"
+import { ILinks } from "@/types"
 
 const getData = async () => {
   try {
@@ -29,7 +29,7 @@ const icons = {
   linkedin: Linkedin,
   twitter: Twitter,
   mail: Mail,
-  instragram: Instagram,
+  instagram: Instagram,
   codepen: Codepen,
 }
 
@@ -76,12 +76,12 @@ export const Footer = async () => {
           </div>
         </div>
         <div className="flex space-x-1">
-          {/* TODO: Repetition of IsocialLinks */}
+          {/* TODO: Repetition of ILinks */}
           {Object.keys(links).map((key) => {
-            if (links[key as keyof ISocialLinks]) {
-              const Icon = icons[key as keyof ISocialLinks]
+            if (links[key as keyof ILinks]) {
+              const Icon = icons[key as keyof ILinks]
               return (
-                <a key={key} href={links[key as keyof ISocialLinks]} target="_blank">
+                <a key={key} href={links[key as keyof ILinks]} target="_blank">
                   <Button size="icon" variant="ghost">
                     <Icon />
                   </Button>

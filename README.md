@@ -46,23 +46,27 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 This repo is what I use to power my personal blog and portfolio site [mehdibha.com](https://www.mehdibha.com).
-<details open><summary>Screenshots</summary>
+
+<details open><summary>Screenshot</summary>
 <img src="https://www.notionfol.io/images/screenshots/screenshot01.png" />
 </details>
 
 ## Features
 
-* 📒 Writing posts using notion
-* 👀 SEO friendly
-* 🤖 Entirely customisable throw one config file
+- 📒 Writing posts using notion
+- 👀 SEO friendly
+- 🤖 Entirely customisable throw one config file
 
 ## Getting Started
 
 If you want to clone the project and make you personal notionfolio
 
 ### Installation
+
 1. Clone the repo
    ```sh
    git clone https://github.com/Mehdi-BHA/notionfolio.git
@@ -71,8 +75,10 @@ If you want to clone the project and make you personal notionfolio
    ```sh
    yarn
    ```
+
 ### Configuration
-* 
+
+-
 
 ## Roadmap
 
@@ -83,19 +89,23 @@ If you want to clone the project and make you personal notionfolio
 - [ ] Refactor blog page to use pagination
 - [ ] NotionRenderrer component
 - [ ] Post page
-- [ ] 
+- [ ]
 
 ## Sites using notionfol.io
+
 We will be happy to mention you here, just make a pull request and we will add you
-* [notionfol.io](https://www.notionfol.io)
-* [mehdibha.com](https://www.mehdibha.com)
+
+- [notionfol.io](https://www.notionfol.io)
+- [mehdibha.com](https://www.mehdibha.com)
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 See the [contribution guide](contributing.md) and join our amazing list of [contributors](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/graphs/contributors)!
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.

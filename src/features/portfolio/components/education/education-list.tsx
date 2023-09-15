@@ -19,7 +19,8 @@ export const EducationList = (props: EducationListProps) => {
             <div className="grid grid-cols-9 gap-6 p-6">
               <div className="col-span-2">
                 <p className="text-sm font-medium uppercase text-foreground-secondary">
-                  {education.startDate} - {education.endDate}
+                  {education.startDate}
+                  {education.endDate ? ` - ${education.endDate}` : ""}
                 </p>
               </div>
               <div className="col-span-6">
@@ -39,4 +40,3 @@ export const EducationList = (props: EducationListProps) => {
     </ul>
   )
 }
-

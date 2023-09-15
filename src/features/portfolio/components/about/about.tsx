@@ -2,14 +2,15 @@ import React from "react"
 import Image from "next/image"
 import { siteConfig } from "@/config"
 
-const title = siteConfig.portfolio.about.title
-const description = siteConfig.portfolio.about.description
+const avatar = siteConfig.about.avatar
+const title = siteConfig.about.title
+const description = siteConfig.about.description
 
 export const About = () => {
   return (
     <div className="flex items-center space-x-12">
       <Image
-        src="https://www.seanhalpin.xyz/about/faces.jpg"
+        src={avatar}
         height={300}
         width={200}
         style={{ objectFit: "cover" }}

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui"
 import { siteConfig } from "@/config"
 import { WorkExperienceList } from "./work-experience-list"
 
-const workExperienceData = siteConfig.portfolio.experience
+const workExperienceData = siteConfig.experience
 
 export const WorkExperience = () => {
   const [collapsed, setCollapsed] = React.useState(true)

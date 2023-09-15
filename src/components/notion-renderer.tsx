@@ -96,28 +96,18 @@ const NotionRenderer: FC<Props> = ({ recordMap }) => {
       <_NotionRenderer
         darkMode={theme === "dark"}
         recordMap={recordMap}
-        components={{
-          Code,
-          Collection,
-          Equation,
-          Modal,
-          Pdf,
-          nextImage: Image,
-          nextLink: Link,
-        }}
+        // components={{
+        //   Code,
+        //   Collection,
+        //   Equation,
+        //   Modal,
+        //   Pdf,
+        //   nextImage: Image,
+        //   nextLink: Link,
+        // }}
         mapPageUrl={mapPageUrl}
       />
   )
 }
 
 export default NotionRenderer
-
-// const StyledWrapper = styled.div`
-//   /* // TODO: why render? */
-//   .notion-collection-page-properties {
-//     display: none !important;
-//   }
-//   .notion-page {
-//     padding: 0;
-//   }
-// `

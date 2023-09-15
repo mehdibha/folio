@@ -6,7 +6,7 @@ import { ProjectsList } from "./projects-list"
 import Link from "next/link"
 
 export const Projects = () => {
-  const projectsData = siteConfig.portfolio.projects
+  const projectsData = siteConfig.projects
   const displayedProjects = projectsData.slice(0, 3)
 
   return (

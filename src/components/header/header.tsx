@@ -10,6 +10,10 @@ interface HeaderProps {
   elevated: boolean
 }
 
+const logo = siteConfig.header.logo
+const name = siteConfig.name
+const nav = siteConfig.header.nav
+
 export const Header = (props: HeaderProps) => {
   const { elevated } = props
   return (
@@ -21,23 +25,24 @@ export const Header = (props: HeaderProps) => {
               href="/"
               className="mr-8 flex items-center space-x-2 transition-all hover:opacity-80"
             >
-              <Image src="/images/logo.png" alt="notionfol.io" width={30} height={30} />
-              <span className="inline-block font-bold">{siteConfig.name}</span>
+              <Image src={logo} alt="notionfol.io" width={30} height={30} />
+              <span className="inline-block font-bold">{name}</span>
             </Link>
             <div className="flex-1">
-              <Nav items={siteConfig.nav} />
+              <Nav items={nav} />
             </div>
             <div className="flex space-x-2">
               <ThemeToggle />
             </div>
           </div>
         </div>
+        {/* background */}
         <div
           className={cn(
             "absolute left-0 top-0 z-[-1] h-full w-full bg-background/70 opacity-0 shadow-md backdrop-blur-md transition-all",
             { "opacity-100": elevated }
           )}
-        ></div>
+        />
       </div>
     </header>
   )

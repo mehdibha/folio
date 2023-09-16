@@ -92,19 +92,20 @@ type Props = {
 
 const NotionRenderer: FC<Props> = ({ recordMap }) => {
   const { theme } = useTheme()
+  console.log(recordMap)
   return (
       <_NotionRenderer
         darkMode={theme === "dark"}
         recordMap={recordMap}
-        // components={{
-        //   Code,
-        //   Collection,
-        //   Equation,
-        //   Modal,
-        //   Pdf,
-        //   nextImage: Image,
-        //   nextLink: Link,
-        // }}
+        components={{
+          Code,
+          Collection,
+          Equation,
+          Modal,
+          Pdf,
+          nextImage: Image,
+          nextLink: Link,
+        }}
         mapPageUrl={mapPageUrl}
       />
   )

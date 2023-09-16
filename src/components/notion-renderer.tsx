@@ -92,7 +92,7 @@ type Props = {
 
 const NotionRenderer: FC<Props> = ({ recordMap }) => {
   const { theme } = useTheme()
-  console.log(recordMap)
+  
   return (
       <_NotionRenderer
         darkMode={theme === "dark"}

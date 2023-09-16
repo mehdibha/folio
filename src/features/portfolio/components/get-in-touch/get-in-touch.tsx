@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui"
+import { siteConfig } from "@/config"
 import React from "react"
 
 export const GetInTouch = () => {
@@ -10,7 +11,9 @@ export const GetInTouch = () => {
         is always open. Whether you have a question or just want to say hi, I’ll
         try my best to get back to you!
       </p>
-      <Button size="lg">Say hello</Button>
+      <Button size="lg" asChild>
+        <a href={`mailto:${siteConfig.links.mail}`}>Say hello</a>
+      </Button>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React from "react"
 import { Badge } from "@/components/ui"
 import { IWorkExperience } from "@/types"
 import Link from "next/link"
+import WorkExperienceDescription from "./work-experience-description"
 
 interface WorkExperienceListProps {
   experiences: IWorkExperience[]
@@ -31,11 +32,12 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
                 <p className="text-md mb-1 text-foreground-secondary">
                   {experience.location}
                 </p>
-                <ul className="mb-3 list-disc">
+                <WorkExperienceDescription list={experience.description} />
+                {/* <ul className="mb-3 list-disc">
                   {experience.description.map((elem, index) => (
                     <li key={index}>{elem}</li>
-                  ))}
-                </ul>
+                  ))} 
+                </ul>*/}
                 <div className="flex flex-wrap gap-2">
                   {experience.tags.map((tag, index) => (
                     <Badge key={index}>{tag}</Badge>

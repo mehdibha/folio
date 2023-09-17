@@ -66,7 +66,7 @@ export const siteConfig: ISiteConfig = {
       startDate: "Jan 2019",
       endDate: "Present",
       description:
-        "Developed and maintained web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+        ["Developed and maintained web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality software solutions."],
       tags: [
         "Software Development",
         "Web Applications",
@@ -84,7 +84,7 @@ export const siteConfig: ISiteConfig = {
       startDate: "Jun 2017",
       endDate: "Dec 2018",
       description:
-        "Led product development initiatives, defined product roadmaps, and coordinated with engineering and design teams to launch successful products.",
+        ["Led product development initiatives, defined product roadmaps, and coordinated with engineering and design teams to launch successful products."],
       tags: [
         "Product Development",
         "Product Roadmaps",
@@ -103,7 +103,7 @@ export const siteConfig: ISiteConfig = {
       startDate: "Mar 2015",
       endDate: "May 2017",
       description:
-        "Executed digital marketing campaigns, analyzed performance metrics, and optimized strategies to increase client ROI.",
+        ["Executed digital marketing campaigns, analyzed performance metrics, and optimized strategies to increase client ROI."],
       tags: [
         "Digital Marketing",
         "Campaigns",
@@ -120,7 +120,7 @@ export const siteConfig: ISiteConfig = {
       startDate: "Jun 2014",
       endDate: "Aug 2014",
       description:
-        "Assisted in various departments, gaining exposure to marketing, sales, and project management.",
+        ["Assisted in various departments, gaining exposure to marketing, sales, and project management."],
       tags: [
         "Internship",
         "Exposure",

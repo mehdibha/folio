@@ -25,7 +25,9 @@ export const Header = (props: HeaderProps) => {
               href="/"
               className="mr-8 flex items-center space-x-2 transition-all hover:opacity-80"
             >
-              <Image src={logo} alt="notionfol.io" width={30} height={30} />
+              {logo && (
+                <Image src={logo} alt="notionfol.io" width={30} height={30} />
+              )}
               <span className="inline-block font-bold">{name}</span>
             </Link>
             <div className="flex-1">

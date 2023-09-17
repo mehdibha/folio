@@ -67,7 +67,7 @@ export interface ISiteConfig {
   name: string
   description: string
   links: ILinks
-  header: { logo: string; nav: INavItem[] }
+  header: { logo?: string; nav: INavItem[] }
   heroBanner: IHeroBanner
   about: IAbout
   experience: IWorkExperience[]

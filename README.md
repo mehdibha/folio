@@ -1,8 +1,5 @@
 [![Stargazers][stars-shield]][stars-url][![Forks][forks-shield]][forks-url][![Contributors][contributors-shield]][contributors-url][![MIT License][license-shield]][license-url][![Issues][issues-shield]][issues-url]
 
-> **Warning**
-> This app is a work in progress. I'm building this in public.
-
 <br/>
 <div align="center">
   <a href="https://github.com/Mehdi-BHA/notionfolio">

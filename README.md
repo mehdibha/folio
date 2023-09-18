@@ -116,7 +116,7 @@ We will be happy to mention you here, just make a pull request and we will add y
 
 ## Contributing
 
-See the [contribution guide](contributing.md) and join our amazing list of [contributors](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/graphs/contributors)!
+See the [contribution guide](contributing.md) and join our amazing list of [contributors](https://github.com/mehdibha/notionfolio/graphs/contributors)!
 
 <!-- LICENSE -->
 

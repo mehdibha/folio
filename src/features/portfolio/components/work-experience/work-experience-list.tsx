@@ -18,13 +18,13 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
             {/* background */}
             <div className="absolute left-0 top-0 z-[-1] h-full w-full rounded-xl bg-[rgba(50,50,50,0.1)] opacity-30 shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent" />
             {/* content */}
-            <div className=" grid grid-cols-9 gap-6 p-6">
-              <div className="col-span-2 pt-1">
+            <div className="grid grid-cols-9 gap-1 sm:gap-6 p-6">
+              <div className="col-span-9 sm:col-span-2 pt-1">
                 <p className="text-sm font-medium uppercase text-foreground-secondary">
                   {experience.startDate} - {experience.endDate}
                 </p>
               </div>
-              <div className="col-span-7">
+              <div className="col-span-9 sm:col-span-7">
                 <h3 className="text-lg font-bold">
                   {experience.title}{" "}
                   <span className="text-primary">@{experience.company}</span>
@@ -33,14 +33,9 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
                   {experience.location}
                 </p>
                 <WorkExperienceDescription list={experience.description} />
-                {/* <ul className="mb-3 list-disc">
-                  {experience.description.map((elem, index) => (
-                    <li key={index}>{elem}</li>
-                  ))} 
-                </ul>*/}
                 <div className="flex flex-wrap gap-2">
                   {experience.tags.map((tag, index) => (
-                    <Badge key={index}>{tag}</Badge>
+                    <Badge key={index} className="text-xs">{tag}</Badge>
                   ))}
                 </div>
               </div>

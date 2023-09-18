@@ -63,6 +63,15 @@ export interface IProject {
   }
 }
 
+export interface IContact {
+  title: string
+  description: string
+  callToAction: {
+    label: string
+    href: string
+  }
+}
+
 export interface ISiteConfig {
   name: string
   description: string
@@ -73,4 +82,5 @@ export interface ISiteConfig {
   experience: IWorkExperience[]
   education: IEducation[]
   projects: IProject[]
+  contact: IContact
 }

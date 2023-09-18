@@ -44,7 +44,7 @@ export const siteConfig: ISiteConfig = {
       },
       {
         label: "Explore my projects",
-        href: "#projects",
+        href: "/#projects",
       },
     ],
   },
@@ -206,4 +206,12 @@ export const siteConfig: ISiteConfig = {
       },
     },
   ],
+  contact: {
+    title: "Get in touch",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    callToAction: {
+      label : "Say hello",
+      href: "emailto:mehdibenhadjali@gmail.com"
+    }
+  }
 }

@@ -35,7 +35,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${display.variable}`}>
+    <html lang="en" className={`${display.variable} scroll-smooth`}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />

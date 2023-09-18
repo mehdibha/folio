@@ -27,11 +27,14 @@ export const HeroBanner = () => {
         <h2 className="mb-8 text-center text-xl">{data.subtitle}</h2>
         <div className="ali flex justify-center space-x-4">
           {data.callToActions.map((elem, index) => (
-            <Link key={index} href={elem.href}>
-              <Button size="lg" variant={index === 0 ? "default" : "neutral"}>
-                {elem.label}
-              </Button>
-            </Link>
+            <Button
+              key={index}
+              asChild
+              size="lg"
+              variant={index === 0 ? "default" : "neutral"}
+            >
+              <Link href={elem.href}>{elem.label}</Link>
+            </Button>
           ))}
         </div>
       </div>

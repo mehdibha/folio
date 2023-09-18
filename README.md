@@ -113,6 +113,7 @@ We will be happy to mention you here, just make a pull request and we will add y
 
 - [mehdibha.co](https://www.mehdibha.co)
 - [hamza-bouissa.blog](https://hamza-bouissa.blog)
+- [iyed.dev](https://www.iyed.dev)
 
 <!-- CONTRIBUTING -->
 

@@ -25,23 +25,18 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
+    <li><a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Forking this project</a></li>
-        <li><a href="#built-with">Screenshots</a></li>
+        <li><a href="#features">Features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#sites-using-notionfolio">Sites using notionfol.io</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contributors">Contributors</a></li>
   </ol>
 </details>
 
@@ -55,48 +50,69 @@ This repo is what I use to power my personal blog and portfolio site [mehdibha.c
 <img src="https://www.notionfol.io/images/screenshots/screenshot01.png" />
 </details>
 
-## Features
+### Features
 
-- 📒 Writing posts using notion
-- 👀 SEO friendly
-- 🤖 Entirely customisable throw one config file
+- 📒 Writing posts using Notion as CMS
+- 👀 Pretty URLs & SEO friendly
+- 🤖 Entirely customisable through one config file
+- 🚀 Fast page views
+- 🌓 Dark and light mode
+- 📱 Responsive
+- ♻️ Incremental static regeneration (Every x minutes re-update website content so no need to redeploy)
+- 🚀 Deploy on Vercel in minutes
+- 🔍 Search
+- 📰 RSS feed (coming soon)
+  
+
+### Built with
+
+- Next.js (v13 with app dir) and React
+- Typescript
+- Tailwind CSS
+- Shadcn-ui as starter components
+- React-notion-x
 
 ## Getting Started
 
 If you want to clone the project and make you personal notionfolio
 
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Mehdi-BHA/notionfolio.git
-   ```
-2. Install NPM packages
-   ```sh
-   yarn
-   ```
-
-### Configuration
-
--
+### Configuratuion
+- Star the repo
+- Duplicate this Notion [template](https://mehdibha.notion.site/11efa51a4fb34073acfe8ef1f70aa0cb), and share it to the public
+- Fork this project
+- Customize /src/config/site.ts
+- Replace favicons and images /public
+- Add NOTION_PAGE_ID as an env variable (see .env.exemple)
+- Deploy on Vercel (do not forget to add env variables)
+- Run script to update website for new features (yarn run update-template) (it syncs with this repo without changing config file and /public)
 
 ## Roadmap
 
-- [ ] Organize project architecture
-- [ ] Latest posts component (home page)
-- [ ] Footer
-- [ ] Blog page design
-- [ ] Refactor blog page to use pagination
-- [ ] NotionRenderrer component
-- [ ] Post page
-- [ ]
+- [ ] Make the website responsive
+- [ ] Projects archive page
+- [ ] Missing cover image in blog posts
+- [ ] Fix display date in posts
+- [ ] Make config more optionnal (config/site.ts)
+- [ ] Switch from react-notion-x to a custom component
+- [ ] CI / pre-commit hooks
+- [ ] Fix all linting and type errors
+- [ ] Generate a sitemap
+- [ ] Implement RSS feed
+- [ ] Implement analytics
+- [ ] Auth + comments
+- [ ] Collect emails to continue reading an article
+- [ ] Introduce courses feature
+- [ ] Introduce tools feature
+- [ ] Automatically generate a resume on build (using LaTeX and maybe with different variants)
+- [ ] Add themes and variants for components
+- [ ] Make a website to generate notionfolios from it directly
 
 ## Sites using notionfol.io
 
 We will be happy to mention you here, just make a pull request and we will add you
 
-- [notionfol.io](https://www.notionfol.io)
-- [mehdibha.com](https://www.mehdibha.com)
+- [mehdibha.co](https://www.mehdibha.co)
+- [hamza-bouissa.blog](https://hamza-bouissa.blog)
 
 <!-- CONTRIBUTING -->
 

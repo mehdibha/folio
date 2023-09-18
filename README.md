@@ -102,6 +102,7 @@ If you want to clone the project and make you personal notionfolio
 - [ ] Introduce tools feature
 - [ ] Automatically generate a resume on build (using LaTeX and maybe with different variants)
 - [ ] Add themes and variants for components
+- [ ] implement i18n
 - [ ] Make a website to generate notionfolios from it directly
 
 ## Sites using notionfol.io

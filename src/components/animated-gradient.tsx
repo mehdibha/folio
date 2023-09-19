@@ -1,8 +1,10 @@
 "use client"
-import { motion } from "framer-motion"
+import { Variants, motion } from "framer-motion"
 
 export const AnimatedGradient = () => (
-  <div style={{ position: "absolute", width: "100%", zIndex: "-1", opacity: 0.7 }}>
+  <div
+    style={{ position: "absolute", width: "100%", zIndex: "-1", opacity: 0.7 }}
+  >
     <div
       style={{
         position: "relative",
@@ -35,9 +37,8 @@ export const AnimatedGradient = () => (
   </div>
 )
 
-const Gradient = (props) => {
-  const isMobile = false
-  const variants = ({ colors }) => {
+const Gradient = () => {
+  const variants = ({ colors }: { colors: string[] }): Variants => {
     return {
       initial: {
         fill: colors[0],
@@ -60,10 +61,10 @@ const Gradient = (props) => {
     <svg
       width={600}
       height={600}
+      className="h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[600px] md:w-[600px]"
       viewBox="0 0 277 231"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
       <motion.path
         fillRule="evenodd"

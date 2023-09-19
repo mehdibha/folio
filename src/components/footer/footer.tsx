@@ -39,7 +39,7 @@ export const Footer = async () => {
   return (
     <div className="container mt-12 pb-1">
       <Separator />
-      <div className="flex items-start justify-between py-4">
+      <div className="flex flex-col-reverse items-start justify-between py-4 sm:flex-row">
         <div>
           <p>
             All rights reserved ©{" "}

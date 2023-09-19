@@ -3,10 +3,8 @@ import React from "react"
 import { Button } from "../ui"
 import { useTheme } from "next-themes"
 import { Sun, Moon } from "@/assets/icons"
-import { getPage } from "@/lib/notion/notion-api/notion-api"
-import { NOTION_PAGE_ID } from "@/config"
 
-const ThemeToggle = () => {
+export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme()
 
   return (
@@ -20,5 +18,3 @@ const ThemeToggle = () => {
     </Button>
   )
 }
-
-export default ThemeToggle

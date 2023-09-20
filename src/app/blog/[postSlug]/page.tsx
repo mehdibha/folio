@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui"
 import { getAllPosts } from "@/lib/notion"
 import { getPostBlocks } from "@/lib/notion/get-post-blocks"
 import { notFound } from "next/navigation"
+import { formatDate } from "@/utils"
 
 const title = "How to configure ESLint and Prettier in an Expo project"
 const date = "Jul 25, 2023"
@@ -44,7 +45,7 @@ const PostPage = async (props: PostPageProps) => {
     <div className="mt-20">
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
       <div className="flex items-center space-x-2">
-        <p>Published in {date}</p>
+        <p>Published in {formatDate(date)}</p>
         <p>•</p>
         <p>{timeToRead} min read</p>
         <p>•</p>

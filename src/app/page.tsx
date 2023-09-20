@@ -1,3 +1,4 @@
+import Link from "next/link"
 import {
   About,
   Education,
@@ -9,7 +10,6 @@ import {
 import { PostsList, getAllPosts } from "@/features/blog"
 import { AnimatedGradient } from "@/components"
 import { Button } from "@/components/ui"
-import Link from "next/link"
 
 async function getData() {
   const posts = await getAllPosts({ includePages: false })

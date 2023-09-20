@@ -6,7 +6,7 @@ export const siteConfig: ISiteConfig = {
     "Make your own portfolio + Notion-powered blog in minutes with Next.js and Vercel.",
   links: {
     // order is same order in the footer (when link added it's shown in the footer)
-    mail: "mehdibenhadjali@gmail.com",
+    mail: "hello@mehdibha.co",
     linkedin: "https://linkedin.com/mehdibha",
     github: "https://github.com/mehdibha",
     twitter: "https://twitter.com/mehdibha_",
@@ -211,7 +211,7 @@ export const siteConfig: ISiteConfig = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     callToAction: {
       label : "Say hello",
-      href: "emailto:mehdibenhadjali@gmail.com"
+      href: "mailto:hello@mehdibha.co"
     }
   }
 }

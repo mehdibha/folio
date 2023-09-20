@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react"
+import React from "react"
 
 export const useScroll = (threshold: number = 0) => {
-  const [scrolled, setScrolled] = useState(
+  const [scrolled, setScrolled] = React.useState(
     typeof window !== "undefined" ? window.scrollY > threshold : false
   )
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Function to handle scroll events
     function handleScroll() {
       // Check if the user has scrolled beyond the top of the page (scrollY > 0)
       setScrolled(window.scrollY > threshold)
     }
-
+    // setScrolled(window.scrollY > threshold)
     // Add the scroll event listener
     window.addEventListener("scroll", handleScroll)
 

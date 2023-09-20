@@ -35,7 +35,7 @@ export async function getAllPosts({ includePages = false }) {
       // // Convert date (with timezone) to unix milliseconds timestamp
       properties.createdTime = new Date(
         block[id].value?.created_time
-      ).toString()
+      ).toISOString();
       
 
       data.push(properties)

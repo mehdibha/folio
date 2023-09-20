@@ -32,8 +32,8 @@ export const ProjectsList = (props: ProjectsListProps) => {
                 alt={project.title}
                 width={300}
                 loading="lazy"
-                height={48}
-                className="col-span-9 sm:col-span-2 rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30"
+                height={150}
+                className="col-span-9 sm:col-span-2 rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 object-cover"
               />
               <div className="col-span-9 sm:col-span-7">
                 <h3 className="text-lg font-bold">{project.title}</h3>

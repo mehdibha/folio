@@ -6,7 +6,7 @@
   :root {
     --background: 240 5.1% 88.4%;
     --foreground: 222.2 47.4% 11.2%;
-    
+
     --foreground-secondary: 0 0% 50%;
 
     --muted: 210 40% 96.1%;
@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
 
-    --border: 0 0% 50%;
+    --border: 0 0% 70%;
     --input: 214.3 31.8% 91.4%;
 
     --card: 0 0% 100%;
@@ -52,7 +52,7 @@
     --popover: 224 71% 4%;
     --popover-foreground: 215 20.2% 65.1%;
 
-    --border: 217 4% 78%;
+    --border: 0 0% 20%;
     --input: 216 34% 17%;
 
     --card: 224 71% 4%;
@@ -79,7 +79,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 }
 
@@ -87,4 +89,21 @@
   .focus-ring {
     @apply ring-primary ring-offset-2 ring-offset-background transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-primary hover:ring-[3px] hover:ring-primary/50 focus:outline-none focus:ring-[3px] focus:ring-primary disabled:ring-0 group-hover:ring-2 group-hover:ring-primary group-focus:ring-2 group-focus:ring-primary dark:ring-offset-background;
   }
+}
+
+::-webkit-scrollbar {
+  height: 1rem;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(210, 210, 210);
+  border: 1px solid rgb(100,100,100);
+  border-radius: 9999px;
+  box-shadow: 0 3px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid rgb(100,100,100);
+  background-color: rgb(120, 120, 120);
 }

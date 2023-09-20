@@ -38,7 +38,7 @@ export const PostListItem = (props: PostListItemProps) => {
               />
             </div>
             <p className="mb-3 text-sm">{summary}</p>
-            <div className="flex space-x-2">
+            <div className="flex gap-2 flex-wrap">
               {tags &&
                 tags.map((tag) => (
                   <Badge variant="outlined" key={tag}>

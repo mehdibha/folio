@@ -7,17 +7,15 @@ import Link from "next/link"
 
 export const Projects = () => {
   const projectsData = siteConfig.projects
-  const displayedProjects = projectsData.slice(0, 3)
+  const displayedProjects = projectsData.filter((project) => project.featured)
 
   return (
     <div>
       <ProjectsList projects={displayedProjects} />
       <div className="text-center">
-        {projectsData.length > 3 && (
-          <Button size="lg" asChild className="mx-auto mt-6">
-            <Link href="/projects">See full projects archive</Link>
-          </Button>
-        )}
+        <Button size="lg" asChild className="mx-auto mt-6">
+          <Link href="/projects">See full projects archive</Link>
+        </Button>
       </div>
     </div>
   )

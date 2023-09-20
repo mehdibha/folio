@@ -1,3 +1,4 @@
+import { format } from "date-fns"
 import { INavItem } from "./nav"
 
 export interface ILinks {
@@ -61,6 +62,7 @@ export interface IProject {
     github?: string
     npm?: string
   }
+  featured: boolean
 }
 
 export interface IContact {

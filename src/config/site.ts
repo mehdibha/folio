@@ -65,10 +65,11 @@ export const siteConfig: ISiteConfig = {
       location: "United States",
       startDate: "Jan 2019",
       endDate: "Present",
-      description:
-        ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi est sit amet facilisis magna etiam. Rutrum quisque non tellus orci ac auctor augue.",
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi est sit amet facilisis magna etiam. Rutrum quisque non tellus orci ac auctor augue.",
         "Posuere morbi leo urna molestie. Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Est velit egestas dui id ornare arcu odio ut sem. Faucibus in ornare quam viverra orci. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.",
-        "Montes nascetur ridiculus mus mauris vitae. Sagittis aliquam malesuada bibendum arcu vitae elementum. Elit pellentesque habitant morbi tristique. Elementum facilisis leo vel fringilla. Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Elementum nibh tellus molestie nunc non blandit massa enim nec",],
+        "Montes nascetur ridiculus mus mauris vitae. Sagittis aliquam malesuada bibendum arcu vitae elementum. Elit pellentesque habitant morbi tristique. Elementum facilisis leo vel fringilla. Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Elementum nibh tellus molestie nunc non blandit massa enim nec",
+      ],
       tags: [
         "Software Development",
         "Web Applications",
@@ -85,10 +86,11 @@ export const siteConfig: ISiteConfig = {
       location: "United States",
       startDate: "Jun 2017",
       endDate: "Dec 2018",
-      description:
-        ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi est sit amet facilisis magna etiam. Rutrum quisque non tellus orci ac auctor augue.",
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi est sit amet facilisis magna etiam. Rutrum quisque non tellus orci ac auctor augue.",
         "Posuere morbi leo urna molestie. Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Est velit egestas dui id ornare arcu odio ut sem. Faucibus in ornare quam viverra orci. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.",
-        "Montes nascetur ridiculus mus mauris vitae. Sagittis aliquam malesuada bibendum arcu vitae elementum. Elit pellentesque habitant morbi tristique. Elementum facilisis leo vel fringilla. Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Elementum nibh tellus molestie nunc non blandit massa enim nec",],
+        "Montes nascetur ridiculus mus mauris vitae. Sagittis aliquam malesuada bibendum arcu vitae elementum. Elit pellentesque habitant morbi tristique. Elementum facilisis leo vel fringilla. Ultricies mi eget mauris pharetra et ultrices neque ornare aenean. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Elementum nibh tellus molestie nunc non blandit massa enim nec",
+      ],
       tags: [
         "Product Development",
         "Product Roadmaps",
@@ -106,8 +108,9 @@ export const siteConfig: ISiteConfig = {
       location: "United States",
       startDate: "Mar 2015",
       endDate: "May 2017",
-      description:
-        ["Executed digital marketing campaigns, analyzed performance metrics, and optimized strategies to increase client ROI."],
+      description: [
+        "Executed digital marketing campaigns, analyzed performance metrics, and optimized strategies to increase client ROI.",
+      ],
       tags: [
         "Digital Marketing",
         "Campaigns",
@@ -123,8 +126,9 @@ export const siteConfig: ISiteConfig = {
       location: "United States",
       startDate: "Jun 2014",
       endDate: "Aug 2014",
-      description:
-        ["Assisted in various departments, gaining exposure to marketing, sales, and project management."],
+      description: [
+        "Assisted in various departments, gaining exposure to marketing, sales, and project management.",
+      ],
       tags: [
         "Internship",
         "Exposure",
@@ -168,8 +172,9 @@ export const siteConfig: ISiteConfig = {
       links: {
         website: "https://www.codehub.tn",
         github: "https://www.github.com/Mehdi-BHA/notionfolio",
-        npm: "https://www.npmjs.com/package/react-wave-player"
+        npm: "https://www.npmjs.com/package/react-wave-player",
       },
+      featured: true,
     },
     {
       title: "Weather Forecast App",
@@ -185,8 +190,9 @@ export const siteConfig: ISiteConfig = {
       links: {
         website: "https://www.codehub.tn",
         github: "https://www.github.com/Mehdi-BHA/notionfolio",
-        npm: "https://www.npmjs.com/package/react-wave-player"
+        npm: "https://www.npmjs.com/package/react-wave-player",
       },
+      featured: true,
     },
     {
       title: "E-commerce Website",
@@ -202,16 +208,18 @@ export const siteConfig: ISiteConfig = {
       links: {
         website: "https://www.codehub.tn",
         github: "https://www.github.com/Mehdi-BHA/notionfolio",
-        npm: "https://www.npmjs.com/package/react-wave-player"
+        npm: "https://www.npmjs.com/package/react-wave-player",
       },
+      featured: true,
     },
   ],
   contact: {
     title: "Get in touch",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     callToAction: {
-      label : "Say hello",
-      href: "mailto:hello@mehdibha.co"
-    }
-  }
+      label: "Say hello",
+      href: "mailto:hello@mehdibha.co",
+    },
+  },
 }

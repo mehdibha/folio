@@ -38,7 +38,7 @@ export const ProjectsList = (props: ProjectsListProps) => {
               <div className="col-span-9 sm:col-span-7">
                 <h3 className="text-lg font-bold">{project.title}</h3>
                 <p className="mb-2">{project.summary}</p>
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                   {project.tags.map((tag, index) => (
                     <Badge variant="filled" key={index}>
                       {tag}

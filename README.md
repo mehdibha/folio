@@ -41,7 +41,7 @@
 
 ## About The Project
 
-This repo is what I use to power my personal blog and portfolio site [mehdibha.com](https://www.mehdibha.com).
+This repo is what I use to power my personal blog and portfolio site [mehdibha.co](https://www.mehdibha.co).
 
 <details open><summary>Screenshot</summary>
 <img src="https://www.notionfol.io/images/screenshots/screenshot01.png" />

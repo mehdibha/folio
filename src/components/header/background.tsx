@@ -1,12 +1,11 @@
 "use client"
 import React from "react"
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams } from "next/navigation"
 import { useScroll } from "@/hooks"
 import { cn } from "@/utils"
 
 export const Background = () => {
-  const searchParams = useSearchParams()
-  console.log(searchParams)
+  useSearchParams()
   const { scrolled } = useScroll(0)
 
   return (

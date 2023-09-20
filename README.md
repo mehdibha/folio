@@ -88,7 +88,7 @@ If you want to clone the project and make you personal notionfolio
 - [ ] Make the website responsive
 - [ ] Projects archive page
 - [ ] Missing cover image in blog posts
-- [ ] Fix display date in posts
+- [x] Fix display date in posts
 - [ ] Infinite scroll in blog page
 - [ ] Make config more optionnal (config/site.ts)
 - [ ] Switch from react-notion-x to a custom component

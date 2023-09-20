@@ -45,7 +45,7 @@ const PostPage = async (props: PostPageProps) => {
     <div className="mt-20">
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
       <div className="flex items-center space-x-2">
-        <p>Published in {formatDate(date)}</p>
+        <p>Published in {formatDate(post.createdTime)}</p>
         <p>•</p>
         <p>{timeToRead} min read</p>
         <p>•</p>

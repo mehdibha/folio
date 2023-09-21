@@ -85,10 +85,10 @@ If you want to clone the project and make you personal notionfolio
 
 ## Roadmap
 
-- [ ] Make the website responsive
-- [ ] Projects archive page
-- [ ] Missing cover image in blog posts
+- [x] Make the website responsive
 - [x] Fix display date in posts
+- [x] Projects archive page
+- [ ] Missing cover image in blog posts
 - [ ] Infinite scroll in blog page
 - [ ] Make config more optionnal (config/site.ts)
 - [ ] Switch from react-notion-x to a custom component

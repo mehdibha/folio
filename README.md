@@ -53,6 +53,7 @@ This repo is what I use to power my personal blog and portfolio site [mehdibha.c
 - 👀 Pretty URLs & SEO friendly
 - 🤖 Entirely customisable through one config file
 - 🚀 Fast page views
+- 💼 Sleek Portfolio -> Showcase your work elegantly and professionally.
 - 🌓 Dark and light mode
 - 📱 Responsive
 - ♻️ Incremental static regeneration (Every x minutes re-update website content so no need to redeploy)

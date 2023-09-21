@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import { Input } from "@/components/ui"
 import { Search } from "@/assets/icons"
@@ -10,6 +11,22 @@ interface SearchBarProps {
 export const SearchBar = (props: SearchBarProps) => {
   const { value, onChange } = props
 
+  const inputRef = React.useRef(null)
+
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && e.key === "k") {
+        e.preventDefault()
+        inputRef.current.focus()
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [])
+
   return (
     <div className="relative w-full">
       <Search className="absolute bottom-0 left-3 top-0 my-auto h-6 w-6 text-gray-500" />
@@ -18,8 +35,12 @@ export const SearchBar = (props: SearchBarProps) => {
         value={value}
         onChange={onChange}
         placeholder="Search a post, a topic, a keyword..."
-        className="rounded-2xl py-7 pl-12 pr-4"
+        className="rounded-2xl py-7 pl-12 pr-12"
+        ref={inputRef}
       />
+      <span className="absolute bottom-0 right-8 top-0 my-auto h-6 w-6 text-gray-500 z-[-1]">
+        ctrl+k
+      </span>
     </div>
   )
 }

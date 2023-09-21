@@ -11,11 +11,11 @@ interface SearchBarProps {
 export const SearchBar = (props: SearchBarProps) => {
   const { value, onChange } = props
 
-  const inputRef = React.useRef(null)
+  const inputRef = React.useRef<HTMLInputElement | null>(null)
 
   React.useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.ctrlKey && e.key === "k") {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.key === "k" && inputRef.current) {
         e.preventDefault()
         inputRef.current.focus()
       }

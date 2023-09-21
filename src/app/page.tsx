@@ -11,13 +11,13 @@ import { PostsList, getAllPosts } from "@/features/blog"
 import { AnimatedGradient } from "@/components"
 import { Button } from "@/components/ui"
 
-async function getData() {
-  const posts = await getAllPosts({ includePages: false })
-  return { posts }
-}
+// async function getData() {
+//   const posts = await getAllPosts({ includePages: false })
+//   return { posts }
+// }
 
 export default async function Home() {
-  const { posts } = await getData()
+  // const { posts } = await getData()
 
   return (
     <main>
@@ -34,7 +34,7 @@ export default async function Home() {
         <Section id="projects" title="Some featured projects">
           <Projects />
         </Section>
-        {posts && (
+        {/* {posts && (
           <Section id="latest-posts" title="Latest posts">
             <PostsList posts={posts.slice(0, 3)} />
             <div className="text-center">
@@ -43,7 +43,7 @@ export default async function Home() {
               </Button>
             </div>
           </Section>
-        )}
+        )} */}
       </div>
       <div
         id="contact"

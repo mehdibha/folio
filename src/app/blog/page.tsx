@@ -1,7 +1,5 @@
-// "use client"
 import React from "react"
-import { Badge } from "@/components/ui"
-import { PostsList, SearchBar, getAllTags } from "@/features/blog"
+import { getAllTags } from "@/features/blog"
 import { getAllPosts } from "@/lib/notion"
 import PostsExplorer from "@/features/blog/components/posts-explorer"
 

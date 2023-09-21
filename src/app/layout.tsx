@@ -2,9 +2,11 @@
 import { Metadata } from "next"
 import localFont from "next/font/local"
 import { Footer, Header, ThemeProvider } from "@/components"
-import { siteConfig } from "@/config"
+import { REVALIDATE_TIME, siteConfig } from "@/config"
 import "@/styles/globals.css"
 import "@/styles/notion.css"
+
+export const revalidate = REVALIDATE_TIME
 
 export const metadata: Metadata = {
   title: {

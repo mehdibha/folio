@@ -4,25 +4,11 @@ import {
   Button,
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui"
 import Image from "next/image"
-import {
-  Codepen,
-  GitFork,
-  Github,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Mail,
-  Star,
-  Link,
-  Npm,
-} from "@/assets/icons"
+import { Link, Github, Npm } from "@/assets/icons"
 
 interface ILinks {
   website?: string
@@ -92,7 +78,7 @@ export const ProjectModal = (props: ProjectModalProps) => {
                       target="_blank"
                     >
                       <Button size="icon" variant="ghost">
-                        <Icon />
+                        <Icon size={20} />
                       </Button>
                     </a>
                   )

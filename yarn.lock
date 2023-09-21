@@ -33,6 +33,11 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@corex/deepmerge@^4.0.43":
+  version "4.0.43"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.43.tgz#9bd42559ebb41cc5a7fb7cfeea5f231c20977dca"
+  integrity sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==
+
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -142,6 +147,11 @@
   version "13.4.19"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.4.19.tgz#46905b4e6f62da825b040343cbc233144e9578d3"
   integrity sha512-FsAT5x0jF2kkhNkKkukhsyYOrRqtSxrEhfliniIq0bwWbuXLgyt3Gv0Ml+b91XwjwArmuP7NxCiGd++GGKdNMQ==
+
+"@next/env@^13.4.3":
+  version "13.5.2"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-13.5.2.tgz#1c09e6cf1df8b1edf3cf0ca9c0e0119a49802a5d"
+  integrity sha512-dUseBIQVax+XtdJPzhwww4GetTjlkRSsXeQnisIJWBaHsnxYcN2RGzsPHi58D6qnkATjnhuAtQTJmR1hKYQQPg==
 
 "@next/eslint-plugin-next@13.4.19":
   version "13.4.19"
@@ -2306,7 +2316,7 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0, minimist@^1.2.6:
+minimist@^1.2.0, minimist@^1.2.6, minimist@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
@@ -2368,6 +2378,16 @@ next-auth@^4.23.1:
     preact "^10.6.3"
     preact-render-to-string "^5.1.19"
     uuid "^8.3.2"
+
+next-sitemap@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-4.2.3.tgz#5db3f650351a51e84b9fd6b58c5af2f9257b5058"
+  integrity sha512-vjdCxeDuWDzldhCnyFCQipw5bfpl4HmZA7uoo3GAaYGjGgfL4Cxb1CiztPuWGmS+auYs7/8OekRS8C2cjdAsjQ==
+  dependencies:
+    "@corex/deepmerge" "^4.0.43"
+    "@next/env" "^13.4.3"
+    fast-glob "^3.2.12"
+    minimist "^1.2.8"
 
 next-themes@^0.2.1:
   version "0.2.1"

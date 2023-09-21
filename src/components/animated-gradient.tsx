@@ -3,13 +3,19 @@ import { Variants, motion } from "framer-motion"
 
 export const AnimatedGradient = () => (
   <div
-    style={{ position: "absolute", width: "100%", zIndex: "-1", opacity: 0.7 }}
+    style={{
+      position: "absolute",
+      width: "100%",
+      height: "calc(100vh - 64px)",
+      zIndex: "-1",
+      opacity: 0.7,
+    }}
   >
     <div
       style={{
         position: "relative",
         width: "100%",
-        height: "600px",
+        height: "100%",
         filter: "blur(60px)",
       }}
     >
@@ -50,13 +56,42 @@ const Gradient = () => {
         transition: {
           repeat: Infinity,
           duration: 10,
-          repeatType: "loop",
-          type: "tween",
-          ease: "linear",
+            repeatType: "loop",
+            type: "tween",
+            ease: "linear",
         },
       },
     }
   }
+
+  return (
+    <svg
+    viewBox="0 0 748 681"
+    width={600}
+    height={600}
+    className="h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[600px] md:w-[600px]"
+  >
+    <motion.path
+      initial="initial"
+      animate="animate"
+      variants={variants({ colors: ["#51FFFF", "#51FF96", "#5162FF"] })}
+      d="M85.1,271c-19.2-40.5,19.7-90.7,59.6-118c38-26,93.1-13.5,141.2-19.7c33.4-4.3,64.8-8.8,98.5-11.1 c44.2-3,91.4-22.7,130.1-4.3c39.2,18.7,49.9,61.8,65.8,97.6c17.2,38.6,52.2,81.8,30.4,118.6c-22.6,38.1-90.7,30.8-132.7,53.9 c-33.7,18.5-49.2,57.6-87.6,67.2c-40,10-89.6,8-121.3-15.2c-31.5-23.1-7.3-73.9-35.6-99.9C194.4,304.1,106.8,316.6,85.1,271 L85.1,271z"
+    />
+    <motion.path
+      d="M662.6,217.7c30.2,36.5,13.3,97.3-10.4,143.7c-21.2,41.5-79,55.7-110.1,92.4c-31.2,36.8-23.6,102.2-69.7,119.7 c-46.2,17.5-77.9-40.6-124.5-46c-49-5.6-109.5,39-148.7,14.6c-38-23.6-30-80.3-28.6-125c1.2-39.2,19.7-76.4,36.2-114.5 c17.1-39.3,21.1-91.5,62.1-111.8c42.4-21,84.7,16.7,130.2,16.5c37.3-0.2,73.4-19.4,110.4-17.9C563.8,191.5,631.6,180.3,662.6,217.7 L662.6,217.7z"
+      initial="initial"
+      animate="animate"
+      variants={variants({ colors: ["#9C8CFF", "#FFC400", "#FF4338"] })}
+    />
+    <motion.path
+      d="M404.3,118.2c16.4-18.2,44.5-21.9,70.8-22.5c24.1-0.6,47.4,11.2,71.6,19.1c26.8,8.7,62.2,5.2,77.9,29.4 c16.2,25.1-13.5,51.7-7.5,79.6c6.4,30.1,58.4,60.9,42.2,83.6c-17.6,24.7-67.2-17.1-96.8-7.2c-23.1,7.8-20.2,47.1-43.5,54.3 c-24.9,7.7-62.6,7.1-80.8-16c-20-25.6,9.2-58.1-0.7-87.9c-8-23.9-42.3-35.3-48.4-59.5C382.5,164.8,388,136.3,404.3,118.2 L404.3,118.2z"
+      initial="initial"
+      animate="animate"
+      variants={variants({ colors: ["#0061FD", "#7E51FF", "#5D5FEF"] })}
+    />
+  </svg>
+  )
+
   return (
     <svg
       width={600}

@@ -11,6 +11,7 @@ export const AnimatedGradient = () => (
         width: "100%",
         height: "600px",
         filter: "blur(60px)",
+        willChange:"filter"
       }}
     >
       <div

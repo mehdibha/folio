@@ -55,10 +55,10 @@ This repo is what I use to power my personal blog and portfolio site [mehdibha.c
 - 🚀 Fast page views
 - 💼 Sleek Portfolio -> Showcase your work elegantly and professionally.
 - 🌓 Dark and light mode
-- 📱 Responsive
+- 📱 Responsive design
 - ♻️ Incremental static regeneration (Every x minutes re-update website content so no need to redeploy)
 - 🚀 Deploy on Vercel in minutes
-- 🔍 Search
+- 🔍 Search posts instantly
 - 📰 RSS feed (coming soon)
   
 

@@ -7,11 +7,11 @@ import { parseISO } from "date-fns"
 export async function generateRssFeed() {
   const posts = await getAllPosts({ includePages: false })
 
-  if (!SITE_URL){
+  if (!SITE_URL) {
     throw new Error("Missing SITE_URL in env file")
   }
-  
-  if (!posts){
+
+  if (!posts) {
     throw new Error("Failed to fetch posts")
   }
 
@@ -26,6 +26,8 @@ export async function generateRssFeed() {
     }`,
     feedLinks: {
       rss2: `${SITE_URL}/rss.xml`,
+      atom: `${SITE_URL}/atom.xml`,
+      json: `${SITE_URL}/rss.json`,
     },
   }
 
@@ -42,4 +44,6 @@ export async function generateRssFeed() {
   })
 
   fs.writeFileSync("./public/rss.xml", feed.rss2())
+  fs.writeFileSync("./public/rss.json", feed.json1())
+  fs.writeFileSync("./public/atom.xml", feed.atom1())
 }

@@ -65,7 +65,7 @@ const Section = (props: SectionProps) => {
   const { title, id, children } = props
   return (
     <div id={id} className="mx-auto w-full max-w-4xl">
-      <h2 className="mb-4 font-display text-4xl font-bold">{title}</h2>
+      <h2 className="font-display mb-4 text-4xl font-bold">{title}</h2>
       {children}
     </div>
   )

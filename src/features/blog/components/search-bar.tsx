@@ -30,16 +30,16 @@ export const SearchBar = (props: SearchBarProps) => {
 
   return (
     <div className="relative w-full">
-      <Search className="absolute bottom-0 left-3 top-0 my-auto h-6 w-6 text-gray-500" />
+      <Search className="absolute inset-y-0 left-3 my-auto h-6 w-6 text-gray-500" />
       <Input
         type="search"
         value={value}
         onChange={onChange}
         placeholder="Search a post, a topic, a keyword..."
-        className="rounded-2xl py-7 pl-12 pr-12"
+        className="rounded-2xl px-12 py-7"
         ref={inputRef}
       />
-      <span className="absolute bottom-0 right-8 top-0 my-auto h-6 w-6 text-gray-500 z-[-1]">
+      <span className="absolute inset-y-0 right-8 z-[-1] my-auto h-6 w-6 text-gray-500">
         ctrl+k
       </span>
     </div>

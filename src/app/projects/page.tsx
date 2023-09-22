@@ -3,7 +3,7 @@ import { ProjectsTable } from "@/features/portfolio"
 
 const Projects = () => {
   return (
-    <div className="container max-w-6xl mt-12">
+    <div className="container mt-12 max-w-6xl">
       <ProjectsTable />
     </div>
   )

@@ -12,7 +12,7 @@ export const Background = () => {
   return (
     <div
       className={cn(
-        "absolute left-0 top-0 z-[-1] h-full w-full bg-background/70 opacity-0 shadow-md backdrop-blur-md transition-all",
+        "bg-background/70 absolute left-0 top-0 z-[-1] h-full w-full opacity-0 shadow-md backdrop-blur-md transition-all",
         { "opacity-100": scrolled }
       )}
     />

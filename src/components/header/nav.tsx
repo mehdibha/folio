@@ -17,7 +17,7 @@ export const Nav = (props: NavProps) => {
 
   return (
     <nav
-      className={cn("flex sm:space-x-2 space-x-0", {
+      className={cn("flex space-x-0 sm:space-x-2", {
         "flex-col items-stretch": direction === "column",
       })}
     >
@@ -28,7 +28,7 @@ export const Nav = (props: NavProps) => {
               key={index}
               href={item.href}
               className={cn(
-                "flex justify-center items-center rounded-lg px-5 py-2 text-sm font-medium transition-all hover:text-foreground",
+                "hover:text-foreground flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-all",
                 item.disabled && "cursor-not-allowed opacity-80",
                 item.href === pathname
                   ? "bg-foreground/10 text-foreground"

@@ -52,7 +52,7 @@ export const Footer = async () => {
             </a>{" "}
             2023.
           </p>
-          <div className="flex space-x-2 text-sm text-foreground-secondary ">
+          <div className="text-foreground-secondary flex space-x-2 text-sm ">
             <p>
               Website powered by{" "}
               <a
@@ -63,7 +63,7 @@ export const Footer = async () => {
                 notionfol.io.
               </a>
             </p>
-            <div className="flex items-center space-x-2 text-sm text-foreground-secondary">
+            <div className="text-foreground-secondary flex items-center space-x-2 text-sm">
               <div className="flex items-center space-x-1">
                 <Star size={16} />
                 <span>{starsCount}</span>

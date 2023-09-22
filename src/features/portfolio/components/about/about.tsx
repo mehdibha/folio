@@ -17,15 +17,15 @@ export const About = () => {
         width={200}
         alt={name}
         loading="lazy"
-        className="my-6 rounded-b-[50px] rounded-t-[999px] aspect-[auto 200 / 300] object-cover"
+        className="aspect-[auto 200 / 300] my-6 rounded-b-[50px] rounded-t-[999px] object-cover"
       />
-      <div className="border-1 border-1 border-solid border-red-500">
-        <h2 className="mb-4 font-display text-2xl font-bold md:text-3xl">
+      <div className="border-1 border-solid border-red-500">
+        <h2 className="font-display mb-4 text-2xl font-bold md:text-3xl">
           {title}
         </h2>
         {description.map((paragraph, index) => (
           <p
-            className={cn("mb-4 text-md lg:text-lg", {
+            className={cn("text-md mb-4 lg:text-lg", {
               "mb-0": index === description.length,
             })}
             key={index}

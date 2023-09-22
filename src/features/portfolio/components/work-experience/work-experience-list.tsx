@@ -18,9 +18,9 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
             {/* background */}
             <div className="absolute left-0 top-0 z-[-1] h-full w-full rounded-xl bg-[rgba(50,50,50,0.1)] opacity-30 shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent" />
             {/* content */}
-            <div className="grid grid-cols-9 gap-1 sm:gap-6 p-6">
-              <div className="col-span-9 sm:col-span-2 pt-1">
-                <p className="text-sm font-medium uppercase text-foreground-secondary">
+            <div className="grid grid-cols-9 gap-1 p-6 sm:gap-6">
+              <div className="col-span-9 pt-1 sm:col-span-2">
+                <p className="text-foreground-secondary text-sm font-medium uppercase">
                   {experience.startDate} - {experience.endDate}
                 </p>
               </div>
@@ -29,7 +29,7 @@ export const WorkExperienceList = (props: WorkExperienceListProps) => {
                   {experience.title}{" "}
                   <span className="text-primary">@{experience.company}</span>
                 </h3>
-                <p className="text-md mb-1 text-foreground-secondary">
+                <p className="text-md text-foreground-secondary mb-1">
                   {experience.location}
                 </p>
                 <WorkExperienceDescription list={experience.description} />

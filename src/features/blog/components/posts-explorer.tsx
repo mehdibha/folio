@@ -1,11 +1,12 @@
 "use client"
 import React from "react"
 import { TPost, TPosts } from "@/types"
+import { useUpdateQueryStringValueWithoutNavigation } from "@/hooks"
 import { SearchBar } from "./search-bar"
 import { TagsSelect } from "./tags-select"
 import { PostsList } from "./posts-list"
 import { useSearchParams } from "next/navigation"
-import { useUpdateQueryStringValueWithoutNavigation } from "@/hooks"
+import { useInView } from "framer-motion"
 
 interface PostsExplorerProps {
   posts: TPosts
@@ -16,6 +17,9 @@ export const PostsExplorer = (props: PostsExplorerProps) => {
   const { posts, tags } = props
 
   const searchParams = useSearchParams()
+  const loadMoreRef = React.useRef<HTMLDivElement | null>(null)
+  const inView = useInView(loadMoreRef)
+  const [numberDisplayedPosts, setNumberDisplayedPosts]=React.useState<number>(30)
 
   const initialSearchValue = searchParams.get("q") ?? ""
   const initialTags =
@@ -54,6 +58,12 @@ export const PostsExplorer = (props: PostsExplorerProps) => {
     })
   }, [posts, searchValue, selectedTags])
 
+  React.useEffect(()=>{
+    if (inView){
+      setNumberDisplayedPosts(prevN => prevN + 20)
+    }
+  },[inView])
+
   return (
     <div>
       <div className="container mb-10 max-w-3xl">
@@ -69,9 +79,9 @@ export const PostsExplorer = (props: PostsExplorerProps) => {
           selectedTags={selectedTags}
           handleTagClick={handleTagClick}
         />
-        {filteredPosts && <PostsList posts={filteredPosts} />}
+        {filteredPosts && <PostsList posts={filteredPosts.slice(0,numberDisplayedPosts)} />}
+        <div ref={loadMoreRef} />
       </div>
     </div>
   )
 }
-

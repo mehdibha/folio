@@ -93,7 +93,7 @@ If you want to clone the project and make you personal notionfolio
 - [x] Implement RSS feed
 - [x] Add thumbnails to posts
 - [x] Implement analytics
-- [ ] Infinite scroll in blog page
+- [x] Infinite scroll in blog page
 - [ ] Make config more optionnal (config/site.ts)
 - [ ] Switch from react-notion-x to a custom component
 - [ ] CI / pre-commit hooks

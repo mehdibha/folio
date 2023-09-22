@@ -102,7 +102,7 @@ If you want to clone the project and make you personal notionfolio
 - [ ] Collect emails to continue reading an article
 - [ ] Introduce courses feature
 - [ ] Introduce tools feature
-- [ ] Automatically generate a resume on build (using LaTeX and maybe with different variants)
+- [ ] Automatically generate a resume on build
 - [ ] PWA
 - [ ] Add themes and variants for components
 - [ ] implement i18n

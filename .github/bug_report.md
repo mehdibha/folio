@@ -37,4 +37,4 @@ labels: bug
   <!-- E.g. Chrome 90, Safari 12.1, Firefox 87 -->
 - Browser:
   <!-- The commit hash of your deployment. E.g. 0dfc11d -->
-- Nobelium:
+- Notionfolio:

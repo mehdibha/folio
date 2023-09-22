@@ -98,7 +98,6 @@ If you want to clone the project and make you personal notionfolio
 - [ ] Switch from react-notion-x to a custom component
 - [ ] CI / pre-commit hooks
 - [ ] Fix all linting and type errors
-
 - [ ] Auth + comments
 - [ ] Collect emails to continue reading an article
 - [ ] Introduce courses feature

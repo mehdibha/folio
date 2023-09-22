@@ -1,7 +1,7 @@
-import { ExtendedRecordMap } from "notion-types"
+import { ExtendedRecordMap } from 'notion-types'
 
-export type TPostStatus = "Private" | "Public" | "PublicOnDetail"
-export type TPostType = "Post" | "Paper" | "Page"
+export type TPostStatus = 'Private' | 'Public' | 'PublicOnDetail'
+export type TPostType = 'Post' | 'Paper' | 'Page'
 
 export type TPost = {
   id: string

@@ -1,4 +1,4 @@
-import { REVALIDATE_TIME } from "@/config"
+import { REVALIDATE_TIME } from '@/config'
 
 interface BlogLayoutProps {
   children: React.ReactNode

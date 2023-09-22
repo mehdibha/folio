@@ -1,6 +1,8 @@
-import React from "react"
-import { TPost } from "@/types"
-import { PostListItem } from "./post-list-item"
+import React from 'react'
+
+import { TPost } from '@/types'
+
+import { PostListItem } from './post-list-item'
 
 interface PostsListProps {
   posts: TPost[]
@@ -9,7 +11,7 @@ interface PostsListProps {
 export const PostsList = (props: PostsListProps) => {
   const { posts } = props
   return (
-    <ul className="flex flex-col space-y-4">
+    <ul className='flex flex-col space-y-4'>
       {posts.map((post) => (
         <PostListItem
           key={post.slug}

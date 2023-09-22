@@ -1,1 +1,1 @@
-export * from "./get-in-touch"
+export * from './get-in-touch'

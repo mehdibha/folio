@@ -1,9 +1,10 @@
-import { ProjectsTable } from "@/features/portfolio"
-import React from "react"
+import React from 'react'
+
+import { ProjectsTable } from '@/features/portfolio'
 
 const Projects = () => {
   return (
-    <div className="container max-w-6xl mt-12">
+    <div className='container max-w-6xl mt-12'>
       <ProjectsTable />
     </div>
   )

@@ -1,1 +1,1 @@
-export { getAllPosts } from '@/lib/notion';
+export { getAllPosts } from '@/lib/notion'

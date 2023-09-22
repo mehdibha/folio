@@ -1,29 +1,30 @@
-import * as React from "react"
-import { VariantProps, cn, cva } from "@/utils"
+import * as React from 'react'
+
+import { VariantProps, cn, cva } from '@/utils'
 
 const badgeVariants = cva(
-  "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 border",
+  'flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 border',
   {
     variants: {
       color: {
-        default: "border-gray-400/30 bg-gray-400/30 text-foreground",
-        primary: "border-primary bg-primary text-primary-foreground",
-        secondary: "border-secondary bg-secondary text-secondary-foreground",
+        default: 'border-gray-400/30 bg-gray-400/30 text-foreground',
+        primary: 'border-primary bg-primary text-primary-foreground',
+        secondary: 'border-secondary bg-secondary text-secondary-foreground'
       },
       variant: {
-        filled: "border-transparent",
-        outlined: "bg-transparent",
-      },
+        filled: 'border-transparent',
+        outlined: 'bg-transparent'
+      }
     },
     defaultVariants: {
-      variant: "filled",
-      color: "default",
-    },
+      variant: 'filled',
+      color: 'default'
+    }
   }
 )
 
 export interface BadgeProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color">,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>,
     VariantProps<typeof badgeVariants> {
   selected?: boolean
 }

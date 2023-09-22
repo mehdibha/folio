@@ -1,10 +1,11 @@
-import { idToUuid } from "notion-utils"
-import { api } from "./notion-api"
-import { getAllPageIds } from "./get-all-page-ids"
-import { getPageProperties } from "./get-page-properties"
-import { NOTION_PAGE_ID } from "@/config"
-import { TPosts } from "@/types"
-import { mapImgUrl } from "./map-image"
+import { NOTION_PAGE_ID } from '@/config'
+import { TPosts } from '@/types'
+import { idToUuid } from 'notion-utils'
+
+import { getAllPageIds } from './get-all-page-ids'
+import { getPageProperties } from './get-page-properties'
+import { mapImgUrl } from './map-image'
+import { api } from './notion-api'
 
 export async function getAllPosts({ includePages = false }) {
   const id = idToUuid(NOTION_PAGE_ID)
@@ -18,8 +19,8 @@ export async function getAllPosts({ includePages = false }) {
 
   // Check Type
   if (
-    rawMetadata?.type !== "collection_view_page" &&
-    rawMetadata?.type !== "collection_view"
+    rawMetadata?.type !== 'collection_view_page' &&
+    rawMetadata?.type !== 'collection_view'
   ) {
     console.log(`pageId "${id}" is not a database`)
     return null
@@ -37,7 +38,8 @@ export async function getAllPosts({ includePages = false }) {
       properties.createdTime = new Date(
         block[id].value?.created_time
       ).toISOString()
-      properties.thumbnail = mapImgUrl(block[id].value?.format?.page_cover, block[id].value) ?? ''
+      properties.thumbnail =
+        mapImgUrl(block[id].value?.format?.page_cover, block[id].value) ?? ''
 
       data.push(properties)
     }

@@ -1,15 +1,15 @@
-import Link from "next/link"
+import Link from 'next/link'
+import { AnimatedGradient } from '@/components'
+import { PostsList, getAllPosts } from '@/features/blog'
 import {
   About,
   Education,
   GetInTouch,
   HeroBanner,
-  WorkExperience,
   Projects,
-} from "@/features/portfolio"
-import { PostsList, getAllPosts } from "@/features/blog"
-import { AnimatedGradient } from "@/components"
-import { Button } from "@/components/ui"
+  WorkExperience
+} from '@/features/portfolio'
+import { Button } from '@/components/ui'
 
 async function getData() {
   const posts = await getAllPosts({ includePages: false })
@@ -23,31 +23,31 @@ export default async function Home() {
     <main>
       <AnimatedGradient />
       <HeroBanner />
-      <div className="container flex flex-col space-y-24">
+      <div className='container flex flex-col space-y-24'>
         <About />
-        <Section id="experience" title="Experience">
+        <Section id='experience' title='Experience'>
           <WorkExperience />
         </Section>
-        <Section id="education" title="Education">
+        <Section id='education' title='Education'>
           <Education />
         </Section>
-        <Section id="projects" title="Some featured projects">
+        <Section id='projects' title='Some featured projects'>
           <Projects />
         </Section>
         {posts && (
-          <Section id="latest-posts" title="Latest posts">
+          <Section id='latest-posts' title='Latest posts'>
             <PostsList posts={posts.slice(0, 3)} />
-            <div className="text-center">
-              <Button size="lg" asChild className="mx-auto mt-6">
-                <Link href="/blog">See all blog posts</Link>
+            <div className='text-center'>
+              <Button size='lg' asChild className='mx-auto mt-6'>
+                <Link href='/blog'>See all blog posts</Link>
               </Button>
             </div>
           </Section>
         )}
       </div>
       <div
-        id="contact"
-        className="flex min-h-[calc(100vh-160px)] items-center justify-center py-20"
+        id='contact'
+        className='flex min-h-[calc(100vh-160px)] items-center justify-center py-20'
       >
         <GetInTouch />
       </div>
@@ -64,8 +64,8 @@ interface SectionProps {
 const Section = (props: SectionProps) => {
   const { title, id, children } = props
   return (
-    <div id={id} className="mx-auto w-full max-w-4xl">
-      <h2 className="mb-4 font-display text-4xl font-bold">{title}</h2>
+    <div id={id} className='mx-auto w-full max-w-4xl'>
+      <h2 className='mb-4 font-display text-4xl font-bold'>{title}</h2>
       {children}
     </div>
   )

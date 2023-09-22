@@ -1,6 +1,7 @@
-import React from "react"
-import Link from "next/link"
-import { IEducation } from "@/types"
+import Link from 'next/link'
+import React from 'react'
+
+import { IEducation } from '@/types'
 
 interface EducationListProps {
   educations: IEducation[]
@@ -9,28 +10,28 @@ interface EducationListProps {
 export const EducationList = (props: EducationListProps) => {
   const { educations } = props
   return (
-    <ul className="flex flex-col space-y-4">
+    <ul className='flex flex-col space-y-4'>
       {educations.map((education, index) => (
-        <li className="group relative cursor-pointer" key={index}>
-          <Link href={education.link} target="_blank">
+        <li className='group relative cursor-pointer' key={index}>
+          <Link href={education.link} target='_blank'>
             {/* background */}
-            <div className="absolute left-0 top-0 z-[-1] h-full w-full rounded-xl bg-[rgba(50,50,50,0.1)] opacity-30 shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent" />
+            <div className='absolute left-0 top-0 z-[-1] h-full w-full rounded-xl bg-[rgba(50,50,50,0.1)] opacity-30 shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent' />
             {/* content */}
-            <div className="grid grid-cols-9 gap-2 sm:gap-6 p-6">
-              <div className="col-span-9 sm:col-span-2">
-                <p className="text-sm font-medium uppercase text-foreground-secondary">
+            <div className='grid grid-cols-9 gap-2 sm:gap-6 p-6'>
+              <div className='col-span-9 sm:col-span-2'>
+                <p className='text-sm font-medium uppercase text-foreground-secondary'>
                   {education.startDate}
-                  {education.endDate ? ` - ${education.endDate}` : ""}
+                  {education.endDate ? ` - ${education.endDate}` : ''}
                 </p>
               </div>
-              <div className="col-span-9 sm:col-span-6">
-                <h3 className="text-lg font-bold">{education.school}</h3>
-                <p className="text-md mb-1 text-foreground-secondary">
+              <div className='col-span-9 sm:col-span-6'>
+                <h3 className='text-lg font-bold'>{education.school}</h3>
+                <p className='text-md mb-1 text-foreground-secondary'>
                   {education.degree}
                   {education.fieldOfStudy && `, ${education.fieldOfStudy}`}
                 </p>
                 {education.description && (
-                  <p className="mb-2 text-sm">{education.description}</p>
+                  <p className='mb-2 text-sm'>{education.description}</p>
                 )}
               </div>
             </div>

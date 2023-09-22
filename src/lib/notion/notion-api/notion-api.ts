@@ -1,13 +1,14 @@
-import * as notion from "notion-types"
+import * as notion from 'notion-types'
+import axios from 'axios'
 import {
   getBlockCollectionId,
   getPageContentBlockIds,
   parsePageId,
-  uuidToId,
-} from "notion-utils"
-import pMap from "p-map"
-import * as types from "./types"
-import axios from "axios"
+  uuidToId
+} from 'notion-utils'
+import pMap from 'p-map'
+
+import * as types from './types'
 
 /**
  * Main Notion API client.
@@ -19,10 +20,10 @@ export class NotionAPI {
   private readonly _userTimeZone: string
 
   constructor({
-    apiBaseUrl = "https://www.notion.so/api/v3",
+    apiBaseUrl = 'https://www.notion.so/api/v3',
     authToken,
     activeUser,
-    userTimeZone = "America/New_York",
+    userTimeZone = 'America/New_York'
   }: {
     apiBaseUrl?: string
     authToken?: string
@@ -39,7 +40,7 @@ export class NotionAPI {
   public async getPage(pageId: string): Promise<notion.ExtendedRecordMap> {
     const page = await this.getPageRaw(pageId, {
       chunkLimit: 100,
-      chunkNumber: 0,
+      chunkNumber: 0
     })
     const recordMap = page?.recordMap as notion.ExtendedRecordMap
 
@@ -86,14 +87,14 @@ export class NotionAPI {
       const block = recordMap.block[blockId].value
       const collectionId =
         block &&
-        (block.type === "collection_view" ||
-          block.type === "collection_view_page") &&
+        (block.type === 'collection_view' ||
+          block.type === 'collection_view_page') &&
         getBlockCollectionId(block, recordMap)
 
       if (collectionId) {
         return block.view_ids?.map((collectionViewId) => ({
           collectionId,
-          collectionViewId,
+          collectionViewId
         }))
       } else {
         return []
@@ -117,37 +118,37 @@ export class NotionAPI {
 
           recordMap.block = {
             ...recordMap.block,
-            ...collectionData.recordMap.block,
+            ...collectionData.recordMap.block
           }
 
           recordMap.collection = {
             ...recordMap.collection,
-            ...collectionData.recordMap.collection,
+            ...collectionData.recordMap.collection
           }
 
           recordMap.collection_view = {
             ...recordMap.collection_view,
-            ...collectionData.recordMap.collection_view,
+            ...collectionData.recordMap.collection_view
           }
 
           recordMap.notion_user = {
             ...recordMap.notion_user,
-            ...collectionData.recordMap.notion_user,
+            ...collectionData.recordMap.notion_user
           }
 
           recordMap.collection_query![collectionId] = {
             ...recordMap.collection_query![collectionId],
-            [collectionViewId]: (collectionData.result as any)?.reducerResults,
+            [collectionViewId]: (collectionData.result as any)?.reducerResults
           }
         } catch (err) {
           // It's possible for public pages to link to private collections, in which case
           // Notion returns a 400 error
-          console.warn("NotionAPI collectionQuery error", pageId, err.message)
+          console.warn('NotionAPI collectionQuery error', pageId, err.message)
           console.error(err)
         }
       },
       {
-        concurrency: 3,
+        concurrency: 3
       }
     )
 
@@ -159,7 +160,7 @@ export class NotionAPI {
 
   public async addSignedUrls({
     recordMap,
-    contentBlockIds,
+    contentBlockIds
   }: {
     recordMap: notion.ExtendedRecordMap
     contentBlockIds?: string[]
@@ -175,30 +176,30 @@ export class NotionAPI {
 
       if (
         block &&
-        (block.type === "pdf" ||
-          block.type === "audio" ||
-          (block.type === "image" && block.file_ids?.length) ||
-          block.type === "video" ||
-          block.type === "file" ||
-          block.type === "page")
+        (block.type === 'pdf' ||
+          block.type === 'audio' ||
+          (block.type === 'image' && block.file_ids?.length) ||
+          block.type === 'video' ||
+          block.type === 'file' ||
+          block.type === 'page')
       ) {
         const source =
-          block.type === "page"
+          block.type === 'page'
             ? block.format?.page_cover
             : block.properties?.source?.[0]?.[0]
         // console.log(block, source)
 
         if (source) {
-          if (!source.includes("secure.notion-static.com")) {
+          if (!source.includes('secure.notion-static.com')) {
             return []
           }
 
           return {
             permissionRecord: {
-              table: "block",
-              id: block.id,
+              table: 'block',
+              id: block.id
             },
-            url: source,
+            url: source
           }
         }
       }
@@ -219,7 +220,7 @@ export class NotionAPI {
           }
         }
       } catch (err) {
-        console.warn("NotionAPI getSignedfileUrls error", err)
+        console.warn('NotionAPI getSignedfileUrls error', err)
       }
     }
   }
@@ -228,7 +229,7 @@ export class NotionAPI {
     pageId: string,
     {
       chunkLimit = 100,
-      chunkNumber = 0,
+      chunkNumber = 0
     }: {
       chunkLimit?: number
       chunkNumber?: number
@@ -245,12 +246,12 @@ export class NotionAPI {
       limit: chunkLimit,
       chunkNumber: chunkNumber,
       cursor: { stack: [] },
-      verticalColumns: false,
+      verticalColumns: false
     }
 
     return this.fetch<notion.PageChunk>({
-      endpoint: "loadPageChunk",
-      body,
+      endpoint: 'loadPageChunk',
+      body
     })
   }
 
@@ -260,12 +261,12 @@ export class NotionAPI {
     collectionView: any
   ) {
     const limit = 9999
-    const searchQuery = ""
+    const searchQuery = ''
     const userTimeZone = this._userTimeZone
     const loadContentCover = true
 
     const type = collectionView?.type
-    const isBoardType = type === "board"
+    const isBoardType = type === 'board'
     const groupBy = isBoardType
       ? collectionView?.format?.board_columns_by
       : collectionView?.format?.collection_group_by
@@ -276,7 +277,7 @@ export class NotionAPI {
         //get the inner filter
         return {
           filter: filterObj?.filter?.filter,
-          property: filterObj?.filter?.property,
+          property: filterObj?.filter?.property
         }
       })
     }
@@ -287,22 +288,22 @@ export class NotionAPI {
     }
 
     let loader: any = {
-      type: "reducer",
+      type: 'reducer',
       reducers: {
         collection_group_results: {
-          type: "results",
+          type: 'results',
           limit,
-          loadContentCover,
-        },
+          loadContentCover
+        }
       },
       sort: [],
       ...collectionView?.query2,
       filter: {
         filters: filters,
-        operator: "and",
+        operator: 'and'
       },
       searchQuery,
-      userTimeZone,
+      userTimeZone
     }
 
     if (groupBy) {
@@ -310,43 +311,43 @@ export class NotionAPI {
         collectionView?.format?.board_columns ||
         collectionView?.format?.collection_groups ||
         []
-      const iterators = [isBoardType ? "board" : "group_aggregation", "results"]
+      const iterators = [isBoardType ? 'board' : 'group_aggregation', 'results']
       const operators = {
-        checkbox: "checkbox_is",
-        url: "string_starts_with",
-        text: "string_starts_with",
-        select: "enum_is",
-        multi_select: "enum_contains",
-        created_time: "date_is_within",
-        ["undefined"]: "is_empty",
+        checkbox: 'checkbox_is',
+        url: 'string_starts_with',
+        text: 'string_starts_with',
+        select: 'enum_is',
+        multi_select: 'enum_contains',
+        created_time: 'date_is_within',
+        ['undefined']: 'is_empty'
       }
 
       const reducersQuery = {}
       for (const group of groups) {
         const {
           property,
-          value: { value, type },
+          value: { value, type }
         } = group
 
         for (const iterator of iterators) {
           const iteratorProps =
-            iterator === "results"
+            iterator === 'results'
               ? {
                   type: iterator,
-                  limit,
+                  limit
                 }
               : {
-                  type: "aggregation",
+                  type: 'aggregation',
                   aggregation: {
-                    aggregator: "count",
-                  },
+                    aggregator: 'count'
+                  }
                 }
 
-          const isUncategorizedValue = typeof value === "undefined"
+          const isUncategorizedValue = typeof value === 'undefined'
           const isDateValue = value?.range
           // TODO: review dates reducers
           const queryLabel = isUncategorizedValue
-            ? "uncategorized"
+            ? 'uncategorized'
             : isDateValue
             ? value.range?.start_date || value.range?.end_date
             : value?.value || value
@@ -357,42 +358,42 @@ export class NotionAPI {
           reducersQuery[`${iterator}:${type}:${queryLabel}`] = {
             ...iteratorProps,
             filter: {
-              operator: "and",
+              operator: 'and',
               filters: [
                 {
                   property,
                   filter: {
                     operator: !isUncategorizedValue
                       ? operators[type]
-                      : "is_empty",
+                      : 'is_empty',
                     ...(!isUncategorizedValue && {
                       value: {
-                        type: "exact",
-                        value: queryValue,
-                      },
-                    }),
-                  },
-                },
-              ],
-            },
+                        type: 'exact',
+                        value: queryValue
+                      }
+                    })
+                  }
+                }
+              ]
+            }
           }
         }
       }
 
-      const reducerLabel = isBoardType ? "board_columns" : `${type}_groups`
+      const reducerLabel = isBoardType ? 'board_columns' : `${type}_groups`
       loader = {
-        type: "reducer",
+        type: 'reducer',
         reducers: {
           [reducerLabel]: {
-            type: "groups",
+            type: 'groups',
             groupBy,
             ...(collectionView?.query2?.filter && {
-              filter: collectionView?.query2?.filter,
+              filter: collectionView?.query2?.filter
             }),
             groupSortPreference: groups.map((group) => group?.value),
-            limit,
+            limit
           },
-          ...reducersQuery,
+          ...reducersQuery
         },
         ...collectionView?.query2,
         searchQuery,
@@ -400,64 +401,64 @@ export class NotionAPI {
         //TODO: add filters here
         filter: {
           filters: filters,
-          operator: "and",
-        },
+          operator: 'and'
+        }
       }
     }
 
     return this.fetch<notion.CollectionInstance>({
-      endpoint: "queryCollection",
+      endpoint: 'queryCollection',
       body: {
         collection: {
-          id: collectionId,
+          id: collectionId
         },
         collectionView: {
-          id: collectionViewId,
+          id: collectionViewId
         },
-        loader,
-      },
+        loader
+      }
     })
   }
 
   public async getUsers(userIds: string[]) {
     return this.fetch<notion.RecordValues<notion.User>>({
-      endpoint: "getRecordValues",
+      endpoint: 'getRecordValues',
       body: {
-        requests: userIds.map((id) => ({ id, table: "notion_user" })),
-      },
+        requests: userIds.map((id) => ({ id, table: 'notion_user' }))
+      }
     })
   }
 
   public async getBlocks(blockIds: string[]) {
     return this.fetch<notion.PageChunk>({
-      endpoint: "syncRecordValues",
+      endpoint: 'syncRecordValues',
       body: {
         requests: blockIds.map((blockId) => ({
           // TODO: when to use table 'space' vs 'block'?
-          table: "block",
+          table: 'block',
           id: blockId,
-          version: -1,
-        })),
-      },
+          version: -1
+        }))
+      }
     })
   }
 
   public async getSignedFileUrls(urls: types.SignedUrlRequest[]) {
     return this.fetch<types.SignedUrlResponse>({
-      endpoint: "getSignedFileUrls",
+      endpoint: 'getSignedFileUrls',
       body: {
-        urls,
-      },
+        urls
+      }
     })
   }
 
   public async search(params: notion.SearchParams) {
     const body = {
-      type: "BlocksInAncestor",
-      source: "quick_find_public",
+      type: 'BlocksInAncestor',
+      source: 'quick_find_public',
       ancestorId: parsePageId(params.ancestorId),
       sort: {
-        field: "relevance",
+        field: 'relevance'
       },
       limit: params.limit || 20,
       query: params.query,
@@ -471,20 +472,20 @@ export class NotionAPI {
         editedBy: [],
         lastEditedTime: {},
         createdTime: {},
-        ...params.filters,
-      },
+        ...params.filters
+      }
     }
 
     return this.fetch<notion.SearchResults>({
-      endpoint: "search",
-      body,
+      endpoint: 'search',
+      body
     })
   }
 
   public async fetch<T>({
     endpoint,
     body,
-    headers: clientHeaders,
+    headers: clientHeaders
   }: {
     endpoint: string
     body: object
@@ -492,7 +493,7 @@ export class NotionAPI {
   }): Promise<T> {
     const headers: any = {
       ...clientHeaders,
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json'
     }
 
     if (this._authToken) {
@@ -500,7 +501,7 @@ export class NotionAPI {
     }
 
     if (this._activeUser) {
-      headers["x-notion-active-user-header"] = this._activeUser
+      headers['x-notion-active-user-header'] = this._activeUser
     }
 
     const url = `${this._apiBaseUrl}/${endpoint}`

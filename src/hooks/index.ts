@@ -1,2 +1,2 @@
-export * from "./use-scroll"
-export * from "./use-update-query"
+export * from './use-scroll'
+export * from './use-update-query'

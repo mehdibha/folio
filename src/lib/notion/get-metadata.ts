@@ -1,4 +1,4 @@
-export function getMetadata (rawMetadata) {
+export function getMetadata(rawMetadata) {
   const metadata = {
     locked: rawMetadata?.format?.block_locked,
     page_full_width: rawMetadata?.format?.page_full_width,

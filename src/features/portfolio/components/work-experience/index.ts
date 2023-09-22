@@ -1,1 +1,1 @@
-export { WorkExperience } from './work-experience';
+export { WorkExperience } from './work-experience'

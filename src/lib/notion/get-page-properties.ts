@@ -1,9 +1,10 @@
-import { getTextContent, getDateValue } from "notion-utils"
-import { api } from "./notion-api"
+import { getDateValue, getTextContent } from 'notion-utils'
+
+import { api } from './notion-api'
 
 export async function getPageProperties(id, block, schema) {
   const rawProperties = Object.entries(block?.[id]?.value?.properties || [])
-  const excludeProperties = ["date", "select", "multi_select", "person"]
+  const excludeProperties = ['date', 'select', 'multi_select', 'person']
   const properties = {}
   for (let i = 0; i < rawProperties.length; i++) {
     const [key, val] = rawProperties[i]
@@ -12,21 +13,21 @@ export async function getPageProperties(id, block, schema) {
       properties[schema[key].name] = getTextContent(val)
     } else {
       switch (schema[key]?.type) {
-        case "date": {
+        case 'date': {
           const dateProperty = getDateValue(val)
           delete dateProperty.type
           properties[schema[key].name] = dateProperty
           break
         }
-        case "select":
-        case "multi_select": {
+        case 'select':
+        case 'multi_select': {
           const selects = getTextContent(val)
           if (selects[0]?.length) {
-            properties[schema[key].name] = selects.split(",")
+            properties[schema[key].name] = selects.split(',')
           }
           break
         }
-        case "person": {
+        case 'person': {
           const rawUsers = val.flat()
           const users = []
           for (let i = 0; i < rawUsers.length; i++) {
@@ -39,7 +40,7 @@ export async function getPageProperties(id, block, schema) {
                 id: resValue?.id,
                 first_name: resValue?.given_name,
                 last_name: resValue?.family_name,
-                profile_photo: resValue?.profile_photo,
+                profile_photo: resValue?.profile_photo
               }
               users.push(user)
             }

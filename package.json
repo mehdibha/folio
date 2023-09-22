@@ -7,7 +7,10 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint",
+    "lint:check": "eslint src --ext ts,tsx,js,jsx --max-warnings 0",
+    "lint:fix": "eslint src --fix ts,tsx,js,jsx",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
     "types:check": "tsc --noEmit",
     "update-template": "bash ./scripts/update_template.sh"
   },
@@ -40,6 +43,7 @@
     "tailwindcss-animate": "^1.0.6"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": "20.5.3",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -47,7 +51,7 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "postcss": "8.4.28",
-    "prettier": "^3.0.2",
+    "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"

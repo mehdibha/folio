@@ -1,2 +1,2 @@
-export { Projects } from './projects';
-export * from "./projects-table"
+export { Projects } from './projects'
+export * from './projects-table'

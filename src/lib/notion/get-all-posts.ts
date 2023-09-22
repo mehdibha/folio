@@ -37,7 +37,7 @@ export async function getAllPosts({ includePages = false }) {
       properties.createdTime = new Date(
         block[id].value?.created_time
       ).toISOString()
-
+      console.log(block[id].value?.format?.page_cover)
       properties.thumbnail = mapImgUrl(block[id].value?.format?.page_cover, block[id].value) ?? ''
 
       data.push(properties)

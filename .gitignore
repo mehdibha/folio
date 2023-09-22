@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# rss & sitemap
+/public/atom.xml
+/public/rss.json
+/public/robots.txt
+/public/rss.xml
+/public/sitemap.xml

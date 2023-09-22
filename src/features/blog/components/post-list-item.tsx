@@ -19,9 +19,6 @@ export const PostListItem = (props: PostListItemProps) => {
   const { href, title, createdTime, timeToRead, summary, tags, thumbnail } =
     props
 
-  React.useEffect(()=>{
-    console.log(thumbnail)
-  },[])
   return (
     <Link href={href}>
       <li className="group relative cursor-pointer">

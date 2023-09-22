@@ -2,7 +2,6 @@ import { SITE_URL, siteConfig } from '@/config'
 import { parseISO } from 'date-fns'
 import { Feed, FeedOptions } from 'feed'
 import fs from 'fs'
-
 import { getAllPosts } from '@/lib/notion'
 
 export async function generateRssFeed() {

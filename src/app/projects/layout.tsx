@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { PageLayout } from '@/layout'
 
 interface ProjectsLayoutProps {

@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { siteConfig } from '@/config'
 import { getFirstStringsLessThanNChars } from '@/utils'
-
 import {
   Badge,
   Table,
@@ -12,7 +10,6 @@ import {
   TableHeader,
   TableRow
 } from '@/components/ui'
-
 import { ProjectModal } from './project-modal'
 
 const projects = siteConfig.projects

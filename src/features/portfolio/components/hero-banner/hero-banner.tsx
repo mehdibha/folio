@@ -2,11 +2,8 @@
 
 import Link from 'next/link'
 import React from 'react'
-
 import { siteConfig } from '@/config'
-
 import { Button } from '@/components/ui'
-
 import { MouseScrollAnimation } from './mouse-scroll-animation'
 
 const data = siteConfig.heroBanner

@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { PostsExplorer, getAllTags } from '@/features/blog'
 import { generateRssFeed } from '@/utils/rss'
-
 import { getAllPosts } from '@/lib/notion'
 
 async function getData() {

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { REVALIDATE_TIME } from '@/config'
 
 interface PostLayoutProps {

@@ -1,7 +1,6 @@
 import { NOTION_PAGE_ID } from '@/config'
 import { TPosts } from '@/types'
 import { idToUuid } from 'notion-utils'
-
 import { getAllPageIds } from './get-all-page-ids'
 import { getPageProperties } from './get-page-properties'
 import { mapImgUrl } from './map-image'

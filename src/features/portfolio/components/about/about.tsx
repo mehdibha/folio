@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-
 import { siteConfig } from '@/config'
 import { cn } from '@/utils'
 

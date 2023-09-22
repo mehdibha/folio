@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { TPost } from '@/types'
-
 import { PostListItem } from './post-list-item'
 
 interface PostsListProps {

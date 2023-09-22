@@ -1,5 +1,4 @@
 import { getDateValue, getTextContent } from 'notion-utils'
-
 import { api } from './notion-api'
 
 export async function getPageProperties(id, block, schema) {

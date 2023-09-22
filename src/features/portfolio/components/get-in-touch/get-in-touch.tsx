@@ -1,11 +1,8 @@
 'use client'
 
 import React from 'react'
-
 import { siteConfig } from '@/config'
-
 import { Button } from '@/components/ui'
-
 import { CopyButton } from './copy-button'
 
 const data = siteConfig.contact

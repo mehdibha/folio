@@ -1,9 +1,7 @@
 'use client'
 
 import React from 'react'
-
 import { Search } from '@/assets/icons'
-
 import { Input } from '@/components/ui'
 
 interface SearchBarProps {

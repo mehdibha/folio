@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-
 import { ChevronsDown } from '@/assets/icons'
 import { motion } from 'framer-motion'
 

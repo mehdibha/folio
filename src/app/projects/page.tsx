@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { ProjectsTable } from '@/features/portfolio'
 
 const Projects = () => {

@@ -1,10 +1,8 @@
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
-
 import { Footer, Header, ThemeProvider } from '@/components'
 import { REVALIDATE_TIME, siteConfig } from '@/config'
 import { Analytics } from '@vercel/analytics/react'
-
 import '@/styles/globals.css'
 import '@/styles/notion.css'
 

@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { cn } from '@/utils'
 import { type VariantProps, cva } from 'class-variance-authority'

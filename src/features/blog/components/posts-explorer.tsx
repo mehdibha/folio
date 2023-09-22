@@ -2,11 +2,9 @@
 
 import { useSearchParams } from 'next/navigation'
 import React from 'react'
-
 import { useUpdateQueryStringValueWithoutNavigation } from '@/hooks'
 import { TPost, TPosts } from '@/types'
 import { useInView } from 'framer-motion'
-
 import { PostsList } from './posts-list'
 import { SearchBar } from './search-bar'
 import { TagsSelect } from './tags-select'

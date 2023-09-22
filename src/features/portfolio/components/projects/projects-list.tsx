@@ -1,10 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-
 import { IProject } from '@/types'
-
 import { Badge } from '@/components/ui'
-
 import { ProjectModal } from './project-modal'
 
 interface ProjectsListProps {

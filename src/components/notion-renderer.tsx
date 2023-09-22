@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css'
 import { useTheme } from 'next-themes'

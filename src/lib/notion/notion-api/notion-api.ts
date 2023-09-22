@@ -7,7 +7,6 @@ import {
   uuidToId
 } from 'notion-utils'
 import pMap from 'p-map'
-
 import * as types from './types'
 
 /**

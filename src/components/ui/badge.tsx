@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { VariantProps, cn, cva } from '@/utils'
 
 const badgeVariants = cva(

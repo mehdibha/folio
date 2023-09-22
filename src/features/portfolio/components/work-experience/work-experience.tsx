@@ -1,11 +1,8 @@
 'use client'
 
 import React from 'react'
-
 import { siteConfig } from '@/config'
-
 import { Button } from '@/components/ui'
-
 import { WorkExperienceList } from './work-experience-list'
 
 const workExperienceData = siteConfig.experience

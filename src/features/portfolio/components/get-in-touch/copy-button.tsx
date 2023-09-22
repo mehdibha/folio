@@ -1,9 +1,7 @@
 'use client'
 
 import React from 'react'
-
 import { CheckCircle, Copy } from '@/assets/icons'
-
 import { Button, Toaster, useToast } from '@/components/ui'
 
 export const CopyButton = () => {

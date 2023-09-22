@@ -10,9 +10,7 @@ import {
 } from '@/assets/icons'
 import { siteConfig } from '@/config'
 import { ILinks } from '@/types'
-
 import { getRepoDetails } from '@/lib/github'
-
 import { Button, Separator } from '../ui'
 
 const getData = async () => {

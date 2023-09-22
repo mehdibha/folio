@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
 import { Github, Link, Npm } from '@/assets/icons'
-
 import {
   Badge,
   Button,

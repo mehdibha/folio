@@ -1,10 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-
 import { IWorkExperience } from '@/types'
-
 import { Badge } from '@/components/ui'
-
 import WorkExperienceDescription from './work-experience-description'
 
 interface WorkExperienceListProps {

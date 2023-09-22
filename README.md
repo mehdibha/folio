@@ -87,16 +87,15 @@ If you want to clone the project and make you personal notionfolio
 ## Roadmap
 
 - [x] Make the website responsive
-- [x] Fix display date in posts
 - [x] Projects archive page
+- [x] Generate a sitemap and robots.txt
+- [x] Implement RSS feed
 - [ ] Missing cover image in blog posts
 - [ ] Infinite scroll in blog page
 - [ ] Make config more optionnal (config/site.ts)
 - [ ] Switch from react-notion-x to a custom component
 - [ ] CI / pre-commit hooks
 - [ ] Fix all linting and type errors
-- [x] Generate a sitemap and robots.txt
-- [ ] Implement RSS feed
 - [ ] Implement analytics
 - [ ] Auth + comments
 - [ ] Collect emails to continue reading an article

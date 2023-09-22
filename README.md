@@ -90,7 +90,7 @@ If you want to clone the project and make you personal notionfolio
 - [x] Projects archive page
 - [x] Generate a sitemap and robots.txt
 - [x] Implement RSS feed
-- [ ] Missing cover image in blog posts
+- [x] Add thumbnails to posts
 - [ ] Infinite scroll in blog page
 - [ ] Make config more optionnal (config/site.ts)
 - [ ] Switch from react-notion-x to a custom component

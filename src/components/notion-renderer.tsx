@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { ExtendedRecordMap } from "notion-types"
-import { Code } from 'react-notion-x/build/third-party/code'
+// import { Code } from 'react-notion-x/build/third-party/code'
 // import useScheme from "src/hooks/useScheme"
 
 // core styles shared by all of react-notion-x (required)
@@ -39,6 +39,13 @@ const Pdf = dynamic(
 )
 const Modal = dynamic(
   () => import("react-notion-x/build/third-party/modal").then((m) => m.Modal),
+  {
+    ssr: false,
+  }
+)
+
+const Code = dynamic(
+  () => import("react-notion-x/build/third-party/code").then((m) => m.Code),
   {
     ssr: false,
   }

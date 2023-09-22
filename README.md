@@ -102,9 +102,9 @@ If you want to clone the project and make you personal notionfolio
 - [ ] Collect emails to continue reading an article
 - [ ] Improve SEO and lighthouse score
 - [ ] Auth + comments
-- [ ] Switch from react-notion-x to a custom component
-- [ ] Add themes and variants for components
 - [ ] PWA
+- [ ] Switch from react-notion-x to a custom component
+- [ ] Add templates and variants for components
 - [ ] implement i18n
 - [ ] Make a website to generate notionfolios from it directly
 

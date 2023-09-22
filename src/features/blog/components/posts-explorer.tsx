@@ -12,7 +12,7 @@ interface PostsExplorerProps {
   tags: string[]
 }
 
-const PostsExplorer = (props: PostsExplorerProps) => {
+export const PostsExplorer = (props: PostsExplorerProps) => {
   const { posts, tags } = props
 
   const searchParams = useSearchParams()
@@ -75,4 +75,3 @@ const PostsExplorer = (props: PostsExplorerProps) => {
   )
 }
 
-export default PostsExplorer

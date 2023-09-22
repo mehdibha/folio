@@ -1,4 +1,4 @@
-name: "Check Lint/format/types"
+name: "lint - format - types"
 on: push
 jobs:
     check:

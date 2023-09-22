@@ -1,13 +1,11 @@
 ---
 name: Feature request
-about: Suggest an idea for Nobelium.
+about: Suggest an idea for Notionfolio.
 title: ''
 labels: enhancement
 ---
 
 <!--
-  中文用户请注意：请仔细阅读以下模版，如果不遵循模版，issue 将会被关闭。
-
   !!! IMPORTANT !!!
   Please do not ignore this template. If you do, your issue will be closed.
 -->

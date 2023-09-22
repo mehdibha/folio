@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
 export const useScroll = (threshold: number = 0) => {
   const [scrolled, setScrolled] = React.useState(
-    typeof window !== 'undefined' ? window.scrollY > threshold : false
+    typeof window !== "undefined" ? window.scrollY > threshold : false
   )
 
   React.useEffect(() => {
@@ -13,11 +13,11 @@ export const useScroll = (threshold: number = 0) => {
     }
     // setScrolled(window.scrollY > threshold)
     // Add the scroll event listener
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll)
 
     // Clean up the event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener("scroll", handleScroll)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []) // Empty dependency array, so this effect runs only once

@@ -5,7 +5,7 @@ export function getMetadata(rawMetadata) {
     page_font: rawMetadata?.format?.page_font,
     page_small_text: rawMetadata?.format?.page_small_text,
     created_time: rawMetadata.created_time,
-    last_edited_time: rawMetadata.last_edited_time
+    last_edited_time: rawMetadata.last_edited_time,
   }
   return metadata
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import { PostsExplorer, getAllTags } from '@/features/blog'
-import { generateRssFeed } from '@/utils/rss'
-import { getAllPosts } from '@/lib/notion'
+import React from "react"
+import { PostsExplorer, getAllTags } from "@/features/blog"
+import { generateRssFeed } from "@/utils/rss"
+import { getAllPosts } from "@/lib/notion"
 
 async function getData() {
   await generateRssFeed()
@@ -21,8 +21,8 @@ const Blog = async () => {
   }
 
   return (
-    <div className='pt-8'>
-      <h1 className='mb-4 text-center	text-4xl font-bold'>
+    <div className="pt-8">
+      <h1 className="mb-4 text-center	text-4xl font-bold">
         Learn development with great articles.
       </h1>
       <PostsExplorer posts={posts} tags={tags} />

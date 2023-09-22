@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { useSearchParams } from 'next/navigation'
-import React from 'react'
-import { useScroll } from '@/hooks'
-import { cn } from '@/utils'
+import { useSearchParams } from "next/navigation"
+import React from "react"
+import { useScroll } from "@/hooks"
+import { cn } from "@/utils"
 
 export const Background = () => {
   useSearchParams()
@@ -12,8 +12,8 @@ export const Background = () => {
   return (
     <div
       className={cn(
-        'absolute left-0 top-0 z-[-1] h-full w-full bg-background/70 opacity-0 shadow-md backdrop-blur-md transition-all',
-        { 'opacity-100': scrolled }
+        "absolute left-0 top-0 z-[-1] h-full w-full bg-background/70 opacity-0 shadow-md backdrop-blur-md transition-all",
+        { "opacity-100": scrolled }
       )}
     />
   )

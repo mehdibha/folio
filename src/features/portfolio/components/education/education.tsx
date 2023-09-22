@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import React from 'react'
-import { siteConfig } from '@/config'
-import { Button } from '@/components/ui'
-import { EducationList } from './education-list'
+import React from "react"
+import { siteConfig } from "@/config"
+import { Button } from "@/components/ui"
+import { EducationList } from "./education-list"
 
 export const Education = () => {
   const [collapsed, setCollapsed] = React.useState(true)
@@ -21,8 +21,8 @@ export const Education = () => {
     <div>
       <EducationList educations={displayedEducations} />
       {educationData.length > 2 && (
-        <Button size='lg' onClick={handleClick} className='mx-auto mt-6 block'>
-          {collapsed ? 'Show all education' : 'Show less'}
+        <Button size="lg" onClick={handleClick} className="mx-auto mt-6 block">
+          {collapsed ? "Show all education" : "Show less"}
         </Button>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { TPosts } from '@/types'
+import { TPosts } from "@/types"
 
 export const getAllTags = (posts: TPosts) => {
   // Use a Set to store unique keywords

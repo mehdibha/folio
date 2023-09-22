@@ -1,20 +1,20 @@
-import { notFound } from 'next/navigation'
-import React from 'react'
-import { formatDate } from '@/utils'
-import NotionRenderer from '@/components/notion-renderer'
-import { Badge } from '@/components/ui'
-import { getAllPosts } from '@/lib/notion'
-import { getPostBlocks } from '@/lib/notion/get-post-blocks'
+import { notFound } from "next/navigation"
+import React from "react"
+import { formatDate } from "@/utils"
+import NotionRenderer from "@/components/notion-renderer"
+import { Badge } from "@/components/ui"
+import { getAllPosts } from "@/lib/notion"
+import { getPostBlocks } from "@/lib/notion/get-post-blocks"
 
-const title = 'How to configure ESLint and Prettier in an Expo project'
-const date = 'Jul 25, 2023'
+const title = "How to configure ESLint and Prettier in an Expo project"
+const date = "Jul 25, 2023"
 const timeToRead = 3
-const tags = ['Expo']
+const tags = ["Expo"]
 
 export async function generateStaticParams() {
   const posts = await getAllPosts({ includePages: false })
   return posts?.map((elem) => ({
-    postSlug: elem.slug
+    postSlug: elem.slug,
   }))
 }
 
@@ -42,18 +42,18 @@ const PostPage = async (props: PostPageProps) => {
   if (!post) notFound()
 
   return (
-    <div className='mt-20'>
-      <h1 className='mb-4 text-4xl font-bold'>{post.title}</h1>
-      <div className='flex items-center space-x-2'>
+    <div className="mt-20">
+      <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
+      <div className="flex items-center space-x-2">
         <p>Published in {formatDate(post.createdTime)}</p>
         <p>•</p>
         <p>{timeToRead} min read</p>
         <p>•</p>
-        <div className='flex space-x-1'>
+        <div className="flex space-x-1">
           {post.tags && post.tags.map((tag) => <Badge key={tag}>{tag}</Badge>)}
         </div>
       </div>
-      <div className='mt-12'>
+      <div className="mt-12">
         <NotionRenderer recordMap={recordMap} />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 export const useUpdateQueryStringValueWithoutNavigation = (
   queryKey: string,
@@ -6,7 +6,7 @@ export const useUpdateQueryStringValueWithoutNavigation = (
 ) => {
   React.useEffect(() => {
     const currentSearchParams = new URLSearchParams(window.location.search)
-    const oldQuery = currentSearchParams.get(queryKey) ?? ''
+    const oldQuery = currentSearchParams.get(queryKey) ?? ""
     if (queryValue === oldQuery) return
 
     if (queryValue) {
@@ -16,7 +16,7 @@ export const useUpdateQueryStringValueWithoutNavigation = (
     }
     const newUrl = [window.location.pathname, currentSearchParams.toString()]
       .filter(Boolean)
-      .join('?')
-    window.history.replaceState(null, '', newUrl)
+      .join("?")
+    window.history.replaceState(null, "", newUrl)
   }, [queryKey, queryValue])
 }

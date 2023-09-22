@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
-import { useSearchParams } from 'next/navigation'
-import React from 'react'
-import { useUpdateQueryStringValueWithoutNavigation } from '@/hooks'
-import { TPost, TPosts } from '@/types'
-import { useInView } from 'framer-motion'
-import { PostsList } from './posts-list'
-import { SearchBar } from './search-bar'
-import { TagsSelect } from './tags-select'
+import { useSearchParams } from "next/navigation"
+import React from "react"
+import { useUpdateQueryStringValueWithoutNavigation } from "@/hooks"
+import { TPost, TPosts } from "@/types"
+import { useInView } from "framer-motion"
+import { PostsList } from "./posts-list"
+import { SearchBar } from "./search-bar"
+import { TagsSelect } from "./tags-select"
 
 interface PostsExplorerProps {
   posts: TPosts
@@ -23,19 +23,19 @@ export const PostsExplorer = (props: PostsExplorerProps) => {
   const [numberDisplayedPosts, setNumberDisplayedPosts] =
     React.useState<number>(30)
 
-  const initialSearchValue = searchParams.get('q') ?? ''
+  const initialSearchValue = searchParams.get("q") ?? ""
   const initialTags =
     searchParams
-      .get('tags')
-      ?.split(',')
-      .filter((elem) => elem !== '') ?? []
+      .get("tags")
+      ?.split(",")
+      .filter((elem) => elem !== "") ?? []
 
   const [searchValue, setSearchValue] =
     React.useState<string>(initialSearchValue)
   const [selectedTags, setSelectedTags] = React.useState<string[]>(initialTags)
 
-  useUpdateQueryStringValueWithoutNavigation('q', searchValue.trim())
-  useUpdateQueryStringValueWithoutNavigation('tags', selectedTags.join(','))
+  useUpdateQueryStringValueWithoutNavigation("q", searchValue.trim())
+  useUpdateQueryStringValueWithoutNavigation("tags", selectedTags.join(","))
 
   const handleTagClick = (tag: string) => {
     const selected = selectedTags.findIndex((elem) => elem === tag) > -1
@@ -55,7 +55,7 @@ export const PostsExplorer = (props: PostsExplorerProps) => {
         ? post.tags.some((tag) => selectedTags.includes(tag))
         : false
       if (selectedTags.length === 0) matchesTags = true
-      if (searchValue === '') matchesSearch = true
+      if (searchValue === "") matchesSearch = true
       return matchesSearch && matchesTags
     })
   }, [posts, searchValue, selectedTags])
@@ -68,14 +68,14 @@ export const PostsExplorer = (props: PostsExplorerProps) => {
 
   return (
     <div>
-      <div className='container mb-10 max-w-3xl'>
+      <div className="container mb-10 max-w-3xl">
         <SearchBar
           value={searchValue}
           onChange={(event) => setSearchValue(event.currentTarget.value)}
         />
       </div>
-      <div className='container mb-6 max-w-6xl'>
-        <h2 className='mb-5 text-xl font-bold'>Search blog by topics</h2>
+      <div className="container mb-6 max-w-6xl">
+        <h2 className="mb-5 text-xl font-bold">Search blog by topics</h2>
         <TagsSelect
           tags={tags}
           selectedTags={selectedTags}

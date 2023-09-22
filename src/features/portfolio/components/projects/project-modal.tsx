@@ -1,14 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
-import { Github, Link, Npm } from '@/assets/icons'
+import Image from "next/image"
+import React from "react"
+import { Github, Link, Npm } from "@/assets/icons"
 import {
   Badge,
   Button,
   Dialog,
   DialogContent,
   DialogFooter,
-  DialogTrigger
-} from '@/components/ui'
+  DialogTrigger,
+} from "@/components/ui"
 
 interface ILinks {
   website?: string
@@ -29,7 +29,7 @@ interface ProjectModalProps {
 const icons = {
   website: Link,
   github: Github,
-  npm: Npm
+  npm: Npm,
 }
 
 export const ProjectModal = (props: ProjectModalProps) => {
@@ -37,35 +37,35 @@ export const ProjectModal = (props: ProjectModalProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className='max-w-2xl p-0'>
-        <div className='max-h-[80vh] overflow-y-scroll p-6'>
-          <h2 className='mb-2 text-xl font-semibold'>{title}</h2>
-          <p className='text-sm text-muted-foreground'>{summary}</p>
+      <DialogContent className="max-w-2xl p-0">
+        <div className="max-h-[80vh] overflow-y-scroll p-6">
+          <h2 className="mb-2 text-xl font-semibold">{title}</h2>
+          <p className="text-sm text-muted-foreground">{summary}</p>
           <Image
             src={image}
             width={350}
             height={100}
             alt={title}
-            objectFit='contain'
-            className='mx-auto my-6'
+            objectFit="contain"
+            className="mx-auto my-6"
           />
-          <div className='mb-4 flex gap-2'>
+          <div className="mb-4 flex gap-2">
             {tags &&
               tags.map((tag, index) => (
-                <Badge variant='filled' key={index}>
+                <Badge variant="filled" key={index}>
                   {tag}
                 </Badge>
               ))}
           </div>
-          <div className='mb-2'>
+          <div className="mb-2">
             {description &&
               description.map((paragraph, index) => (
-                <p key={index} className='mb-2'>
+                <p key={index} className="mb-2">
                   {paragraph}
                 </p>
               ))}
           </div>
-          <div className='flex space-x-1'>
+          <div className="flex space-x-1">
             {/* TODO: Repetition of ILinks */}
             {links &&
               Object.keys(links).map((key) => {
@@ -75,9 +75,9 @@ export const ProjectModal = (props: ProjectModalProps) => {
                     <a
                       key={key}
                       href={links[key as keyof ILinks]}
-                      target='_blank'
+                      target="_blank"
                     >
-                      <Button size='icon' variant='ghost'>
+                      <Button size="icon" variant="ghost">
                         <Icon size={20} />
                       </Button>
                     </a>

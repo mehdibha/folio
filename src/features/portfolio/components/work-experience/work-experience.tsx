@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import React from 'react'
-import { siteConfig } from '@/config'
-import { Button } from '@/components/ui'
-import { WorkExperienceList } from './work-experience-list'
+import React from "react"
+import { siteConfig } from "@/config"
+import { Button } from "@/components/ui"
+import { WorkExperienceList } from "./work-experience-list"
 
 const workExperienceData = siteConfig.experience
 
@@ -22,8 +22,8 @@ export const WorkExperience = () => {
     <div>
       <WorkExperienceList experiences={displayedExperience} />
       {workExperienceData.length > 2 && (
-        <Button size='lg' onClick={handleClick} className='mx-auto mt-6 block'>
-          {collapsed ? 'Show all experience' : 'Show less'}
+        <Button size="lg" onClick={handleClick} className="mx-auto mt-6 block">
+          {collapsed ? "Show all experience" : "Show less"}
         </Button>
       )}
     </div>

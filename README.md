@@ -96,13 +96,13 @@ If you want to clone the project and make you personal notionfolio
 - [x] Infinite scroll in blog page
 - [x] CI / pre-commit hooks
 - [ ] Make config more optionnal (config/site.ts)
-- [ ] Switch from react-notion-x to a custom component
 - [ ] Collect emails to continue reading an article
 - [ ] Introduce courses feature
 - [ ] Introduce tools feature
 - [ ] Automatically generate a resume on build
 - [ ] Improve SEO and lighthouse score
 - [ ] Auth + comments
+- [ ] Switch from react-notion-x to a custom component
 - [ ] Add themes and variants for components
 - [ ] PWA
 - [ ] implement i18n

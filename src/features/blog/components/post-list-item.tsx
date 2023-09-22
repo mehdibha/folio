@@ -11,10 +11,12 @@ interface PostListItemProps {
   timeToRead: number
   summary?: string
   tags?: string[]
+  thumbnail?: string
 }
 
 export const PostListItem = (props: PostListItemProps) => {
-  const { href, title, createdTime, timeToRead, summary, tags } = props
+  const { href, title, createdTime, timeToRead, summary, tags, thumbnail } =
+    props
 
   return (
     <Link href={href}>
@@ -31,14 +33,16 @@ export const PostListItem = (props: PostListItemProps) => {
                   Published on {formatDate(createdTime)} • {timeToRead} min read
                 </p>
               </div>
-              <CoverImage
-                src="https://miro.medium.com/v2/resize:fill:140:140/0*70WW9yETGs2BFPp6"
-                className="block sm:hidden"
-                alt={title}
-              />
+              {thumbnail && (
+                <CoverImage
+                  src={thumbnail}
+                  className="block sm:hidden"
+                  alt={title}
+                />
+              )}
             </div>
             <p className="mb-3 text-sm">{summary}</p>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex flex-wrap gap-2">
               {tags &&
                 tags.map((tag) => (
                   <Badge variant="outlined" key={tag}>
@@ -47,11 +51,13 @@ export const PostListItem = (props: PostListItemProps) => {
                 ))}
             </div>
           </div>
-          <CoverImage
-            src="https://miro.medium.com/v2/resize:fill:140:140/0*70WW9yETGs2BFPp6"
-            className="hidden sm:block"
-            alt={title}
-          />
+          {thumbnail && (
+            <CoverImage
+              src={thumbnail}
+              className="hidden sm:block"
+              alt={title}
+            />
+          )}
         </div>
       </li>
     </Link>

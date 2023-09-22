@@ -1,7 +1,7 @@
 import React from "react"
 import { PostsExplorer, getAllTags } from "@/features/blog"
 import { getAllPosts } from "@/lib/notion"
-import { generateRssFeed } from "@/utils";
+import { generateRssFeed } from "@/utils/rss";
 
 async function getData() {
   await generateRssFeed();

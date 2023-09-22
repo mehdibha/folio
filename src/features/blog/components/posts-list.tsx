@@ -18,6 +18,7 @@ export const PostsList = (props: PostsListProps) => {
           createdTime={post.createdTime}
           timeToRead={4}
           summary={post.summary}
+          thumbnail={post?.thumbnail}
           tags={post.tags}
         />
       ))}

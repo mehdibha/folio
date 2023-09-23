@@ -6,7 +6,7 @@ interface BlogLayoutProps {
 
 export const revalidate = REVALIDATE_TIME
 
-export default function RootLayout(props: BlogLayoutProps) {
+export default function BlogLayout(props: BlogLayoutProps) {
   const { children } = props
   return <div>{children}</div>
 }

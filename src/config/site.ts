@@ -24,6 +24,10 @@ export const siteConfig: ISiteConfig = {
         title: "Blog",
         href: "/blog",
       },
+      {
+        title: "Courses",
+        href: "/courses",
+      },
     ],
   },
   heroBanner: {
@@ -222,4 +226,86 @@ export const siteConfig: ISiteConfig = {
       href: "mailto:hello@mehdibha.co",
     },
   },
+  courses: [
+    {
+      title: "Master React developmenet",
+      description:
+        "Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, best practices and way more",
+      image: "/images/courses/course01.png",
+      rate: 4.7,
+      numberReviews: "1.2k",
+      price: "$74.99",
+      tags: ["27 lessons", "Intermediate", "4h70"],
+    },
+    {
+      title: "Advanced Python Programming",
+      description:
+        "Take your Python skills to the next level with advanced topics like decorators, generators, metaclasses, and more.",
+      image: "/images/courses/course01.png",
+      rate: 4.9,
+      numberReviews: "850",
+      price: "$89.99",
+      tags: ["15 lessons", "Advanced", "3h45"],
+    },
+    {
+      title: "Machine Learning Fundamentals",
+      description:
+        "Get started with machine learning and explore algorithms, data preprocessing, and model evaluation.",
+      image: "/images/courses/course01.png",
+      rate: 4.8,
+      numberReviews: "1.5k",
+      price: "$99.99",
+      tags: ["20 lessons", "Intermediate", "4h30"],
+    },
+    {
+      title: "Web Design and Development",
+      description:
+        "Learn the essentials of web design, HTML, CSS, and JavaScript to build interactive websites.",
+      image: "/images/courses/course01.png",
+      rate: 4.6,
+      numberReviews: "1.8k",
+      price: "$79.99",
+      tags: ["22 lessons", "Beginner", "3h15"],
+    },
+    {
+      title: "Data Science Essentials",
+      description:
+        "Learn the fundamentals of data science, including data analysis, machine learning, and data visualization.",
+      image: "/images/courses/course01.png",
+      rate: 4.7,
+      numberReviews: "1.1k",
+      price: "$94.99",
+      tags: ["25 lessons", "Intermediate", "4h15"],
+    },
+    {
+      title: "UX/UI Design Fundamentals",
+      description:
+        "Explore the basics of user experience (UX) and user interface (UI) design to create user-friendly digital products.",
+      image: "/images/courses/course01.png",
+      rate: 4.6,
+      numberReviews: "950",
+      price: "$69.99",
+      tags: ["20 lessons", "Beginner", "3h30"],
+    },
+    {
+      title: "Java Programming for Beginners",
+      description:
+        "Start your journey into programming with Java. Learn syntax, object-oriented principles, and basic Java applications.",
+      image: "/images/courses/course01.png",
+      rate: 4.5,
+      numberReviews: "800",
+      price: "$59.99",
+      tags: ["15 lessons", "Beginner", "2h45"],
+    },
+    {
+      title: "Cybersecurity Fundamentals",
+      description:
+        "Gain a foundational understanding of cybersecurity, including threat detection, encryption, and network security.",
+      image: "/images/courses/course10.png",
+      rate: 4.8,
+      numberReviews: "1.2k",
+      price: "$89.99",
+      tags: ["22 lessons", "Intermediate", "4h10"],
+    },
+  ],
 }

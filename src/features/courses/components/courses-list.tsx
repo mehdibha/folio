@@ -2,6 +2,7 @@ import Image from "next/image"
 import React from "react"
 import { Star } from "@/assets/icons"
 import { ICourse } from "@/types"
+import { Badge } from "@/components/ui"
 
 interface CoursesListProps {
   courses: ICourse[]
@@ -14,11 +15,16 @@ export const CoursesList = (props: CoursesListProps) => {
       {courses.map((course, index) => {
         return (
           <li
-            className="group relative col-span-12 h-[300px] cursor-pointer p-4 sm:col-span-6 md:col-span-4 lg:col-span-3 "
+            className="group relative col-span-12 h-[300px] cursor-pointer p-4 sm:col-span-6 md:col-span-4 lg:col-span-3"
             key={index}
           >
             {/* background */}
             <div className="absolute left-0 top-0 z-[-1] h-full w-full rounded-xl border-2 border-gray-400 bg-[rgba(50,50,50,0.1)] opacity-30 shadow-md transition-all duration-300 group-hover:opacity-100 dark:border-slate-200/30 dark:bg-[rgba(230,230,230,0.1)] dark:from-transparent dark:via-transparent dark:to-transparent" />
+            {course.price && (
+              <Badge className="absolute right-4 top-4" size="sm">
+                {course.price}
+              </Badge>
+            )}
             {/* content */}
             <div className="flex h-full flex-col">
               <div className="flex-1">

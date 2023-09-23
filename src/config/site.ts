@@ -244,7 +244,7 @@ export const siteConfig: ISiteConfig = {
       image: "/images/courses/course01.png",
       rate: 4.9,
       numberReviews: "850",
-      price: "$89.99",
+      price: "FREE",
       tags: ["15 lessons", "Advanced", "3h45"],
     },
     {
@@ -254,7 +254,7 @@ export const siteConfig: ISiteConfig = {
       image: "/images/courses/course01.png",
       rate: 4.8,
       numberReviews: "1.5k",
-      price: "$99.99",
+      price: "FREE",
       tags: ["20 lessons", "Intermediate", "4h30"],
     },
     {
@@ -274,7 +274,7 @@ export const siteConfig: ISiteConfig = {
       image: "/images/courses/course01.png",
       rate: 4.7,
       numberReviews: "1.1k",
-      price: "$94.99",
+      price: "FREE",
       tags: ["25 lessons", "Intermediate", "4h15"],
     },
     {
@@ -294,14 +294,14 @@ export const siteConfig: ISiteConfig = {
       image: "/images/courses/course01.png",
       rate: 4.5,
       numberReviews: "800",
-      price: "$59.99",
+      price: "FREE",
       tags: ["15 lessons", "Beginner", "2h45"],
     },
     {
       title: "Cybersecurity Fundamentals",
       description:
         "Gain a foundational understanding of cybersecurity, including threat detection, encryption, and network security.",
-      image: "/images/courses/course10.png",
+      image: "/images/courses/course01.png",
       rate: 4.8,
       numberReviews: "1.2k",
       price: "$89.99",

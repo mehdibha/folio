@@ -28,7 +28,7 @@ export const ToolsList = (props: ToolsListProps) => {
                     width={50}
                     height={50}
                     alt={tool.title}
-                    className="mb-1 rounded-md border-2 border-slate-200/10  duration-300"
+                    className="mb-2 rounded-md border-2 border-slate-200/10  duration-300"
                   />
                   <h2 className="text-lg font-bold">{tool.title}</h2>
                   <p className="text-md text-foreground-secondary mt-1">

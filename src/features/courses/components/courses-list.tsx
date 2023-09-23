@@ -35,7 +35,7 @@ export const CoursesList = (props: CoursesListProps) => {
                     width={50}
                     height={50}
                     alt={course.title}
-                    className="mb-1 rounded-md border-2 border-slate-200/10  duration-300"
+                    className="mb-2 rounded-md border-2 border-slate-200/10  duration-300"
                   />
                   <h2 className="text-lg font-bold">{course.title}</h2>
                   <p className="text-md text-foreground-secondary mt-1">

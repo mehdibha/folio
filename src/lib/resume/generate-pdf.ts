@@ -1,10 +1,18 @@
 import { FormValues } from "@/types"
+import { execSync } from "child_process"
 import fs from "fs"
 import latex from "node-latex"
 import { getTemplateData } from "./get-template-data"
 
 export async function generatePDF(formData: FormValues) {
   const { texDoc, opts } = getTemplateData(formData)
+
+  // Install TinyTeX
+  try {
+    execSync("R -e \"install.packages('tinytex');tinytex::install_tinytex()\"")
+  } catch (error) {
+    console.error("Error installing TinyTeX:", error.message)
+  }
 
   // const pdf = await latex(texDoc, opts)
 

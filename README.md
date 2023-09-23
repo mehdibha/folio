@@ -94,17 +94,17 @@ If you want to clone the project and make you personal notionfolio
 - [x] Add thumbnails to posts
 - [x] Implement analytics
 - [x] Infinite scroll in blog page
-- [ ] Make config more optionnal (config/site.ts)
-- [ ] Switch from react-notion-x to a custom component
-- [ ] CI / pre-commit hooks
-- [ ] Fix all linting and type errors
-- [ ] Auth + comments
-- [ ] Collect emails to continue reading an article
+- [x] CI / pre-commit hooks
 - [ ] Introduce courses feature
 - [ ] Introduce tools feature
 - [ ] Automatically generate a resume on build
+- [ ] Make config more optionnal (config/site.ts)
+- [ ] Collect emails to continue reading an article
+- [ ] Improve SEO and lighthouse score
+- [ ] Auth + comments
 - [ ] PWA
-- [ ] Add themes and variants for components
+- [ ] Switch from react-notion-x to a custom component
+- [ ] Add templates and variants for components
 - [ ] implement i18n
 - [ ] Make a website to generate notionfolios from it directly
 

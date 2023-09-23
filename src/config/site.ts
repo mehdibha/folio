@@ -236,6 +236,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "1.2k",
       price: "$74.99",
       tags: ["27 lessons", "Intermediate", "4h70"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "Advanced Python Programming",
@@ -246,6 +247,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "850",
       price: "FREE",
       tags: ["15 lessons", "Advanced", "3h45"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "Machine Learning Fundamentals",
@@ -256,6 +258,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "1.5k",
       price: "FREE",
       tags: ["20 lessons", "Intermediate", "4h30"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "Web Design and Development",
@@ -266,6 +269,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "1.8k",
       price: "$79.99",
       tags: ["22 lessons", "Beginner", "3h15"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "Data Science Essentials",
@@ -276,6 +280,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "1.1k",
       price: "FREE",
       tags: ["25 lessons", "Intermediate", "4h15"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "UX/UI Design Fundamentals",
@@ -286,6 +291,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "950",
       price: "$69.99",
       tags: ["20 lessons", "Beginner", "3h30"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "Java Programming for Beginners",
@@ -296,6 +302,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "800",
       price: "FREE",
       tags: ["15 lessons", "Beginner", "2h45"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
     {
       title: "Cybersecurity Fundamentals",
@@ -306,6 +313,7 @@ export const siteConfig: ISiteConfig = {
       numberReviews: "1.2k",
       price: "$89.99",
       tags: ["22 lessons", "Intermediate", "4h10"],
+      link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     },
   ],
 }

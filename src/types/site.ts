@@ -82,6 +82,7 @@ export interface ICourse {
   numberReviews: string
   price: string
   tags: string[]
+  link: string
 }
 
 export interface ISiteConfig {

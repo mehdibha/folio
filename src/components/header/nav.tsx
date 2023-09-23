@@ -9,10 +9,11 @@ import { cn } from "@/utils"
 interface NavProps {
   items: INavItem[]
   direction?: "column" | "row"
+  onNavItemClick?: () => void
 }
 
 export const Nav = (props: NavProps) => {
-  const { items, direction = "row" } = props
+  const { items, direction = "row", onNavItemClick } = props
   const pathname = usePathname()
 
   return (
@@ -34,6 +35,7 @@ export const Nav = (props: NavProps) => {
                   ? "bg-foreground/10 text-foreground"
                   : "text-foreground/60"
               )}
+              onClick={onNavItemClick}
             >
               {item.title}
             </Link>

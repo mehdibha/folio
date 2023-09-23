@@ -1,5 +1,5 @@
-import { notFound } from "next/navigation"
 import React from "react"
+import { notFound } from "next/navigation"
 import { formatDate } from "@/utils"
 import NotionRenderer from "@/components/notion-renderer"
 import { Badge } from "@/components/ui"

@@ -1,5 +1,5 @@
-import Image from "next/image"
 import React from "react"
+import Image from "next/image"
 import { IProject } from "@/types"
 import { Badge } from "@/components/ui"
 import { ProjectModal } from "./project-modal"

@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import React from "react"
+import Link from "next/link"
 import { siteConfig } from "@/config"
 import { Button } from "@/components/ui"
 import { ProjectsList } from "./projects-list"

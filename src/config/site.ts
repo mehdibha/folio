@@ -28,6 +28,10 @@ export const siteConfig: ISiteConfig = {
         title: "Courses",
         href: "/courses",
       },
+      {
+        title: "Useful tools",
+        href: "/tools",
+      },
     ],
   },
   heroBanner: {
@@ -314,6 +318,50 @@ export const siteConfig: ISiteConfig = {
       price: "$89.99",
       tags: ["22 lessons", "Intermediate", "4h10"],
       link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+    },
+  ],
+  tools: [
+    {
+      title: "CSS Gradient Generator",
+      description: "Generate CSS gradients visually.",
+      image: "/images/courses/course01.png",
+      tags: ["CSS", "Generator", "Gradient"],
+      link: "https://cssgradient.io/",
+    },
+    {
+      title: "Gradient Hunt",
+      description: "Discover and collect beautiful gradients.",
+      image: "/images/courses/course01.png",
+      tags: ["CSS", "Generator", "Gradient"],
+      link: "https://gradienthunt.com/",
+    },
+    {
+      title: "Coolors",
+      description: "Generate color palettes easily.",
+      image: "/images/courses/course01.png",
+      tags: ["Color", "Generator", "Palette"],
+      link: "https://coolors.co/",
+    },
+    {
+      title: "Font Awesome",
+      description: "Library of free icons for web projects.",
+      image: "/images/courses/course01.png",
+      tags: ["Icons", "Library"],
+      link: "https://fontawesome.com/",
+    },
+    {
+      title: "Material Icons",
+      description: "A collection of icons in Material Design style.",
+      image: "/images/courses/course01.png",
+      tags: ["Icons", "Material Design"],
+      link: "https://material.io/resources/icons/",
+    },
+    {
+      title: "Visual Studio Code",
+      description: "A popular code editor for web development.",
+      image: "/images/courses/course01.png",
+      tags: ["Code Editor", "Development"],
+      link: "https://code.visualstudio.com/",
     },
   ],
 }

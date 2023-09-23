@@ -1,7 +1,7 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
 import React from "react"
+import { useSearchParams } from "next/navigation"
 import { useScroll } from "@/hooks"
 import { cn } from "@/utils"
 

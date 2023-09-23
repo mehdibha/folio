@@ -1,7 +1,7 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
 import React from "react"
+import { useSearchParams } from "next/navigation"
 import { useUpdateQueryStringValueWithoutNavigation } from "@/hooks"
 import { TPost, TPosts } from "@/types"
 import { useInView } from "framer-motion"

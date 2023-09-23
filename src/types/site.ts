@@ -85,6 +85,14 @@ export interface ICourse {
   link: string
 }
 
+export interface ITool {
+  title: string
+  description: string
+  image: string
+  tags: string[]
+  link: string
+}
+
 export interface ISiteConfig {
   name: string
   description: string
@@ -97,4 +105,5 @@ export interface ISiteConfig {
   projects: IProject[]
   courses: ICourse[]
   contact: IContact
+  tools: ITool[]
 }

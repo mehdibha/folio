@@ -29,7 +29,7 @@ export const siteConfig: ISiteConfig = {
         href: "/courses",
       },
       {
-        title: "Useful tools",
+        title: "Tools",
         href: "/tools",
       },
     ],

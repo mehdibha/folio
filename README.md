@@ -98,7 +98,7 @@ If you want to clone the project and make you personal notionfolio
 - [x] Infinite scroll in blog page
 - [x] CI / pre-commit hooks
 - [x] Introduce courses feature
-- [ ] Introduce tools feature
+- [x] Introduce tools feature
 - [ ] Automatically generate a resume on build
 - [ ] Make config more optionnal (config/site.ts)
 - [ ] Collect emails to continue reading an article

@@ -42,6 +42,7 @@
 ## About The Project
 
 This repo is what I use to power my personal blog and portfolio site [mehdibha.co](https://www.mehdibha.co).
+It's perfect for building your own personal website if you are a developer, a designer, a researcher, a writer with almost everything customizable.
 
 <details open><summary>Screenshot</summary>
 <img src="https://www.notionfol.io/images/screenshots/screenshot01.png" />
@@ -61,6 +62,7 @@ This repo is what I use to power my personal blog and portfolio site [mehdibha.c
 - 🚀 Deploy on Vercel in minutes
 - 🔍 Search posts instantly
 - 📈 Analytics with vercel analytics
+- Dispaly your courses
   
 
 ### Built with
@@ -95,7 +97,7 @@ If you want to clone the project and make you personal notionfolio
 - [x] Implement analytics
 - [x] Infinite scroll in blog page
 - [x] CI / pre-commit hooks
-- [ ] Introduce courses feature
+- [x] Introduce courses feature
 - [ ] Introduce tools feature
 - [ ] Automatically generate a resume on build
 - [ ] Make config more optionnal (config/site.ts)

@@ -16,10 +16,7 @@ export async function generatePDF(formData: FormValues) {
     }
   })
 
-  // fs.writeFile('./output.tex',texDoc)
-  // const output = fs.createWriteStream("./output.pdf")
+  const output = fs.createWriteStream("./public/resume.pdf")
 
-  // latex(texDoc, opts).pipe(output)
-  //   pdf.pipe(res)
-  //   res.setHeader('Content-Type', 'application/pdf')
+  latex(texDoc, opts).pipe(output)
 }

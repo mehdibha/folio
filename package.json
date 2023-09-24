@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "sh ./scripts/install_dependencies.sh && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint:check": "eslint src --ext ts,tsx,js,jsx --max-warnings 0",

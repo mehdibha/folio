@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get install wget
+apt-get update
+apt-get install wget
 
 # Define the installation directory within your project
 INSTALL_DIR="$HOME/project/tinytex"

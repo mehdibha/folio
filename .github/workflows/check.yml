@@ -1,36 +1,20 @@
-name: LaTeX to PDF Conversion
-
-on:
-  push:
-    branches:
-      - main  # Replace with the default branch name of your repository
-
+name: "lint - format - types"
+on: push
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install TinyTeX and Dependencies
-      run: |
-        # Install TinyTeX
-        wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh -
-        export PATH=$HOME/.TinyTeX/bin/x86_64-linux:$PATH
-        sudo apt-get install -y libpoppler-cpp-dev  # Install a dependency
-
-        # Install additional LaTeX packages if needed
-        # tlmgr install package_name
-
-    - name: Compile LaTeX to PDF
-      run: |
-        # Compile LaTeX to PDF
-        pdflatex -interaction=nonstopmode your_latex_file.tex
-        pdflatex -interaction=nonstopmode your_latex_file.tex  # Run twice for correct references
-
-    - name: Upload PDF Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: pdf
-        path: your_latex_file.pdf
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Use Node.js 18
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 18
+            - name: install dependencies
+              run: yarn
+            - name: format
+              run: yarn run format:check
+            - name: lint
+              run: yarn run lint:check
+            - name: check types
+              run: yarn run types:check

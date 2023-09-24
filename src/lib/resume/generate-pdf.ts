@@ -11,11 +11,11 @@ export async function generatePDF(formData: FormValues) {
   // Import the child_process module
 
   // Install TinyTeX
-  try {
-    execSync('curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh')
-  } catch (error) {
-    console.error("Error installing TinyTeX:", error)
-  }
+  // try {
+  //   execSync('curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh')
+  // } catch (error) {
+  //   console.error("Error installing TinyTeX:", error)
+  // }
 
   fs.writeFile("./public/resume.tex", texDoc, (err) => {
     if (err) {

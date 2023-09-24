@@ -7,14 +7,14 @@ import { getTemplateData } from "./get-template-data"
 
 const formData = {
   headings: {
-    basics: "Personal Information",
-    work: "Work Experience",
-    education: "Education",
-    skills: "Skills",
-    projects: "Projects",
-    awards: "Awards",
-    publications: "Publications",
-    volunteer: "Volunteer Experience",
+    // basics: "Personal Information",
+    // work: "Work Experience",
+    // education: "Education",
+    // skills: "Skills",
+    // projects: "Projects",
+    // awards: "Awards",
+    // publications: "Publications",
+    // volunteer: "Volunteer Experience",
   },
   sections: [
     "basics",
@@ -123,42 +123,42 @@ export async function generatePDFResume() {
   try {
     const { texDoc } = getTemplateData(formData)
 
-    // // if you want to generate also your resume in latex
-    // fs.writeFile("./public/resume.tex", texDoc, (err) => {
-    //   if (err) {
-    //     console.error("Error writing to resume.tex", err)
-    //   } else {
-    //     console.log("LaTeX content has been written to resume.tex")
-    //   }
-    // })
-
-    const jobStatusResponse = await axios.post(
-      "https://api.advicement.io/v1/templates/pub-tex-to-pdf-with-pdflatex-v1/compile",
-      { texFileContent: texDoc },
-      {
-        headers: {
-          "Adv-Security-Token": DYNAMIC_DOCS_TOKEN,
-        },
+    // if you want to generate also your resume in latex
+    fs.writeFile("./public/resume.tex", texDoc, (err) => {
+      if (err) {
+        console.error("Error writing to resume.tex", err)
+      } else {
+        console.log("LaTeX content has been written to resume.tex")
       }
-    )
-
-    await delay(20000) // wait 20sec until the job is finished
-
-    const { data } = await axios.get(jobStatusResponse.data.documentStatusUrl)
-    const documentUrl = data.documentUrl
-
-    const response = await axios.get(documentUrl, { responseType: "stream" })
-
-    // Pipe the response data to a writable stream to save the file
-    response.data.pipe(fs.createWriteStream("./public/resume.pdf"))
-
-    // Wait for the file to finish writing
-    await new Promise((resolve, reject) => {
-      response.data.on("end", resolve)
-      response.data.on("error", reject)
     })
 
-    console.log("PDF downloaded successfully.")
+    // const jobStatusResponse = await axios.post(
+    //   "https://api.advicement.io/v1/templates/pub-tex-to-pdf-with-pdflatex-v1/compile",
+    //   { texFileContent: texDoc },
+    //   {
+    //     headers: {
+    //       "Adv-Security-Token": DYNAMIC_DOCS_TOKEN,
+    //     },
+    //   }
+    // )
+
+    // await delay(20000) // wait 20sec until the job is finished
+
+    // const { data } = await axios.get(jobStatusResponse.data.documentStatusUrl)
+    // const documentUrl = data.documentUrl
+
+    // const response = await axios.get(documentUrl, { responseType: "stream" })
+
+    // // Pipe the response data to a writable stream to save the file
+    // response.data.pipe(fs.createWriteStream("./public/resume.pdf"))
+
+    // // Wait for the file to finish writing
+    // await new Promise((resolve, reject) => {
+    //   response.data.on("end", resolve)
+    //   response.data.on("error", reject)
+    // })
+
+    // console.log("PDF downloaded successfully.")
   } catch (error) {
     console.log(error)
   }

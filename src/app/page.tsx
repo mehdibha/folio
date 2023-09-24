@@ -20,9 +20,9 @@ async function getData() {
 }
 
 async function jobs() {
-  if (PROD) {
+  if (!PROD) {
     await generatePDFResume()
-    await generateRssFeed()
+    // await generateRssFeed()
   }
 }
 

@@ -336,35 +336,12 @@ function template1(values: FormValues) {
     \\begin{document}
     \\vspace*{-40pt}
 
-    ${values.sections
-      .map((section) => {
-        switch (section) {
-          case "profile":
-            return generator.profileSection(values.basics)
-
-          case "education":
-            return generator.educationSection(
-              values.education,
-              headings.education
-            )
-
-          case "work":
-            return generator.workSection(values.work, headings.work)
-
-          case "skills":
-            return generator.skillsSection(values.skills, headings.skills)
-
-          case "projects":
-            return generator.projectsSection(values.projects, headings.projects)
-
-          case "awards":
-            return generator.awardsSection(values.awards, headings.awards)
-
-          default:
-            return ""
-        }
-      })
-      .join("\n\n")}
+    ${generator.profileSection(values.basics)}\n\n
+    ${generator.educationSection(values.education, headings.education)}\n\n
+    ${generator.workSection(values.work, headings.work)}\n\n
+    ${generator.skillsSection(values.skills, headings.skills)}\n\n
+    ${generator.projectsSection(values.projects, headings.projects)}\n\n
+    ${generator.awardsSection(values.awards, headings.awards)}
 
     ${WHITESPACE}
     \\end{document}

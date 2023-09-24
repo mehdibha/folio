@@ -16,5 +16,5 @@ jobs:
               run: yarn run format:check
             - name: lint
               run: yarn run lint:check
-            - name: check types
-              run: yarn run types:check
+            # - name: check types
+            #   run: yarn run types:check

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "sh ./scripts/install_dependencies.sh && next build",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint:check": "eslint src --ext ts,tsx,js,jsx --max-warnings 0",
@@ -23,6 +23,7 @@
     "@vercel/analytics": "^1.0.2",
     "axios": "^1.5.0",
     "class-variance-authority": "^0.7.0",
+    "cloudconvert": "^2.3.5",
     "clsx": "^2.0.0",
     "cmdk": "^0.2.0",
     "date-fns": "^2.30.0",

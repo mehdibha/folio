@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { AnimatedGradient } from "@/components"
+import { PROD } from "@/config"
 import { PostsList, getAllPosts } from "@/features/blog"
 import {
   About,
@@ -9,14 +10,24 @@ import {
   Projects,
   WorkExperience,
 } from "@/features/portfolio"
+import { generateRssFeed } from "@/utils/rss"
 import { Button } from "@/components/ui"
+import { generatePDFResume } from "@/lib/resume"
 
 async function getData() {
   const posts = await getAllPosts({ includePages: false })
   return { posts }
 }
 
+async function jobs() {
+  if (PROD) {
+    await generatePDFResume()
+    await generateRssFeed()
+  }
+}
+
 export default async function Home() {
+  await jobs()
   const { posts } = await getData()
 
   return (

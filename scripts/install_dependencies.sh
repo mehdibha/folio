@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yam install wget
+yum install wget
 
 # Define the installation directory within your project
 INSTALL_DIR="$HOME/project/tinytex"

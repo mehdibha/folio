@@ -27,9 +27,7 @@ export const HeroBanner = () => {
             </span>
           ))}
         </h1>
-        <h2 className="mb-8 text-center text-lg font-medium md:text-xl">
-          {data.subtitle}
-        </h2>
+        <h2 className="mb-8 text-center text-lg md:text-xl">{data.subtitle}</h2>
         <div className="flex justify-center space-x-2 sm:space-x-4">
           {data.callToActions.map((elem, index) => (
             <Button

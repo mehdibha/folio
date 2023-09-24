@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
 }
 
 const display = localFont({

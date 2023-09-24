@@ -65,8 +65,7 @@ export const ProjectModal = (props: ProjectModalProps) => {
                 </p>
               ))}
           </div>
-          <div className="flex space-x-1">
-            {/* TODO: Repetition of ILinks */}
+          <div className="mt-8 flex space-x-1">
             {links &&
               Object.keys(links).map((key) => {
                 if (links[key as keyof ILinks]) {
@@ -85,9 +84,6 @@ export const ProjectModal = (props: ProjectModalProps) => {
                 }
               })}
           </div>
-          {/* <div className="relative h-[300px] w-full"></div>
-            <div className="relative w-full"></div> */}
-          <div></div>
         </div>
         <DialogFooter></DialogFooter>
       </DialogContent>

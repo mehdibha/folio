@@ -3,7 +3,7 @@ name: LaTeX to PDF Conversion
 on:
   push:
     branches:
-      - main  # Replace with the default branch name of your repository
+      - resume-gen  # Replace with the default branch name of your repository
 
 jobs:
   build:

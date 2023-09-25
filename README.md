@@ -2,7 +2,7 @@
 
 <br/>
 <div align="center">
-  <a href="https://github.com/Mehdi-BHA/notionfolio">
+  <a href="https://github.com/mehdibha/notionfolio">
     <img src="https://www.notionfol.io/images/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h1 align="center">Notionfolio</h1>
@@ -13,9 +13,9 @@
     
    <a href="https://www.notionfol.io">View Demo</a>
     ·
-    <a href="https://github.com/Mehdi-BHA/notionfolio/issues">Report Bug</a>
+    <a href="https://github.com/mehdibha/notionfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Mehdi-BHA/notionfolio/issues">Request Feature</a>
+    <a href="https://github.com/mehdibha/notionfolio/issues">Request Feature</a>
   </p>
 </div>
 

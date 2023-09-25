@@ -3,7 +3,8 @@ import { ISiteConfig } from "@/types"
 export const siteConfig: ISiteConfig = {
   name: "Notionfol.io", // shown in the header
   description:
-    "Make your own portfolio + Notion-powered blog in minutes with Next.js and Vercel.",
+    "Make your own personal website with portfolio , blog, courses and more using notion as a CMS, in minutes with Next.js and Vercel.",
+  image: "/images/screenshots/screenshot01.png",
   links: {
     // order is same order in the footer (when link added it's shown in the footer)
     mail: "hello@mehdibha.co",

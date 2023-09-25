@@ -96,6 +96,7 @@ export interface ITool {
 export interface ISiteConfig {
   name: string
   description: string
+  image: string
   links: ILinks
   header: { logo?: string; nav: INavItem[] }
   heroBanner: IHeroBanner

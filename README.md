@@ -99,15 +99,12 @@ If you want to clone the project and make you personal notionfolio
 - [x] CI / pre-commit hooks
 - [x] Introduce courses feature
 - [x] Introduce tools feature
-- [ ] Automatically generate a resume on build
 - [ ] Make config more optionnal (config/site.ts)
-- [ ] Collect emails to continue reading an article
+- [ ] Collect emails
 - [ ] Improve SEO and lighthouse score
 - [ ] Auth + comments
-- [ ] PWA
-- [ ] Switch from react-notion-x to a custom component
-- [ ] Add templates and variants for components
 - [ ] implement i18n
+- [ ] Switch from react-notion-x to a custom component
 - [ ] Make a website to generate notionfolios from it directly
 
 ## Sites using notionfol.io

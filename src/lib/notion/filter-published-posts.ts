@@ -1,4 +1,12 @@
-export function filterPublishedPosts({ posts, includePages }) {
+import { TPost } from "@/types"
+
+export function filterPublishedPosts({
+  posts,
+  includePages,
+}: {
+  posts: TPost[] | null
+  includePages: boolean
+}): TPost[] {
   if (!posts || !posts.length) return []
   return posts
     .filter((post) =>
@@ -7,10 +15,6 @@ export function filterPublishedPosts({ posts, includePages }) {
         : post?.type?.[0] === "Post"
     )
     .filter(
-      (post) =>
-        post.title &&
-        post.slug &&
-        post?.status?.[0] === "Published" &&
-        post.date <= new Date()
+      (post) => post.title && post.slug && post?.status?.[0] === "Published"
     )
 }

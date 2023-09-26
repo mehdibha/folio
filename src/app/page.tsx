@@ -10,10 +10,13 @@ import {
   WorkExperience,
 } from "@/features/portfolio"
 import { Button } from "@/components/ui"
+import { filterPublishedPosts } from "@/lib/notion"
 
 async function getData() {
   const posts = await getAllPosts({ includePages: false })
-  return { posts }
+  const filteredPosts = filterPublishedPosts({ posts, includePages: false })
+
+  return { posts: filteredPosts }
 }
 
 export default async function Home() {

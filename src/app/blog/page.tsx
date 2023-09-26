@@ -1,16 +1,18 @@
 import React from "react"
 import { PostsExplorer, getAllTags } from "@/features/blog"
 import { generateRssFeed } from "@/utils/rss"
-import { getAllPosts } from "@/lib/notion"
+import { filterPublishedPosts, getAllPosts } from "@/lib/notion"
 
 async function getData() {
   await generateRssFeed()
   const posts = await getAllPosts({ includePages: false })
+  const filteredPosts = filterPublishedPosts({ posts, includePages: false })
+
   let tags: string[] = []
   if (posts) {
-    tags = getAllTags(posts)
+    tags = getAllTags(filteredPosts)
   }
-  return { posts, tags }
+  return { posts: filteredPosts, tags }
 }
 
 const Blog = async () => {

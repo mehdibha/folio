@@ -3,17 +3,16 @@ import { notFound } from "next/navigation"
 import { formatDate } from "@/utils"
 import NotionRenderer from "@/components/notion-renderer"
 import { Badge } from "@/components/ui"
-import { getAllPosts } from "@/lib/notion"
+import { filterPublishedPosts, getAllPosts } from "@/lib/notion"
 import { getPostBlocks } from "@/lib/notion/get-post-blocks"
 
-const title = "How to configure ESLint and Prettier in an Expo project"
-const date = "Jul 25, 2023"
 const timeToRead = 3
-const tags = ["Expo"]
 
 export async function generateStaticParams() {
   const posts = await getAllPosts({ includePages: false })
-  return posts?.map((elem) => ({
+
+  const filteredPosts = filterPublishedPosts({ posts, includePages: false })
+  return filteredPosts?.map((elem) => ({
     postSlug: elem.slug,
   }))
 }

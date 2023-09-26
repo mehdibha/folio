@@ -1,6 +1,6 @@
 import { ExtendedRecordMap } from "notion-types"
 
-export type TPostStatus = "Private" | "Public" | "PublicOnDetail"
+export type TPostStatus = "Published" | "Draft" | "Revise" | "Idea"
 export type TPostType = "Post" | "Paper" | "Page"
 
 export type TPost = {

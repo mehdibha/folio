@@ -3,7 +3,7 @@
 <br/>
 <div align="center">
   <a href="https://github.com/mehdibha/notionfolio">
-    <img src="https://www.notionfol.io/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://demo.notionfol.io/images/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h1 align="center">Notionfolio</h1>
   <p align="center">
@@ -11,7 +11,7 @@
   </p>
   <p>
     
-   <a href="https://www.notionfol.io">View Demo</a>
+   <a href="https://demo.notionfol.io">View Demo</a>
     ·
     <a href="https://github.com/mehdibha/notionfolio/issues">Report Bug</a>
     ·
@@ -45,7 +45,7 @@ This repo is what I use to power my personal blog and portfolio site [mehdibha.c
 It's perfect for building your own personal website if you are a developer, a designer, a researcher, a writer with almost everything customizable.
 
 <details open><summary>Screenshot</summary>
-<img src="https://www.notionfol.io/images/screenshots/screenshot01.png" />
+<img src="https://demo.notionfol.io/images/screenshots/screenshot01.png" />
 </details>
 
 ### Features

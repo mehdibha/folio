@@ -15,6 +15,7 @@ jobs:
           source-directory: "src/app"
           destination-github-username: "mehdibha"
           destination-repository-name: "notionfolio"
+          target-directory: "src/app/[domain]/folio"
           user-email: hello@mehdibha.co
-          target-branch: main
+          target-branch: folio
           create-target-branch-if-needed: true

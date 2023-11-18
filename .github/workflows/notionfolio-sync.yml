@@ -1,4 +1,4 @@
-name: sync notionfolio
+name: sync with notionfolio
 
 on: push
 
@@ -17,5 +17,5 @@ jobs:
           destination-repository-name: "notionfolio"
           target-directory: "src/app/[domain]/folio"
           user-email: hello@mehdibha.co
-          target-branch: folio
+          target-branch: dev
           create-target-branch-if-needed: true

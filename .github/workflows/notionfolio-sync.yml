@@ -1,22 +1,24 @@
-name: Sync with notionfolio
+name: Push File
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: push
 
 jobs:
-  build:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
-        with:
-          source-directory: "src/app"
-          destination-github-username: "mehdibha"
-          destination-repository-name: "notionfolio"
-          user-email: hello@mehdibha.com
-          target-branch: main
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Create pull request
+      uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        source_folder: 'src/app'
+        destination_repo: 'mehdibha/notionfolio'
+        destination_folder: 'src/app/[domain]/tutu'
+        destination_base_branch: 'main'
+        destination_head_branch: 'folio'
+        user_email: 'hello@mehdibha.com'
+        user_name: 'mehdibha'
+        pull_request_reviewers: 'reviewers'

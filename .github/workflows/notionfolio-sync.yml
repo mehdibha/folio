@@ -1,44 +1,22 @@
-name: Sync with Folio
+name: Sync with notionfolio
 
 on:
   push:
-    branches:
-      - main  # Change this to your main branch name
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  sync:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout source repository
-      uses: actions/checkout@v2
-      with:
-        path: ./src/app
-
-    - name: Checkout destination repository
-      uses: actions/checkout@v2
-      with:
-        repository: mehdibha/notionfolio  # Replace with the username and repository name
-        token: ${{ secrets.GH_TOKEN }}
-        path: ./src/app/[domain]/foliotest 
-
-    - name: Copy files to destination repository
-      run: |
-        cp -r ./src/app/* ./src/app/[domain]/foliotest
-
-    - name: Commit and push changes
-      run: |
-        cd ./folio
-        git config user.name "${{ github.actor }}"
-        git config user.email "${{ github.actor }}@users.noreply.github.com"
-        git add .
-        git commit -m "Sync changes from ./src/app"
-        git push
-
-    - name: Create pull request
-      uses: peter-evans/create-pull-request@v3
-      with:
-        commit-message: "Sync changes from ./src/app"
-        title: "Sync changes from ./src/app"
-        branch: main  # Change this to your main branch name
-        delete-branch: true
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
+        with:
+          source-directory: "src/app"
+          destination-github-username: "mehdibha"
+          destination-repository-name: "notionfolio"
+          user-email: hello@mehdibha.com
+          target-branch: main

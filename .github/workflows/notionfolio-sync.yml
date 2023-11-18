@@ -1,23 +1,20 @@
-name: Push File
+name: sync notionfolio
 
 on: push
 
 jobs:
-  copy-file:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Pushes test folder
-      uses: datalbry/copy_folder_to_another_repo_action@1.0.0
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
-      with:
-        source_folder: 'src/app'
-        destination_repo: 'mehdibha/notionfolio'
-        destination_folder: 'src/app/[domain]/notionfolio'
-        destination_branch_create: 'folio-test'
-        user_email: 'hello@mehdibha.com'
-        user_name: 'mehdibha'
-        commit_msg: '[GHA] Bot update.'
+      - uses: actions/checkout@v2
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
+        with:
+          source-directory: "src/app"
+          destination-github-username: "mehdibha"
+          destination-repository-name: "notionfolio"
+          user-email: hello@mehdibha.co
+          target-branch: main
+          create-target-branch-if-needed: true

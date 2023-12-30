@@ -5,9 +5,9 @@
   <a href="https://github.com/mehdibha/notionfolio">
     <img src="https://demo.notionfol.io/images/logo.png" alt="Logo" width="80" height="80">
   </a>
-  <h1 align="center">Notionfolio</h1>
+  <h1 align="center">Folio</h1>
   <p align="center">
-    Make your own portfolio + Notion-powered blog in minutes with Next.js and Vercel.
+    Make your own portfolio + Notion-powered blog in seconds with Notionfolio.
   </p>
   <p>
     
@@ -19,33 +19,14 @@
   </p>
 </div>
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#sites-using-notionfolio">Sites using notionfol.io</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contributors">Contributors</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## Notionfol.io template
 
-This repo is what I use to power my personal blog and portfolio site [mehdibha.co](https://www.mehdibha.co).
-It's perfect for building your own personal website if you are a developer, a designer, a researcher, a writer with almost everything customizable.
+This template is available for free at <a href="https://app.notionfol.io?template=folio">app.notionfol.io?template=folio</a>
 
 <details open><summary>Screenshot</summary>
-<img src="https://demo.notionfol.io/images/screenshots/screenshot01.png" />
+  <img src="https://notionfol.io/images/templates/folio.png">
 </details>
 
 ### Features
@@ -79,13 +60,11 @@ If you want to clone the project and make you personal notionfolio
 
 ### Configuratuion
 - Star the repo
+- Go to <a href="https://app.notionfol.io">app.notionfol.io?template=folio</a>
+- Create a website and hoose 'folio' template
 - Duplicate this Notion [template](https://mehdibha.notion.site/11efa51a4fb34073acfe8ef1f70aa0cb), and share it to the public
-- Fork this project
-- Customize /src/config/site.ts
-- Replace favicons and images /public
-- Add NOTION_PAGE_ID as an env variable (see .env.exemple)
-- Deploy on Vercel (do not forget to add env variables)
-- Run script to update website for new features (yarn run update-template) (it syncs with this repo without changing config file and /public)
+- Add it to your settings in notionfol.io
+- Make the site yours
 
 ## Roadmap
 

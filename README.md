@@ -58,7 +58,7 @@ This template is available for free at <a href="https://app.notionfol.io?templat
 
 If you want to clone the project and make your personal notionfolio
 
-### Configuratuion
+### Configuration
 - Star the repo
 - Go to <a href="https://app.notionfol.io">app.notionfol.io?template=folio</a>
 - Create a website and choose 'folio' template

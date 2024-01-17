@@ -42,8 +42,8 @@ This template is available for free at <a href="https://app.notionfol.io?templat
 - 📰 RSS feed
 - 🚀 Deploy on Vercel in minutes
 - 🔍 Search posts instantly
-- 📈 Analytics with vercel analytics
-- Dispaly your courses
+- 📈 Analytics with Vercel Analytics
+- Display your courses
   
 
 ### Built with
@@ -56,12 +56,12 @@ This template is available for free at <a href="https://app.notionfol.io?templat
 
 ## Getting Started
 
-If you want to clone the project and make you personal notionfolio
+If you want to clone the project and make your personal notionfolio
 
 ### Configuratuion
 - Star the repo
 - Go to <a href="https://app.notionfol.io">app.notionfol.io?template=folio</a>
-- Create a website and hoose 'folio' template
+- Create a website and choose 'folio' template
 - Duplicate this Notion [template](https://mehdibha.notion.site/11efa51a4fb34073acfe8ef1f70aa0cb), and share it to the public
 - Add it to your settings in notionfol.io
 - Make the site yours

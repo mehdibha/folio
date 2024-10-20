@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/components/core/link";
 
 const links = [
   { label: "GitHub", href: "https://github.com/mehdibha" },
@@ -8,15 +8,21 @@ const links = [
 ];
 export const Footer = () => {
   return (
-    <div className="flex items-center justify-between border-t py-6">
-      <p>Mehdi BHA</p>
-      <div className="flex items-center gap-2 text-sm text-fg-muted">
+    <div className="flex flex-col gap-2 border-t py-6 text-sm text-fg-muted">
+      <div className="flex items-center gap-3 text-sm text-fg-muted">
+        <div>Find me on:</div>
         {links.map((link) => (
-          <Link key={link.label} href={link.href}>
+          <Link
+            variant="quiet"
+            key={link.label}
+            href={link.href}
+            target="_blank"
+          >
             {link.label}
           </Link>
         ))}
       </div>
+      <div>Or mail me at hello@mehdibha.com</div>
     </div>
   );
 };

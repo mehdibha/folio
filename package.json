@@ -7,24 +7,24 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache --log-level warn"
+    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.0",
+    "@content-collections/core": "^0.7.2",
+    "@content-collections/mdx": "^0.1.6",
+    "@content-collections/next": "^0.2.3",
+    "@fumadocs/content-collections": "^1.1.4",
     "clsx": "^2.1.1",
     "fumadocs-core": "^13.4.10",
     "fumadocs-mdx": "^10.0.2",
     "lucide-react": "^0.453.0",
     "next": "14.2.15",
     "next-themes": "^0.3.0",
-    "prettier-plugin-tailwindcss": "^0.6.8",
     "react": "^18",
     "react-aria-components": "^1.4.1",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.4",
-    "tailwind-variants": "^0.2.1",
-    "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-react-aria-components": "^1.1.6"
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -35,7 +35,10 @@
     "eslint-config-next": "14.2.15",
     "postcss": "^8",
     "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^1.1.6",
     "typescript": "^5"
   }
 }

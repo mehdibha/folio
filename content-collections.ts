@@ -1,5 +1,6 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
+
 // import { transformMDX } from "@fumadocs/content-collections/configuration";
 
 const posts = defineCollection({

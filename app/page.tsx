@@ -1,4 +1,4 @@
-import { allLabs, allPosts } from "@/lib/docs";
+// import { allLabs, allPosts } from "@/lib/docs";
 import { Link } from "@/components/core/link";
 import { List } from "@/components/list";
 import { projects } from "@/content/projects";

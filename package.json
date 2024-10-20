@@ -6,22 +6,35 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache --log-level warn"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "fumadocs-core": "^13.4.10",
     "fumadocs-mdx": "^10.0.2",
+    "lucide-react": "^0.453.0",
     "next": "14.2.15",
+    "next-themes": "^0.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "react": "^18",
-    "react-dom": "^18"
+    "react-aria-components": "^1.4.1",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.4",
+    "tailwind-variants": "^0.2.1",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^1.1.6"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "postcss": "^8",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

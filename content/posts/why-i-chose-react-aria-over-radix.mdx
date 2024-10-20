@@ -1,0 +1,64 @@
+---
+title: Why i chose React Aria over Radix UI?
+description: A comparison of React Aria and Radix UI
+---
+
+When it comes to building accessible and customizable UI components in React, two popular libraries often come to mind: React Aria and Radix UI. Both offer powerful tools for creating robust user interfaces, but they have distinct approaches and philosophies. In this article, I'll explain why I chose React Aria over Radix UI for my recent project, and explore the strengths and considerations of each library.
+
+## Understanding React Aria and Radix UI
+
+Before diving into the comparison, let's briefly introduce both libraries:
+
+### React Aria
+
+React Aria, developed by Adobe, is a collection of React Hooks that provides accessible UI primitives to build design systems and component libraries. It focuses on behavior and interactions, leaving the styling entirely up to the developer.
+
+### Radix UI
+
+Radix UI, on the other hand, is a low-level UI component library for building high-quality, accessible design systems and web applications. It provides a set of unstyled, accessible components that can be easily customized.
+
+## Why I Chose React Aria
+
+1. **Flexibility in Styling**
+
+   One of the primary reasons I opted for React Aria is its complete separation of concerns between behavior and styling. React Aria provides only the logic and accessibility features, allowing me to have full control over the styling of my components. This approach aligns perfectly with my preference for custom designs and the ability to integrate seamlessly with any styling solution, be it CSS-in-JS, Tailwind, or plain CSS.
+
+2. **Granular Control**
+
+   React Aria's hook-based approach gives me granular control over every aspect of my components. I can compose complex components from smaller, reusable parts, which leads to more maintainable and flexible code. This level of control is particularly useful when building highly customized UI elements that don't fit into pre-defined patterns.
+
+3. **Performance**
+
+   By providing only the necessary logic through hooks, React Aria has a minimal impact on bundle size and runtime performance. This lean approach allows me to build performant applications without unnecessary overhead.
+
+4. **Accessibility First**
+
+   While both libraries prioritize accessibility, I found React Aria's approach to be more comprehensive. It handles a wide range of accessibility concerns out of the box, including ARIA attributes, keyboard navigation, and screen reader support, reducing the risk of overlooking crucial accessibility features.
+
+5. **Learning and Growth**
+
+   Using React Aria has been an excellent learning experience. It has deepened my understanding of accessibility concerns and component behavior, making me a better frontend developer overall.
+
+## Considerations for Radix UI
+
+While I chose React Aria for my project, Radix UI is an excellent library with its own strengths:
+
+1. **Quicker Development**
+
+   Radix UI provides more out-of-the-box functionality, which can lead to faster development times for standard UI patterns.
+
+2. **Community and Ecosystem**
+
+   Radix UI has a strong community and a growing ecosystem of tools and resources, which can be beneficial for larger teams or projects.
+
+3. **Design System Friendly**
+
+   If you're working with a predefined design system, Radix UI's components might align more closely with common UI patterns.
+
+## Conclusion
+
+Choosing between React Aria and Radix UI ultimately depends on your project's specific needs, your team's preferences, and your development philosophy. For my project, React Aria's flexibility, granular control, and focus on accessibility made it the ideal choice.
+
+However, both libraries are excellent tools in the React ecosystem. React Aria shines when you need full control over your component's behavior and styling, while Radix UI excels in providing a solid foundation for building design systems with pre-built, customizable components.
+
+Whichever you choose, both React Aria and Radix UI represent a step forward in creating accessible, robust, and user-friendly interfaces in React applications.

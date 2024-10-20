@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 import { Providers } from "./providers";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Mehdi BHA",
@@ -28,10 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <div className="mx-auto max-w-xl">
+          <div className="mx-auto max-w-2xl px-4">
             <main className="py-20">{children}</main>
             <Footer />
           </div>

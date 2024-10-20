@@ -16,7 +16,7 @@ export const List = ({
       {items.map((item, index) => (
         <NavLink
           key={index}
-          href={item}
+          href={item.href}
           className={cn(
             "flex items-center justify-between border-b py-3 duration-200",
             hoveredIndex !== null && hoveredIndex !== index ? "opacity-50" : ""

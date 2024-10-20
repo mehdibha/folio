@@ -1,44 +1,7 @@
+import { allLabs, allPosts } from "@/lib/docs";
 import { Link } from "@/components/core/link";
 import { List } from "@/components/list";
-
-const projects = [
-  {
-    title: "dotUI",
-    hint: "creator, maintainer",
-    description:
-      "Collection of accessible, mobile-friendly, modern components.",
-    href: "https://dotui.org",
-  },
-  {
-    title: "Notionfolio",
-    hint: "creator",
-    description: "SaaS to create blogs with Notion.",
-    href: "https://notionfol.io",
-  },
-  {
-    title: "Palettify",
-    hint: "creator",
-    description: "Platform to create and share color themes.",
-    href: "https://palettify.co",
-  },
-  {
-    title: "Vapi",
-    hint: "creator",
-    description: "Marketplace for vape related products.",
-    href: "https://vapi.tn",
-  },
-];
-const lab = [{ title: "Animations on the web", href: "/lab/animated" }];
-const writing = [
-  {
-    title: "Why i chose React Aria over Radix UI?",
-    href: "/writing/why-i-chose-react-aria",
-  },
-  {
-    title: "Copy and paste is the new way to build",
-    href: "/writing/copy-and-paste-is-the-new-way-to-build",
-  },
-];
+import { projects } from "@/content/projects";
 
 export default function Home() {
   return (
@@ -55,9 +18,19 @@ export default function Home() {
       <h2 className="mb-2 mt-10 text-sm text-fg-muted">Projects</h2>
       <List items={projects} />
       <h2 className="mt-10 text-sm text-fg-muted">Lab</h2>
-      <List items={lab} />
+      <List
+        items={allLabs.map((lab) => ({
+          title: lab.title,
+          href: `/lab/${lab._meta.fileName}`,
+        }))}
+      />
       <h2 className="mt-10 text-sm text-fg-muted">Writing</h2>
-      <List items={writing} />
+      <List
+        items={allPosts.map((post) => ({
+          title: post.title,
+          href: `/writing/${post._meta.fileName}`,
+        }))}
+      />
     </div>
   );
 }

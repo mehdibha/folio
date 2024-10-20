@@ -17,7 +17,7 @@ export default function Home() {
       </p>
       <h2 className="mb-2 mt-10 text-sm text-fg-muted">Projects</h2>
       <List items={projects} />
-      <h2 className="mt-10 text-sm text-fg-muted">Lab</h2>
+      {/* <h2 className="mt-10 text-sm text-fg-muted">Lab</h2>
       <List
         items={allLabs.map((lab) => ({
           title: lab.title,
@@ -30,7 +30,7 @@ export default function Home() {
           title: post.title,
           href: `/writing/${post._meta.fileName}`,
         }))}
-      />
+      /> */}
     </div>
   );
 }

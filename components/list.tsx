@@ -10,6 +10,7 @@ export const List = ({
   items: { title: string; description?: string; hint?: string; href: string }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  console.log(hoveredIndex);
 
   return (
     <div className="text-sm">
@@ -19,10 +20,13 @@ export const List = ({
           href={item.href}
           className={cn(
             "flex items-center justify-between border-b py-3 duration-200",
-            hoveredIndex !== null && hoveredIndex !== index ? "opacity-50" : ""
+            hoveredIndex !== null && hoveredIndex !== index ? "!opacity-50" : ""
           )}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
+          onHoverStart={() => {
+            console.log(index);
+            setHoveredIndex(index);
+          }}
+          onHoverEnd={() => setHoveredIndex(null)}
           target={item.href.startsWith("http") ? "_blank" : undefined}
         >
           <div className="flex flex-col">

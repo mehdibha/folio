@@ -52,7 +52,7 @@ function Item({
   return <motion.div variants={item} {...props} />;
 }
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 function ItemLink(props: HTMLMotionProps<"a">) {
   return <MotionLink variants={item} {...props} />;
 }

@@ -19,11 +19,10 @@ export const List = ({
           key={index}
           href={item.href}
           className={cn(
-            "flex items-center justify-between border-b py-3 duration-200",
+            "flex items-center justify-between border-b py-3",
             hoveredIndex !== null && hoveredIndex !== index ? "!opacity-50" : ""
           )}
           onHoverStart={() => {
-            console.log(index);
             setHoveredIndex(index);
           }}
           onHoverEnd={() => setHoveredIndex(null)}
@@ -35,7 +34,7 @@ export const List = ({
               <span className="text-fg-muted">{item.description}</span>
             )}
           </div>
-          {item.hint && <span className="text-fg-muted">{item.hint}</span>}
+          {item.hint && <span className="text-fg-muted text-right">{item.hint}</span>}
         </ItemLink>
       ))}
     </div>

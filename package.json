@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
+    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@content-collections/core": "^0.7.2",
@@ -15,6 +16,7 @@
     "@content-collections/next": "^0.2.3",
     "@fumadocs/content-collections": "^1.1.4",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.11.9",
     "fumadocs-core": "^13.4.10",
     "fumadocs-mdx": "^10.0.2",
     "lucide-react": "^0.453.0",

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import NavLink from "next/link";
 import { cn } from "@/lib/cn";
+import { ItemLink } from "./fade-in";
 
 export const List = ({
   items,
@@ -14,7 +14,7 @@ export const List = ({
   return (
     <div className="text-sm">
       {items.map((item, index) => (
-        <NavLink
+        <ItemLink
           key={index}
           href={item.href}
           className={cn(
@@ -32,7 +32,7 @@ export const List = ({
             )}
           </div>
           {item.hint && <span className="text-fg-muted">{item.hint}</span>}
-        </NavLink>
+        </ItemLink>
       ))}
     </div>
   );

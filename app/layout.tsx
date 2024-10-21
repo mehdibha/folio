@@ -21,7 +21,7 @@ export default function RootLayout({
       >
         <Providers>
           <div className="mx-auto max-w-2xl px-4">
-            <main className="py-20">{children}</main>
+            <main className="min-h-screen py-20">{children}</main>
             <Footer />
           </div>
         </Providers>
